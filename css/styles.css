@@ -1,0 +1,17 @@
+body{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.Welcome{
+  background-image: url("../images/tecom.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  color: #fff;
+  height: 70vh;
+}
