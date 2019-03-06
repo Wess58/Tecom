@@ -1,9 +1,11 @@
-body{
+body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  position: relative;
 }
-.Welcome{
+
+.Welcome {
   background-image: url("../images/tecom.png");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -14,4 +16,66 @@ body{
   position: fixed;
   color: #fff;
   height: 70vh;
+}
+
+/* NAVBAR ANIMATIONS */
+nav {
+  background-color: #fff;
+  height: 10%;
+  background: linear-gradient(45deg,#fff 7%, #000 7%, #000 17%, #fff 17%);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0);
+}
+
+nav .navbar-brand {
+  font-size: 35px;
+  font-family: 'Wallpoet', cursive;
+  margin-left: 4.5%;
+  background: linear-gradient(10deg, #000, #2AECF5, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Circle behind */
+nav a {
+  color: #000 !important;
+  font-family: 'Wallpoet', cursive;
+  font-size: 25px;
+  text-decoration: none;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+nav a:before,
+nav a:after {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #2AECF5;
+  transform: translateX(-50%) translateY(-50%) scale(1.5);
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+nav a:after {
+  border-width: 2px;
+  transition: all 0.4s;
+}
+
+nav a:hover:before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+nav a:hover:after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%) scale(1.3);
 }
