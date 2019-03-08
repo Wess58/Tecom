@@ -197,6 +197,11 @@ nav #phone {
   -webkit-text-fill-color: transparent;
 }
 
+iframe{
+  border-radius: 5px;
+  box-shadow: 0 20px 30px 10px #4B4D4D;
+}
+
 /* KEYFRAME ANIMATIONS */
 nav {
   -webkit-animation: show 4s 1;
