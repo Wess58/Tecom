@@ -15,7 +15,6 @@ nav {
   background-color: #fff;
   height: 10%;
   background: linear-gradient(45deg, #fff 7%, #000 7%, #000 17%, #fff 17%);
-  opacity: 0.8;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0);
 }
 
@@ -167,8 +166,8 @@ nav #phone {
 
 /* OFFER IMAGES END */
 .footer {
-  height: 50vh;
-  padding-top: 1%;
+  padding: 4%;
+
   background-color: #62BFC2;
   color: #fff;
   bottom: 0;
@@ -197,7 +196,7 @@ nav #phone {
   -webkit-text-fill-color: transparent;
 }
 
-iframe{
+iframe {
   border-radius: 5px;
   box-shadow: 0 20px 30px 10px #4B4D4D;
 }
@@ -214,7 +213,7 @@ nav {
   }
 
   to {
-    opacity: 0.9;
+    opacity: 1;
   }
 }
 
@@ -224,11 +223,18 @@ nav {
   }
 
   to {
-    opacity: 0.9;
+    opacity: 1;
   }
 }
 
 /* MEDIA QUERIES FOR RESPONSIVENESS */
+@media only screen and (max-width: 1300px) {
+  nav {
+    background: linear-gradient(45deg, #fff 8%, #000 8%, #000 20%, #fff 20%);
+    height: 11%;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .Welcome {
     background-image: url("../images/Tecom - Cover.png");
