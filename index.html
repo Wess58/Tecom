@@ -7,7 +7,7 @@
   <title>TECOM</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="shortcut icon" href="images/typography.png">
-  <link href="https://fonts.googleapis.com/css?family=Wallpoet|Crete+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Wallpoet|Crete+Round|Prompt|Dr+Sugiyama" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/scripts.js"></script>
@@ -24,14 +24,12 @@
             <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">FEATURES</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">PRICING</a>
+            <a class="nav-link" href="#offers">SERVICES</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">CONTACT</a>
           </li>
+          <li><img id="phone" src="images/phone-contact.png"> +254 720 402 275 </li>
           <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown link
@@ -45,63 +43,134 @@
         </ul>
       </div>
     </nav>
+    <!-- <img onclick="topFunction()" id="myBtn" title="Go to top" src="images/totop.png"> -->
+
     <div class="container-fluid Welcome">
 
       <!-- TECOM IMAGE LOGO -->
 
     </div>
-    <div class="container">
-      <h2>Tecom offers</h2>
+    <!-- <div class="container" id="offers">
+      <h2>WHAT WE DO</h2>
       <div class="row">
-        <div class="col-md-3">
-          <img src="images/offered/virus.png">
-          <p>Both Laptops and Desktop Repair</p>
+        <div class="col-xs-6 col-md-3">
+          <div class="card">
 
+
+            <img id="comps" src="images/offered/virus.png">
+            <h6>Computer Repair & Upgrades</h6>
+            <p>Have a broken Desktop or Laptop or what you really need is an upgrade , we'll get you up and running in no time.
+
+            </p>
+
+          </div>
         </div>
-        <div class="col-md-3">
-          <img src="images/offered/smartphone.png">
-          <p>Tablets and Smart Phones Flashing and Repair</p>
+        <div class="col-xs-6 col-md-3">
+          <div class="card">
 
+            <img id="smartphones" src="images/offered/smartphone.png">
+            <h6>Tablets and Smart Phones Flashing and Repair</h6>
+            <p>Why should you have to walk around with that cracked screen, we've got you covered with original screen-replacements. </p>
+          </div>
         </div>
-        <div class="col-md-3">
-          <img src="images/offered/computer.png">
-          <p>Software Installation Updating Maintenance</p>
+        <div class="col-xs-6 col-md-3">
+          <div class="card">
 
+
+            <img id="software" src="images/offered/computer.png">
+            <h6>Software Installation, Updating & Maintenance</h6>
+            <p>Need an updated version of Microsoft Office? No problem! How about an updated antivirus program? We can handle that!</p>
+          </div>
         </div>
+        <div class="col-xs-6 col-md-3">
+          <div class="card">
 
+            <img src="images/offered/folder.png">
+            <h6>Data Recovery</h6>
+            <p>Do you wish to recover lost files, pictures, documents, videos, and more from deletions, formatting errors, partition losses, OS crashes or virus attacks, not to worry!</p>
 
-        <div class="col-xs-12 col-md-6">
-          <h2>Tecom offers</h2>
-          div
-          <ul>
-            <li>/li> CHECK
-            <li></li>CHECK
-            <li></li> CHECK
-            <li>Printers, Photocopier and Scanners Repair</li>CHECK
-            <li>Data Recovery (even for formatted data storage)</li>CHECK
-            <li>Networking and Security CCTV</li>CHECK
-            <li>Biometric installation</li>CHECK
-          </ul>
+          </div>
         </div>
-        <div class="col-xs-12 col-md-6">
-
-        </div>
-
       </div>
 
-    </div>
-    <div class="container footer" id="contact">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class="card">
+
+            <img src="images/offered/printer.png">
+            <h6>Printers, Photocopier and Scanners Repair</h6>
+            <p>Is it Paper jams, Really bad looking prints or just old-age and/or outdated technology on your trustee printers, all common all fixable!</p>
+
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-3">
+          <div class="card">
+
+            <img src="images/offered/cctv.png">
+            <h6>Networking and Security CCTV</h6>
+            <p>You can’t be everywhere but CCTV can , CCTV helps reduce the likelihood of break-ins, fire hazards and create discipline among employees and customers alike.</p>
+
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class="card">
+
+            <img src="images/offered/programming.png">
+            <h6>Web & Software Development</h6>
+            <p>Are you full of creamy tech ideas but just don't know how to implement their complexities or just want an Online brochure for better Marketing, we've got you!</p>
+
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class="card">
+
+            <img src="images/offered/fingerprint.png">
+            <h6>Biometric Installation</h6>
+            <p>Fingerprint recognition is ideal ,highly accurate and curtains the need to reduce instances of fraud as well as to provide secured access to physical and logical assets</p>
+
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="container-fluid footer" id="contact">
+      <p style="color:#19979B;">| FOLLOW US | </p>
       <div class="wrapper" style="display:flex;justify-content:center;align-items:center;">
-        <img href="https://www.facebook.com/TecomAdvance/" src="images/Facebook.png">
-        <img href="https://www.instagram.com/tecom.advance/" src="images/Instagram.png">
-        <img href="  https://twitter.com/Tecom_Tech" src="images/Twitter.png">
+
+        <a href="https://www.facebook.com/TecomAdvance/" target="_blank"><img src="images/Facebook.png"></a>
+        <a href="https://www.instagram.com/tecom.advance/" target="_blank"><img src="images/Instagram.png"></a>
+        <a href="https://twitter.com/Tecom_Tech" target="_blank"><img src="images/Twitter.png"></a>
         <img src="images/WhatsApp.png">
       </div>
-      <p>Contact Us on: +254 720 402 275 <br> Email: tecomadvance@gmail.com</p>
+      <h2 style="color:#000;font-family: 'Dr Sugiyama', cursive;">The Tech Solutions You Deserve</h2>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-md-4">
+            <h3 style="color:#19979B;text-decoration:underline;">ADDRESS</h3>
+            <p>KIAMBU | <br>
+              KIKA STALLS | <br>
+              STALL NO.
+              <span style="color:#19979B;">H4</span>
+            </p>
+            <p style="text-decoration:underline; cursor:pointer;">Google Maps</p>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <h3 style="color:#19979B;text-decoration:underline;">LEGAL</h3>
+            <small>&#9400;2019 <span>TECOM</span> |<br> All Rights Reserved <br>
+              Terms | Conditons
+            </small>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <h3 style="color:#19979B;text-decoration:underline;">CONTACT</h3>
+            <p> +254 720 402 275 <br> tecomadvance@gmail.com</p>
+
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="copyright">
-      <small>&#9400;2019 <span>TECOM</span> | All Rights Reserved</small>
-    </div>
+
   </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
