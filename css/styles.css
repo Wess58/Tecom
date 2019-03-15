@@ -122,6 +122,7 @@ nav #phone {
 /* OFFER IMAGES */
 #offers {
   margin-bottom: 10%;
+  position: relative;
 }
 
 #offers .row {
