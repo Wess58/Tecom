@@ -9,6 +9,11 @@ body {
   font-family: 'Crete Round', serif;
   color: #000;
 }
+#particles-js{
+  text-align: center;
+  background-color: #04041C;
+  color: #fff;
+}
 
 /* NAVBAR ANIMATIONS */
 nav {
@@ -228,12 +233,20 @@ nav {
 }
 
 /* MEDIA QUERIES FOR RESPONSIVENESS */
-@media only screen and (max-width: 1300px) {
+@media  (max-width: 1440px) {
+  nav {
+    background: linear-gradient(45deg, #fff 8%, #000 8%, #000 19%, #fff 19%);
+    height: 11%;
+  }
+}
+
+@media  (max-width: 1280px) {
   nav {
     background: linear-gradient(45deg, #fff 8%, #000 8%, #000 20%, #fff 20%);
     height: 11%;
   }
 }
+
 
 @media only screen and (max-width: 700px) {
   .Welcome {
@@ -250,7 +263,7 @@ nav {
   }
 
   nav {
-    background: linear-gradient(45deg, #fff 10%, #000 10%, #000 40%, #fff 40%);
+    background: linear-gradient(45deg, #fff 10%, #000 10%, #000 20%, #fff 20%);
   }
 
   nav img {
