@@ -119,10 +119,18 @@ nav #phone {
   font-family: 'Dr Sugiyama', cursive;
 }
 
+#particles-js{
+    position: absolute;
+    height: 100vh;
+}
+
 /* OFFER IMAGES */
 #offers {
   margin-bottom: 10%;
-
+  position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%,-50%);
 }
 
 #offers .row {
