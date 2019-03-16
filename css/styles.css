@@ -134,6 +134,7 @@ nav #phone {
 /* OFFER IMAGES */
 #offers {
   margin-bottom: 10%;
+  margin: auto;
   position: relative;
 }
 
@@ -254,7 +255,7 @@ nav {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 450px) {
   .Welcome {
     background-image: url("../images/Tecom - Cover.png");
     background-repeat: no-repeat;
@@ -269,7 +270,7 @@ nav {
   }
 
   nav {
-    background: linear-gradient(45deg, #fff 10%, #000 10%, #000 20%, #fff 20%);
+    background: #fff;
   }
 
   nav img {
@@ -277,7 +278,12 @@ nav {
   }
 
   nav a {
-    color: #fff !important;
+    background-color: #fff;
+    color: #000 !important;
     text-align: center;
+    padding: 10px;
+  }
+  nav .navContact{
+    display: none;
   }
 }
