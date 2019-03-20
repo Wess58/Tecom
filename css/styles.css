@@ -135,6 +135,7 @@ nav #phone {
 #offers {
   margin-bottom: 10%;
   margin: auto;
+  background-color: rgba(255, 255, 255, 0.6);
   position: relative;
 }
 
