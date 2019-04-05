@@ -9,6 +9,28 @@
 //
 //      }
 //  });
+
+
+//NAVBAR SCROLL EFFECT
+ $(function() {
+  var header = $(".navbar");
+  var navAText = $(".nav-link");
+
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 530) {
+      header.addClass("scrolled");
+      navAText.addClass("navA");
+
+    } else {
+      header.removeClass("scrolled");
+      navAText.removeClass("navA");
+
+    }
+  });
+
+});
+
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
   scrollFunction()
