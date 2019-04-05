@@ -18,7 +18,7 @@
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll >= 530) {
+    if (scroll >= 600) {
       header.addClass("scrolled");
       navAText.addClass("navA");
 
@@ -31,7 +31,14 @@
 
 });
 
-// When the user scrolls down 20px from the top of the document, show the button
+//ONSCROLL OPACITY
+$(document).ready(function() {
+  $(window).scroll(function() {
+    $('.Welcome').css("opacity", 1 - $(window).scrollTop() / 620)
+  });
+});
+
+// ON SCROLL SHOW TO TOP BUTTON
 window.onscroll = function() {
   scrollFunction()
 };

@@ -175,8 +175,10 @@ nav #phone {
 }
 
 .card {
-  width: 250px;
+  width: 100%;
   height: 320px;
+  margin-bottom: 20px!important;
+  margin:auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,7 +191,7 @@ nav #phone {
 
 .card:hover {
   border: 1px solid #fff;
-  box-shadow: 0 20px 30px 10px #CBCBCB;
+  box-shadow: 0 10px 20px 5px #CBCBCB;
 }
 
 .card p {
@@ -272,28 +274,43 @@ nav {
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 1440px) {
   nav {
-    background: linear-gradient(45deg, #fff 8%, #000 8%, #000 19%, #fff 19%);
     height: 11%;
+  }
+  .scrolled {
+    color: #000!important;
+    background: linear-gradient(45deg, #fff 8%, #000 8%, #000 19%, #fff 19%);
+    background-color: #fff;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    transition: all .3s;
+
   }
 }
 
 @media (max-width: 1280px) {
   nav {
-    background: linear-gradient(45deg, #fff 8%, #000 8%, #000 20%, #fff 20%);
     height: 11%;
+  }
+  .scrolled {
+    color: #000!important;
+    background: linear-gradient(45deg, #fff 8%, #000 8%, #000 20%, #fff 20%);
+    background-color: #fff;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    transition: all .3s;
+
   }
 }
 
 @media only screen and (max-width: 450px) {
   .Welcome {
-    background-image: url("../images/Tecom - Cover.png");
+    background-image: url("../images/Tecom Square.png");
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
     background-position: center;
     background-attachment: fixed;
+    width: 100%;
     height: 70vh;
     margin-bottom: 5%;
   }
