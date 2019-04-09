@@ -12,7 +12,7 @@
 
 
 //NAVBAR SCROLL EFFECT
- $(function() {
+$(function() {
   var header = $(".navbar");
   var navAText = $(".nav-link");
 
@@ -38,7 +38,7 @@ $(document).ready(function() {
   });
 });
 
-// ON SCROLL SHOW TO TOP BUTTON
+// ON SCROLL SHOW TO TOP BUTTON START -->
 window.onscroll = function() {
   scrollFunction()
 };
@@ -56,3 +56,31 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// ON SCROLL SHOW TO TOP BUTTON END <---
+
+//INITIALIZE SLICK SLIDER
+$(document).ready(function() {
+  $('.autoplay').slick({
+    dots: false,
+    infinite: true,
+    arrows: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [{
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },{
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
+  });
+});
