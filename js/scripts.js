@@ -75,10 +75,11 @@ $(document).ready(function() {
         slidesToShow: 2,
         slidesToScroll: 2
       }
-    },{
+    }, {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1,
+        autoplaySpeed: 2500,
+        slidesToShow: 2,
         slidesToScroll: 1
       }
     }]
