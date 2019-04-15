@@ -90,7 +90,7 @@ nav #phone {
   color: #000!important;
   background: linear-gradient(45deg, #fff 7%, #000 7%, #000 17%, #fff 17%);
   background-color: #fff;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
   transition: all .3s;
 
 }
@@ -128,6 +128,7 @@ nav #phone {
   background-position: top;
   background-attachment: fixed;
   height: 80vh;
+  margin-bottom: 5%;
 }
 
 .Welcome h2 {
@@ -138,7 +139,6 @@ nav #phone {
 /* OFFER IMAGES */
 #offers {
   margin-bottom: 10%;
-  padding-top: 10%;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.6);
   position: relative;
@@ -180,7 +180,7 @@ nav #phone {
 
 .card:hover {
   border: 1px solid #fff;
-  box-shadow: 0 10px 20px 5px #CBCBCB;
+  box-shadow: 0 10px 10px 0 #CBCBCB;
 }
 
 .card p {
@@ -235,30 +235,7 @@ iframe {
 }
 
 /* KEYFRAME ANIMATIONS */
-nav {
-  -webkit-animation: show 4s 1;
-  animation: show 4s 1;
-}
 
-@keyframes show {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes show {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 1440px) {
