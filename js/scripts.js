@@ -62,7 +62,6 @@ function topFunction() {
 //INITIALIZE SLICK SLIDER
 $(document).ready(function() {
   $('.autoplay').slick({
-    dots: false,
     infinite: true,
     arrows: false,
     slidesToShow: 5,

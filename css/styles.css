@@ -10,12 +10,20 @@ body {
   color: #000;
 }
 
+.description {
+  color: #343030;
+}
+
+.description span {
+  color: #000;
+  font-weight: 600;
+}
+
 /* NAVBAR ANIMATIONS */
 nav {
-  color: #fff!important;
+  color: #fff !important;
   height: 10%;
   transition: all .3s;
-
 }
 
 nav .navbar-brand {
@@ -28,9 +36,8 @@ nav .navbar-brand {
 }
 
 /* Circle behind */
-
 nav a {
-  color: #fff!important;
+  color: #fff !important;
   font-family: 'Prompt', sans-serif;
   font-size: 15px;
   text-decoration: none;
@@ -87,20 +94,16 @@ nav #phone {
 }
 
 .scrolled {
-  color: #000!important;
+  color: #000 !important;
   background: linear-gradient(45deg, #fff 7%, #000 7%, #000 17%, #fff 17%);
   background-color: #fff;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
   transition: all .3s;
-
 }
 
-.navA{
-  color: #000!important;
+.navA {
+  color: #000 !important;
 }
-
-
-
 
 /* NAVBAR END */
 /* TOTOP BTN */
@@ -132,8 +135,13 @@ nav #phone {
 }
 
 .Welcome h2 {
-  color: #000;
-  font-family: 'Dr Sugiyama', cursive;
+  position: relative;
+  top: 90%;
+  left: 10%;
+  letter-spacing: 2px;
+  color: #f9caa3;
+  font-size: 24px;
+  font-family: 'Wallpoet', cursive;
 }
 
 /* OFFER IMAGES */
@@ -148,14 +156,11 @@ nav #phone {
   margin-bottom: 3%;
 }
 
-#offers h2 {
-  text-decoration: underline;
-}
-
 #offers h6 {
   font-family: 'Prompt', sans-serif;
   text-decoration: underline;
   color: #19979B;
+  letter-spacing: 1px;
 }
 
 #offers img {
@@ -166,8 +171,8 @@ nav #phone {
 .card {
   width: 100%;
   height: 320px;
-  margin-bottom: 20px!important;
-  margin:auto;
+  margin-bottom: 20px !important;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,11 +190,13 @@ nav #phone {
 
 .card p {
   font-size: 15px;
+  color: #343030;
+  letter-spacing: 1px;
 }
 
 /* OFFER IMAGES END */
 .Bottom {
-  background-image: linear-gradient(315deg, rgba(63, 209, 216) 20%, rgba(63, 209, 216, 0.9 ), rgba(63, 209, 216, 0.8), rgba(63, 209, 216, 0.6), rgba(63, 209, 216, 0.5)), url("../images/business-circuits-computer.jpg");
+  background-image: linear-gradient(315deg, rgba(63, 209, 216) 20%, rgba(63, 209, 216, 0.9), rgba(63, 209, 216, 0.8), rgba(63, 209, 216, 0.6), rgba(63, 209, 216, 0.5)), url("../images/business-circuits-computer.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -199,12 +206,23 @@ nav #phone {
   background-attachment: fixed;
   border-radius: 0 20px 0 10px;
 }
+
 .footer {
   padding: 4%;
   /* background-color: #62BFC2; */
-  color: #fff;
+  color: #3e3939;
   bottom: 0;
   text-align: center;
+}
+
+.footer h2 {
+  color: #000;
+  font-family: 'Dr Sugiyama', cursive;
+
+}
+
+.footer h3 {
+  color: #171616;
 }
 
 .wrapper {
@@ -214,6 +232,8 @@ nav #phone {
 .wrapper img {
   width: 50px;
   height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
   transition: all .3s;
 }
 
@@ -235,20 +255,18 @@ iframe {
 }
 
 /* KEYFRAME ANIMATIONS */
-
-
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 1440px) {
   nav {
     height: 11%;
   }
+
   .scrolled {
-    color: #000!important;
+    color: #000 !important;
     background: linear-gradient(45deg, #fff 8%, #000 8%, #000 19%, #fff 19%);
     background-color: #fff;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     transition: all .3s;
-
   }
 }
 
@@ -256,13 +274,13 @@ iframe {
   nav {
     height: 11%;
   }
+
   .scrolled {
-    color: #000!important;
+    color: #000 !important;
     background: linear-gradient(45deg, #fff 8%, #000 8%, #000 20%, #fff 20%);
     background-color: #fff;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     transition: all .3s;
-
   }
 }
 
@@ -281,7 +299,7 @@ iframe {
   }
 
   nav {
-    background: #fff!important;
+    background: #fff !important;
   }
 
   nav img {
@@ -294,13 +312,13 @@ iframe {
     text-align: center;
     padding: 10px;
   }
-  nav .navContact{
+
+  nav .navContact {
     display: none;
   }
 
   #offers {
     margin-bottom: 10%;
-    padding: 0!important;
+    padding: 0 !important;
   }
-
 }
