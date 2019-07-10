@@ -15,17 +15,19 @@
 $(function() {
   var header = $(".navbar");
   var navAText = $(".nav-link");
+  var navbar_brand = $(".navbar-brand")
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll >= 600) {
+    if (scroll >= 550) {
       header.addClass("scrolled");
       navAText.addClass("navA");
+      navbar_brand.css('color', '#2AECF5')
 
     } else {
       header.removeClass("scrolled");
       navAText.removeClass("navA");
-
+      navbar_brand.css('color', 'transparent')
     }
   });
 

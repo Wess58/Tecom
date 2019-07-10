@@ -27,12 +27,14 @@ nav {
 }
 
 nav .navbar-brand {
-  font-size: 35px;
-  font-family: 'Wallpoet', cursive;
+  font-size: 40px;
+  font-family: 'Allerta Stencil', sans-serif;
   margin-left: 4.5%;
-  background: linear-gradient(10deg, #000, #2AECF5, #000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-shadow: 0 5px 10px #0003;
+  /* background: linear-gradient(10deg, #000, #2AECF5, #000); */
+  /* color: #2AECF5!important; */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 /* Circle behind */
@@ -95,7 +97,7 @@ nav #phone {
 
 .scrolled {
   color: #000 !important;
-  background: linear-gradient(45deg, #fff 7%, #000 7%, #000 17%, #fff 17%);
+  /* background: linear-gradient(45deg, #fff 7%, #000 7%, #000 17%, #fff 17%); */
   background-color: #fff;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
   transition: all .3s;
@@ -122,7 +124,7 @@ nav #phone {
 }
 
 .Welcome {
-  background-image: url("../images/Tecom - Cover.png");
+  background-image: linear-gradient(to bottom, #0005 50% , #fff3), url("../images/astronomy-comet-constellation.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -134,14 +136,24 @@ nav #phone {
   margin-bottom: 5%;
 }
 
-.Welcome h2 {
+/* .centered{
   position: relative;
-  top: 90%;
-  left: 10%;
+  top: 40%;
+
+} */
+
+
+.Welcome h1 {
+  font-family: 'Allerta Stencil', sans-serif;
   letter-spacing: 2px;
+  color: #2AECF5;
+  font-size: 15em;
+}
+.Welcome h3{
+  font-family: 'Allerta Stencil', sans-serif;
   color: #f9caa3;
-  font-size: 24px;
-  font-family: 'Wallpoet', cursive;
+  font-size: 10em;
+
 }
 
 /* OFFER IMAGES */
@@ -277,7 +289,7 @@ iframe {
 
   .scrolled {
     color: #000 !important;
-    background: linear-gradient(45deg, #fff 8%, #000 8%, #000 20%, #fff 20%);
+    /* background: linear-gradient(45deg, #fff 8%, #000 8%, #000 20%, #fff 20%); */
     background-color: #fff;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     transition: all .3s;
@@ -315,6 +327,12 @@ iframe {
 
   nav .navContact {
     display: none;
+  }
+
+  .Welcome h1,
+  .Welcome h3 {
+  display: none;
+
   }
 
   #offers {
