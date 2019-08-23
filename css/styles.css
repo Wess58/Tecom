@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Crete Round', serif;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
   color: #000;
 }
@@ -22,7 +22,6 @@ body {
 /* NAVBAR ANIMATIONS */
 nav {
   color: #fff !important;
-  height: 10%;
   transition: all .3s;
 }
 
@@ -96,7 +95,7 @@ nav #phone {
 }
 
 .scrolled {
-  color: #000 !important;
+  color: #202124 !important;
   /* background: linear-gradient(45deg, #fff 7%, #000 7%, #000 17%, #fff 17%); */
   background-color: #fff;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
@@ -104,7 +103,7 @@ nav #phone {
 }
 
 .navA {
-  color: #000 !important;
+  color: #202124 !important;
 }
 
 /* NAVBAR END */
@@ -132,16 +131,8 @@ nav #phone {
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
-  height: 80vh;
   margin-bottom: 5%;
 }
-
-/* .centered{
-  position: relative;
-  top: 40%;
-
-} */
-
 
 .Welcome h1 {
   font-family: 'Allerta Stencil', sans-serif;
@@ -202,7 +193,7 @@ nav #phone {
 
 .card p {
   font-size: 15px;
-  color: #343030;
+  color: #202124;
   letter-spacing: 1px;
 }
 
@@ -216,13 +207,12 @@ nav #phone {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  border-radius: 0 20px 0 10px;
 }
 
 .footer {
   padding: 4%;
   /* background-color: #62BFC2; */
-  color: #3e3939;
+  color: #202124;
   bottom: 0;
   text-align: center;
 }
@@ -231,10 +221,11 @@ nav #phone {
   color: #000;
   font-family: 'Dr Sugiyama', cursive;
 
-}
+  }
 
 .footer h3 {
-  color: #171616;
+  color: #202124;
+  font
 }
 
 .wrapper {
@@ -312,6 +303,16 @@ iframe {
 
   nav {
     background: #fff !important;
+    width: 100%!important;
+  }
+  nav .navbar-brand {
+    color: #000;
+    font-family: 'Allerta Stencil', sans-serif;
+    text-shadow: 0 0 0 #fff!important;
+    /* background: linear-gradient(10deg, #000, #2AECF5, #000); */
+    /* color: #2AECF5!important; */
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
   }
 
   nav img {
@@ -322,8 +323,8 @@ iframe {
     background-color: #fff;
     color: #000 !important;
     text-align: center;
-    padding: 10px;
-  }
+    padding: 20px;
+    }
 
   nav .navContact {
     display: none;
