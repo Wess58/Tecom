@@ -19,7 +19,7 @@ $(function() {
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll >= 550) {
+    if (scroll >= 100) {
       header.addClass("scrolled");
       navAText.addClass("navA");
       navbar_brand.css('color', '#2AECF5')
