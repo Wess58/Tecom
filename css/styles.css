@@ -145,6 +145,7 @@ nav #phone {
 
 .Welcome button {
   color: #3c4043;
+  font-size: 12px;
   font-weight: 600;
   border: 3px solid #3c4043;
   border-radius: 8px;
@@ -255,30 +256,58 @@ iframe {
 /* KEYFRAME ANIMATIONS */
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 1440px) {
-  nav {
-    height: 11%;
-  }
 
-  .scrolled {
-    color: #000 !important;
-    background: linear-gradient(45deg, #fff 8%, #000 8%, #000 19%, #fff 19%);
-    background-color: #fff;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-    transition: all .3s;
-  }
 }
 
 @media (max-width: 1280px) {
-  nav {
-    height: 11%;
+
+
+
+  .Welcome .text {
+    position: relative;
+    top: 70px;
   }
 
-  .scrolled {
-    color: #000 !important;
-    /* background: linear-gradient(45deg, #fff 8%, #000 8%, #000 20%, #fff 20%); */
-    background-color: #fff;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-    transition: all .3s;
+  .Welcome h1 {
+    /* font-family: 'Allerta Stencil', sans-serif; */
+    /* letter-spacing: 2px; */
+    /* color: #2AECF5; */
+    color: #3c4043;
+    font-weight: 600;
+    font-size: 120px;
+  }
+
+  .Welcome h3 {
+    /* font-family: 'Allerta Stencil', sans-serif; */
+    color: #2AECF5;
+    font-size: 36px;
+    font-weight: 600;
+    position: relative;
+    top: -40px;
+    right: 50px;
+  }
+  .Welcome .roundedSquare1 {
+    position: absolute;
+    top: -120px;
+    left: -400px;
+    width: 900px;
+    height: 900px;
+    z-index: -100;
+    transform: rotate(30deg);
+  }
+
+  .Welcome .roundedSquare2 {
+    position: absolute;
+    top: -170px;
+    left: -400px;
+    width: 1000px;
+    height: 1000px;
+    z-index: -110;
+    transform: rotate(30deg);
+  }
+  .Welcome .hologram {
+    width: 450px;
+    height: 450px;
   }
 }
 
