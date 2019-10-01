@@ -15,19 +15,21 @@
 $(function() {
   var header = $(".navbar");
   var navAText = $(".nav-link");
-  var navbar_brand = $(".navbar-brand")
+  // var navbar_brand = $(".navbar-brand")
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll >= 100) {
       header.addClass("scrolled");
       navAText.addClass("navA");
-      navbar_brand.css('color', '#2AECF5')
+
+      // navbar_brand.attr('style', 'color: #2AECF5 !important');
+      // navbar_brand.css('', '')
 
     } else {
       header.removeClass("scrolled");
       navAText.removeClass("navA");
-      navbar_brand.css('color', 'transparent')
+
     }
   });
 
