@@ -32,7 +32,7 @@ nav .navbar-brand {
 nav a {
   /* font-family: 'Prompt', sans-serif; */
   color: #3c4043 !important;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none;
   margin: 0px 10px;
@@ -270,6 +270,9 @@ nav #phone {
 .footer #find_us {
   width: 600px;
 }
+.footer .directContact{
+  text-align: left;
+}
 
 .footer .directContact img {
   width: 20px;
@@ -282,11 +285,17 @@ nav #phone {
 
 .footer h3 {
   font-size: 30px;
+  font-weight: 600;
 }
 
 .footer h4 {
   font-size: 20px;
   font-weight: 600;
+}
+
+
+.footer h3+p {
+  font-size: 16px;
 }
 
 .footer p {
@@ -313,7 +322,6 @@ nav #phone {
   border-radius: 5px;
   box-shadow: 0 20px 30px 10px #4B4D4D;
 } */
-
 /* KEYFRAME ANIMATIONS */
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 1440px) {
@@ -476,7 +484,9 @@ nav #phone {
   }
 
   .Welcome .roundedSquare1,
-  .Welcome .hologram {
+  .Welcome .hologram,
+  .footer #find_us,
+  .slider #done_svg {
     display: none;
   }
 
@@ -513,4 +523,16 @@ nav #phone {
     margin-bottom: 10%;
     padding: 0 !important;
   }
+  .footer .directContact{
+    text-align: center;
+  }
+
+  .slider .description {
+    font-size: 30px;
+    position: relative;
+    top: 0px;
+    margin-bottom: 20%;
+  }
+
+
 }
