@@ -13,24 +13,21 @@ body {
 /* *************************************************************** */
 /* NAVBAR  */
 nav {
-  padding: 0 200px 0 0 !important;
-  transition: all .3s;
+  padding-right: 200px !important;
+  transition: all .2s ease;
 }
 
 nav .navbar-brand {
-  font-family: 'Allerta Stencil', sans-serif;
-  margin-left: 4.5%;
-  font-size: 40px;
-  color: transparent !important;
-  /* text-shadow: 0 5px 10px #0003; */
-  /* background: linear-gradient(10deg, #000, #2AECF5, #000); */
-  /* color: #2AECF5!important; */
-  /* -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  color: #80868b;
+  font-weight: 600;
+}
+
+nav .navbar-brand span span {
+  color: #2AECF5;
+  font-size: 14px;
 }
 
 nav a {
-  /* font-family: 'Prompt', sans-serif; */
   color: #3c4043 !important;
   font-size: 13px;
   font-weight: 600;
@@ -42,29 +39,10 @@ nav a {
   cursor: pointer;
 }
 
-nav #menu {
-  width: 30px;
-  height: 30px;
-  visibility: hidden;
-}
-
-nav #phone {
-  margin: 2px;
-  width: 30px;
-  height: 30px;
-  visibility: visible;
-}
-
 .scrolled {
-  color: #202124 !important;
-  /* background: linear-gradient(45deg, #fff 7%, #000 7%, #000 17%, #fff 17%); */
   background-color: #fff;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
-  transition: all .3s;
-}
-
-.navA {
-  color: #202124 !important;
+  transition: all .2s ease;
 }
 
 /* NAVBAR END */
@@ -96,22 +74,17 @@ nav #phone {
 }
 
 .Welcome h1 {
-  /* font-family: 'Allerta Stencil', sans-serif; */
-  /* letter-spacing: 2px; */
-  /* color: #2AECF5; */
   color: #3c4043;
   font-weight: 600;
   font-size: 140px;
 }
 
 .Welcome h3 {
-  /* font-family: 'Allerta Stencil', sans-serif; */
   color: #2AECF5;
   font-size: 46px;
   font-weight: 600;
   position: relative;
-  top: -45px;
-  right: 94px;
+  top: -30px;
 }
 
 .Welcome .roundedSquare1 {
@@ -141,6 +114,7 @@ nav #phone {
 .Welcome .hologram {
   width: 500px;
   height: 500px;
+  margin-top: 10vh;
 }
 
 .Welcome p {
@@ -161,8 +135,7 @@ nav #phone {
 /* *************************************************************** */
 /* OFFER IMAGES */
 #offers {
-  margin-bottom: 10%;
-  margin: auto;
+  padding: 10vh 0 10vh 0;
 }
 
 #offers .description {
@@ -211,9 +184,6 @@ nav #phone {
   height: 310px;
   margin-bottom: 20px !important;
   margin: auto;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   padding: 30px 10px 10px 10px;
   box-sizing: border-box;
   border-radius: 25px;
@@ -224,10 +194,6 @@ nav #phone {
   transition: all .4s;
 }
 
-/* .card:hover {
-  border: 1px solid #fff;
-  box-shadow: 0 10px 10px 0 #CBCBCB;
-} */
 .card p {
   font-size: 14px;
   color: #80868b;
@@ -246,7 +212,7 @@ nav #phone {
 /* *************************************************************** */
 /* BRANDS */
 .slider #done_svg {
-  width: 700px;
+  width: 550px;
 }
 
 .slider .description {
@@ -262,15 +228,17 @@ nav #phone {
 /* *************************************************************** */
 /* FOOTER */
 .footer {
-  padding: 4% 4% 1% 4%;
+  padding-top: 10vh;
+  padding-bottom: 2vh;
   background-color: #F8FAFB;
   text-align: center;
 }
 
 .footer #find_us {
-  width: 600px;
+  width: 550px;
 }
-.footer .directContact{
+
+.footer .directContact {
   text-align: left;
 }
 
@@ -286,6 +254,7 @@ nav #phone {
 .footer h3 {
   font-size: 30px;
   font-weight: 600;
+  color: #80868b;
 }
 
 .footer h4 {
@@ -293,13 +262,16 @@ nav #phone {
   font-weight: 600;
 }
 
-
 .footer h3+p {
   font-size: 16px;
 }
 
 .footer p {
-  font-size: 16px;
+  font-size: 14px;
+}
+
+.footer iframe {
+  width: 100%;
 }
 
 .wrapper {
@@ -324,24 +296,76 @@ nav #phone {
 } */
 /* KEYFRAME ANIMATIONS */
 /* MEDIA QUERIES FOR RESPONSIVENESS */
-@media (max-width: 1440px) {
+@media (max-width: 2000px) {
+  .container {
+    max-width: 1500px !important;
+  }
+
+  .Welcome .text {
+    padding-top: 5vh;
+  }
+
   .Welcome h1 {
-    /* font-family: 'Allerta Stencil', sans-serif; */
-    /* letter-spacing: 2px; */
-    /* color: #2AECF5; */
+    color: #3c4043;
+    font-weight: 600;
+    font-size: 150px;
+  }
+
+  .Welcome h3 {
+    color: #2AECF5;
+    font-size: 50px;
+    font-weight: 600;
+  }
+
+  .Welcome .roundedSquare1 {
+    position: absolute;
+    top: -120px;
+    left: -340px;
+    width: 1050px;
+    height: 1050px;
+    z-index: -100;
+    transform: rotate(30deg);
+  }
+
+  .Welcome .roundedSquare2 {
+    position: absolute;
+    top: -170px;
+    left: -300px;
+    width: 1150px;
+    height: 1150px;
+    z-index: -110;
+    transform: rotate(30deg);
+  }
+
+  .Welcome .hologram {
+    width: 600px;
+    height: 600px;
+  }
+
+  .card {
+    width: 100%;
+    height: 310px;
+    margin-bottom: 20px !important;
+    margin: auto;
+    padding: 30px 20px 10px 20px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .container {
+    max-width: 1300px !important;
+  }
+
+  .Welcome h1 {
     color: #3c4043;
     font-weight: 600;
     font-size: 130px;
   }
 
   .Welcome h3 {
-    /* font-family: 'Allerta Stencil', sans-serif; */
     color: #2AECF5;
     font-size: 40px;
     font-weight: 600;
-    position: relative;
-    top: -40px;
-    right: 74px;
   }
 
   .Welcome .roundedSquare1 {
@@ -370,35 +394,32 @@ nav #phone {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1350px) {
+  .container {
+    max-width: 1000px !important;
+  }
+
   .Welcome .text {
     position: relative;
     top: 70px;
   }
 
   .Welcome h1 {
-    /* font-family: 'Allerta Stencil', sans-serif; */
-    /* letter-spacing: 2px; */
-    /* color: #2AECF5; */
     color: #3c4043;
     font-weight: 600;
     font-size: 120px;
   }
 
   .Welcome h3 {
-    /* font-family: 'Allerta Stencil', sans-serif; */
     color: #2AECF5;
     font-size: 36px;
     font-weight: 600;
-    position: relative;
-    top: -40px;
-    right: 50px;
   }
 
   .Welcome .roundedSquare1 {
     position: absolute;
     top: -120px;
-    left: -400px;
+    left: -380px;
     width: 900px;
     height: 900px;
     z-index: -100;
@@ -408,7 +429,7 @@ nav #phone {
   .Welcome .roundedSquare2 {
     position: absolute;
     top: -170px;
-    left: -400px;
+    left: -380px;
     width: 1000px;
     height: 1000px;
     z-index: -110;
@@ -416,40 +437,35 @@ nav #phone {
   }
 
   .Welcome .hologram {
-    width: 450px;
-    height: 450px;
+    width: 350px;
+    height: 350px;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px) {
+  .container {
+    max-width: auto !important;
+  }
+
   nav {
-    padding: 0 30px 0 0 !important;
+    padding-right: 40px !important;
     transition: all .3s;
   }
 
-  nav .navbar-brand {
-    color: #000;
-    font-family: 'Allerta Stencil', sans-serif;
-    text-shadow: 0 0 0 #fff !important;
-    /* background: linear-gradient(10deg, #000, #2AECF5, #000); */
-    /* color: #2AECF5!important; */
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+  nav a {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
-  nav img {
-    visibility: visible;
+  nav .menu {
+    font-size: 30px;
+    color: #3c4043 !important;
   }
 
   nav a {
-    background-color: #fff;
-    color: #000 !important;
-    text-align: center;
-    padding: 20px;
-  }
-
-  nav .navContact {
-    display: none;
+    border-top: 0.5px solid #0003;
   }
 
   .Welcome {
@@ -460,19 +476,6 @@ nav #phone {
     margin-bottom: 5%;
   }
 
-  /* .Welcome .roundedSquare1 {
-    position: absolute;
-    top: 50px;
-    left: -100px;
-    width: 300px;
-    height: 300px;
-    z-index: -100;
-    transform: rotate(30deg);
-    border-radius: 20px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
-
-
-  } */
   .Welcome .roundedSquare2 {
     position: absolute;
     top: 50px;
@@ -485,28 +488,27 @@ nav #phone {
 
   .Welcome .roundedSquare1,
   .Welcome .hologram,
-  .footer #find_us,
-  .slider #done_svg {
+  .footer #find_us {
     display: none;
   }
 
+  .slider #done_svg {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
   .Welcome h1 {
-    /* font-family: 'Allerta Stencil', sans-serif; */
-    /* letter-spacing: 2px; */
-    /* color: #2AECF5; */
     color: #3c4043;
     font-weight: 600;
     font-size: 70px;
+    position: relative;
+    top: -20px;
   }
 
   .Welcome h3 {
-    /* font-family: 'Allerta Stencil', sans-serif; */
     color: #2AECF5;
     font-size: 30px;
     font-weight: 600;
-    position: relative;
-    top: -20px;
-    right: 5px;
   }
 
   .Welcome a {
@@ -521,9 +523,14 @@ nav #phone {
 
   #offers {
     margin-bottom: 10%;
-    padding: 0 !important;
+    padding: 10vh 20px 10vh 20px;
   }
-  .footer .directContact{
+
+  #offers .card {
+    margin-bottom: 50px !important;
+  }
+
+  .footer .directContact {
     text-align: center;
   }
 
@@ -533,6 +540,4 @@ nav #phone {
     top: 0px;
     margin-bottom: 20%;
   }
-
-
 }

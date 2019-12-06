@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="shortcut icon" href="images/TA_grey.png">
   <link href="https://fonts.googleapis.com/css?family=Crete+Round|Allerta+Stencil|Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
@@ -17,21 +18,26 @@
 
 <body>
 
+
   <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar">
     <span class="navbar-brand" href="#">
-      <img src="images/TA_blue.png" width="70px" height="70px" alt="">
+      <!-- <img src="images/TA_blue.png" width="70px" height="70px" alt=""> -->
+      <span>TECOM <span>ADVANCE</span> </span>
     </span>
-    <img id="menu" src="images/menu.svg" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+    <span class="d-block d-sm-none menu" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </span>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link " href="#">HOME <span class="sr-only">(current)</span></a>
+          <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#offers">SERVICES</a>
+          <a class="nav-link " href="#/services">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#contact">CONTACT</a>
+          <a class="nav-link " href="#/contact">Contact</a>
         </li>
         <!-- <li class="navContact"><img id="phone" src="images/phone-contact.png" alt="phone"> +254 720 402 275 </li> -->
         <!-- <li class="nav-item dropdown">
@@ -51,19 +57,20 @@
 
 
   <main>
-    <div class="container-fluid Welcome pt-5 mb-5">
+    <div class="container-fluid Welcome mb-5">
 
       <div class="row">
 
-        <div class="col-md-6 p-5">
+        <div class="col-md-6 py-5">
 
           <div class="text-center text">
             <h1>TECOM</h1>
-            <h3 class="text-right">ADVANCE</h3>
+            <h3>ADVANCE</h3>
             <p>Your one-stop service store for your <br> Technology, Security and Repair needs.</p>
             <a href="#contact" class="btn btn-md my-4"> TALK TO US <span class="ml-2">🠪</span></a>
 
           </div>
+
           <img class="roundedSquare1" src="images/rounded-black-square-lightgrey.svg" alt="rounded-square">
           <img class="roundedSquare2" src="images/rounded-black-square-grey.svg" alt="rounded-square">
 
@@ -89,7 +96,7 @@
 
 
 
-  <div class="container-fluid">
+  <div class="container-fluid" id="/services">
     <div class="container" id="offers">
 
 
@@ -224,7 +231,6 @@
     </div>
 
 
-
     <div class="container slider">
 
       <div class="row">
@@ -272,87 +278,96 @@
 
   </div>
 
-  <div class="footer" id="contact">
-    <div class="row">
-
-      <div class="col-md-6">
-        <h3>Contact us </h3>
-        <p class="mb-5">We're understand that you may have much on your plate at work ... <br> No stress , we'll come to you snd repair your device on site ! <br> <strong>Get in touch</strong> with us today.</p>
-
+  <div id="/contact">
+    <div class="footer" id="contact">
+      <div class="container">
         <div class="row">
 
-          <div class="col-md-6 mb-5">
-            <h4 class="mb-3">ADDRESS</h4>
-            <p>KIAMBU ROAD <br>
-              KIKA STALLS <br>
-              STALL NO.
-              <strong>H4</strong>
-            </p>
-
-            <a href="https://goo.gl/maps/6tXig9GF3Mz">
-              <p style="text-decoration:underline; cursor:pointer; color: #000;">Google Maps &#x21AA;</p>
-            </a>
-          </div>
-
-          <div class="col-md-6 directContact mb-5">
-
-            <h4 class="mb-3"> DIRECT CONTACT </h4>
-            <p> <img class="mr-2" src="images/telephone.svg" alt="telephone"> +254 720 402 275</P>
-            <p> <img class="mr-2" src="images/envelope.svg" alt="mail"> tecomadvance@gmail.com</p>
-
-          </div>
-
-        </div>
-        <div class="row">
-          <!-- <div class="col-md-3"></div> -->
           <div class="col-md-6">
-            <h4 class="description mb-3"> WE'RE SOCIAL</h4>
+            <h3>Contact us </h3>
+            <p class="mb-5">We're understand that you may have much on your plate at work ... <br> No stress , we'll come to you snd repair your device on site ! <br> <strong>Get in touch</strong> with us today.</p>
 
-            <div class="wrapper" style="display:flex;justify-content:center;align-items:center;">
+            <div class="row">
 
-              <a href="https://www.facebook.com/TecomAdvance/" target="_blank"><img src="images/Facebook.png" title="Facebook"></a>
-              <a href="https://www.instagram.com/tecom.advance/" target="_blank"><img src="images/Instagram.png" title="Instagram"></a>
-              <a href="https://twitter.com/Tecom_Tech" target="_blank"><img src="images/Twitter.png" title="Twitter"></a>
+              <div class="col-md-6 mb-5">
+                <h4 class="mb-3">ADDRESS</h4>
+                <p>KIAMBU ROAD, <br>
+                  KIKA STALLS, <br>
+                  STALL NO.
+                  <strong>H4</strong>
+                </p>
+
+                <a href="https://goo.gl/maps/6tXig9GF3Mz">
+                  <p style="text-decoration:underline; cursor:pointer; color: #000;">Google Maps &#x21AA;</p>
+                </a>
+              </div>
+
+              <div class="col-md-6 directContact mb-5">
+
+                <h4 class="mb-3"> DIRECT CONTACT </h4>
+                <p>
+                  <span>
+                    <i class="fas fa-phone mr-2"></i>
+                  </span>
+                  <span>+254 720 402 275</span> </P>
+                <p>
+
+                  <span>
+                    <i class="fas fa-envelope mr-2"></i>
+                  </span>
+                  <span>tecomadvance@gmail.com</span>
+                </p>
+
+              </div>
+
+            </div>
+            <div class="row">
+              <!-- <div class="col-md-3"></div> -->
+              <div class="col-12">
+                <h4 class="description mb-3"> WE'RE SOCIAL</h4>
+
+                <div class="wrapper" style="display:flex;justify-content:center;align-items:center;">
+
+                  <a href="https://www.facebook.com/TecomAdvance/" target="_blank"><img src="images/Facebook.png" title="Facebook"></a>
+                  <a href="https://www.instagram.com/tecom.advance/" target="_blank"><img src="images/Instagram.png" title="Instagram"></a>
+                  <a href="https://twitter.com/Tecom_Tech" target="_blank"><img src="images/Twitter.png" title="Twitter"></a>
+
+                </div>
+
+              </div>
+              <div class="col-md-6"></div>
 
             </div>
 
           </div>
-          <div class="col-md-6"></div>
+          <div class="col-md-6">
+
+            <img id="find_us" src="images/undraw_social_media.svg" alt="social media">
+
+          </div>
 
         </div>
-
-      </div>
-      <div class="col-md-6">
-
-        <img id="find_us" src="images/undraw_social_media.svg" alt="social media">
-
       </div>
 
+      <br>
+      <br>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.987121565491!2d36.82449351504967!3d-1.1695560991469005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3d131a527f05%3A0xfe6abe58add7568e!2sTecom+Advance!5e0!3m2!1sen!2ske!4v1552042196775"
+        width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+      <div class="container mt-2">
+        <small>&#9400;
+          <script>
+            var currentYear = new Date().getFullYear();
+            document.write(currentYear);
+          </script>
+          <strong>TECOM ADVANCE</strong> | All Rights Reserved </small>
+      </div>
+
+
     </div>
-
-    <br>
-    <br>
-
-    <div class="container">
-
-      <hr>
-
-
-      <small>&#9400;
-        <script>
-          var currentYear = new Date().getFullYear();
-          document.write(currentYear);
-        </script>
-        <strong>TECOM</strong> | All Rights Reserved
-        Terms | Conditons
-      </small>
-    </div>
-
-
   </div>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.987121565491!2d36.82449351504967!3d-1.1695560991469005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3d131a527f05%3A0xfe6abe58add7568e!2sTecom+Advance!5e0!3m2!1sen!2ske!4v1552042196775"
-    width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
 
   </div>
   </div>
