@@ -13,7 +13,8 @@ body {
 /* *************************************************************** */
 /* NAVBAR  */
 nav {
-  padding-right: 200px !important;
+  padding-left: 100px !important;
+  padding-right: 100px !important;
   transition: all .2s ease;
 }
 
@@ -448,8 +449,9 @@ nav a {
   }
 
   nav {
+    padding-left: 40px !important;
     padding-right: 40px !important;
-    transition: all .3s;
+    transition: all .2s;
   }
 
   nav a {
@@ -469,11 +471,9 @@ nav a {
   }
 
   .Welcome {
-    height: auto;
     min-height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
-    margin-bottom: 5%;
   }
 
   .Welcome .roundedSquare2 {
