@@ -113,8 +113,7 @@ nav a {
 }
 
 .Welcome .hologram {
-  width: 500px;
-  height: 500px;
+  width: 700px !important;
   margin-top: 10vh;
 }
 
@@ -221,7 +220,6 @@ nav a {
   font-size: 36px;
   padding-top: 5vh;
   padding-bottom: 5vh;
-
 }
 
 .slider .description span {
@@ -498,13 +496,13 @@ nav a {
   }
 
   .Welcome .roundedSquare1,
-  .Welcome .hologram,
   .footer #find_us {
     display: none;
   }
 
-  .slider #done_svg {
-    width: 300px;
+  .slider #done_svg,
+  .Welcome .hologram {
+    width: 300px !important;
     margin-bottom: 20px;
   }
 
@@ -520,6 +518,10 @@ nav a {
     color: #2AECF5;
     font-size: 30px;
     font-weight: 600;
+  }
+
+  .Welcome p {
+    font-size: 18px;
   }
 
   .Welcome a {
@@ -538,6 +540,7 @@ nav a {
   }
 
   #offers .card {
+    height: 300px;
     margin-bottom: 50px !important;
   }
 
