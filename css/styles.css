@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth!important;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -20,7 +20,7 @@ nav {
 }
 
 nav .navbar-brand {
-  color: #06d5da!important;
+  color: #06d5da !important;
   font-weight: 600;
   visibility: hidden;
 }
@@ -31,8 +31,8 @@ nav .navbar-brand span span {
 }
 
 nav a {
-  color: #3c4043 !important;
-  font-size: 13px;
+  color: #5f6368 !important;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   position: relative;
@@ -41,11 +41,9 @@ nav a {
   z-index: 0;
   cursor: pointer;
   transition: all .2s ease;
-
 }
 
 /* stroke */
-
 nav a:after {
   position: absolute;
   bottom: 0;
@@ -58,6 +56,7 @@ nav a:after {
   background: #aaa;
   height: 1px;
 }
+
 nav a:hover:after {
   width: 100%;
 }
@@ -68,6 +67,7 @@ nav a:after {
   margin: 0;
   opacity: 0;
 }
+
 nav a:hover:after {
   z-index: -10;
   animation: fill 1s forwards;
@@ -112,13 +112,13 @@ nav a:hover:after {
 }
 
 .Welcome h1 {
-  color: #06d5da!important;
+  color: #06d5da !important;
   font-weight: 600;
   font-size: 7rem;
 }
 
 .Welcome h3 {
-  color: #fcd4b3!important;
+  color: #fcd4b3 !important;
   font-size: 2.4rem;
   font-weight: 600;
   position: relative;
@@ -168,7 +168,6 @@ nav a:hover:after {
   background-color: #06d5da;
   box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.09);
 }
-
 
 /* *************************************************************** */
 /* OFFER IMAGES */
@@ -343,6 +342,7 @@ nav a:hover:after {
   .Welcome .text {
     padding-top: 5vh;
   }
+
   .Welcome .roundedSquare1 {
     position: absolute;
     top: -120px;
@@ -469,24 +469,24 @@ nav a:hover:after {
   }
 
   nav {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
+    padding: 8px 25px !important;
     transition: all .2s;
   }
 
   nav a {
-    text-align: center;
+    text-align: right;
     font-size: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 10px 0px !important;
+    margin:0px!important;
   }
 
   nav .menu {
-    font-size: 30px;
-    color: #3c4043 !important;
+    font-size: 28px;
+    margin-top: 5px;
+    color: #5f6368 !important;
   }
 
-  nav a {
+  nav ul li:first-child a {
     border-top: 0.5px solid #0003;
   }
 
@@ -511,11 +511,16 @@ nav a:hover:after {
     display: none;
   }
 
-  .slider #done_svg,
-  .Welcome .hologram {
+  .slider #done_svg {
     width: 300px !important;
     margin-bottom: 20px;
   }
+
+  .Welcome .hologram {
+    width: 300px !important;
+    margin-bottom: 0px!important;
+  }
+
 
   .Welcome h1 {
     font-weight: 600;
@@ -532,10 +537,9 @@ nav a:hover:after {
     font-size: 20px;
   }
 
-  .Welcome p br{
+  .Welcome p br {
     display: none;
   }
-
 
   /* .Welcome a {
     color: #3c4043;
@@ -546,10 +550,9 @@ nav a:hover:after {
     background-color: transparent;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   } */
-
   #offers {
     margin-bottom: 10%;
-    padding: 10vh 20px 10vh 20px;
+    padding: 0vh 20px 10vh 20px;
   }
 
   #offers .card {

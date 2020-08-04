@@ -1,0 +1,9 @@
+ReWriteEngine On
+
+DirectoryIndex index.html
+
+RewriteRule ^contact$ /#contact [NC,L]
+
+RewriteRule ^company$ /#services [NC,L]
+
+RewriteRule ^home$ /# [NC,L]

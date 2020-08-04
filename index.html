@@ -50,8 +50,8 @@
       <span>TECOM <span>ADVANCE</span> </span>
     </span>
 
-    <span class="d-block d-sm-none menu" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
+    <span class="d-block d-sm-none menu" data-toggle="collapse" id="toggleIcon" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleIcon()">
+      <i class="fas fa-bars" id="menuIcon"></i>
     </span>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
@@ -59,10 +59,10 @@
           <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#/services">Services</a>
+          <a class="nav-link " href="#services">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#/contact">Contact</a>
+          <a class="nav-link " href="#contact">Contact</a>
         </li>
         <!-- <li class="navContact"><img id="phone" src="images/phone-contact.png" alt="phone"> +254 720 402 275 </li> -->
         <!-- <li class="nav-item dropdown">
@@ -78,7 +78,7 @@
       </ul>
     </div>
   </nav>
-  <img onclick="topFunction()" id="myBtn" title="Go to top" src="images/totop.png">
+  <img onclick="topFunction()" id="myBtn" title="Go to top" src="images/totop.svg">
 
 
   <main>
@@ -121,7 +121,7 @@
 
 
 
-  <div class="container-fluid" id="/services">
+  <div class="container-fluid" id="services">
     <div class="container" id="offers">
 
 
@@ -308,7 +308,7 @@
 
   </div>
 
-  <div id="/contact">
+  <div id="contact">
     <div class="footer" id="contact">
       <div class="container">
         <div class="row">

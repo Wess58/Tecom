@@ -1,11 +1,11 @@
-$(window).scroll(function(){
-     var scroll = $(window).scrollTop();
-     if(scroll >= 0 && scroll <= 400){
-         $('.navbar-brand').css('visibility', 'hidden')
-     } else{
-         $('.navbar-brand').css('visibility', 'visible');
-     }
- });
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+  if (scroll >= 0 && scroll <= 400) {
+    $('.navbar-brand').css('visibility', 'hidden')
+  } else {
+    $('.navbar-brand').css('visibility', 'visible');
+  }
+});
 
 
 //NAVBAR SCROLL EFFECT
@@ -45,7 +45,7 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
     document.getElementById("myBtn").style.display = "block";
   } else {
     document.getElementById("myBtn").style.display = "none";
@@ -85,3 +85,13 @@ $(document).ready(function() {
     }]
   });
 });
+
+
+this.clicked = false;
+
+function toggleIcon() {
+  console.log(this.clicked);
+  if (!this.clicked) {
+    $("#menuIcon").toggleClass("fa-times");
+  }
+}
