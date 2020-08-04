@@ -1,14 +1,11 @@
-// $(window).scroll(function(){
-//      var scroll = $(window).scrollTop();
-//      if(scroll < 400){
-//          $('.fixed-top').css('background', 'transparent');
-//          $('.nav-link').css('color', '#fff')
-//
-//      } else{
-//          $('.fixed-top').css('background', '#fff');
-//
-//      }
-//  });
+$(window).scroll(function(){
+     var scroll = $(window).scrollTop();
+     if(scroll >= 0 && scroll <= 400){
+         $('.navbar-brand').css('visibility', 'hidden')
+     } else{
+         $('.navbar-brand').css('visibility', 'visible');
+     }
+ });
 
 
 //NAVBAR SCROLL EFFECT

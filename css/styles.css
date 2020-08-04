@@ -22,6 +22,7 @@ nav {
 nav .navbar-brand {
   color: #06d5da!important;
   font-weight: 600;
+  visibility: hidden;
 }
 
 nav .navbar-brand span span {
