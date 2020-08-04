@@ -12,35 +12,35 @@
 
 
 //NAVBAR SCROLL EFFECT
-$(function() {
-  var header = $(".navbar");
-  var navAText = $(".nav-link");
-  // var navbar_brand = $(".navbar-brand")
-
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    if (scroll >= 100) {
-      header.addClass("scrolled");
-      navAText.addClass("navA");
-
-      // navbar_brand.attr('style', 'color: #2AECF5 !important');
-      // navbar_brand.css('', '')
-
-    } else {
-      header.removeClass("scrolled");
-      navAText.removeClass("navA");
-
-    }
-  });
-
-});
+// $(function() {
+//   var header = $(".navbar");
+//   var navAText = $(".nav-link");
+//   // var navbar_brand = $(".navbar-brand")
+//
+//   $(window).scroll(function() {
+//     var scroll = $(window).scrollTop();
+//     if (scroll >= 100) {
+//       header.addClass("scrolled");
+//       navAText.addClass("navA");
+//
+//       // navbar_brand.attr('style', 'color: #06d5da !important');
+//       // navbar_brand.css('', '')
+//
+//     } else {
+//       header.removeClass("scrolled");
+//       navAText.removeClass("navA");
+//
+//     }
+//   });
+//
+// });
 
 //ONSCROLL OPACITY
-$(document).ready(function() {
-  $(window).scroll(function() {
-    $('.Welcome').css("opacity", 1 - $(window).scrollTop() / 620)
-  });
-});
+// $(document).ready(function() {
+//   $(window).scroll(function() {
+//     $('.Welcome').css("opacity", 1 - $(window).scrollTop() / 620)
+//   });
+// });
 
 // ON SCROLL SHOW TO TOP BUTTON START -->
 window.onscroll = function() {

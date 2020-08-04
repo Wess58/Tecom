@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth!important;
 }
 
 body {
@@ -13,18 +13,19 @@ body {
 /* *************************************************************** */
 /* NAVBAR  */
 nav {
+  background-color: #fff;
   padding-left: 100px !important;
   padding-right: 100px !important;
-  transition: all .2s ease;
+  box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.09);
 }
 
 nav .navbar-brand {
-  color: #80868b;
+  color: #06d5da!important;
   font-weight: 600;
 }
 
 nav .navbar-brand span span {
-  color: #2AECF5;
+  color: #fcd4b3;
   font-size: 14px;
 }
 
@@ -33,11 +34,45 @@ nav a {
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
+  position: relative;
   margin: 0px 10px;
   padding: 10px 10px;
-  position: relative;
   z-index: 0;
   cursor: pointer;
+  transition: all .2s ease;
+
+}
+
+/* stroke */
+
+nav a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav a:hover:after {
+  width: 100%;
+}
+
+nav a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
 }
 
 .scrolled {
@@ -72,20 +107,21 @@ nav a {
 .Welcome .text {
   position: relative;
   top: 70px;
+  padding-left: 10vw;
 }
 
 .Welcome h1 {
-  color: #3c4043;
+  color: #06d5da!important;
   font-weight: 600;
-  font-size: 140px;
+  font-size: 7rem;
 }
 
 .Welcome h3 {
-  color: #2AECF5;
-  font-size: 46px;
+  color: #fcd4b3!important;
+  font-size: 2.4rem;
   font-weight: 600;
   position: relative;
-  top: -30px;
+  top: -20px;
 }
 
 .Welcome .roundedSquare1 {
@@ -123,14 +159,15 @@ nav a {
 }
 
 .Welcome a {
-  color: #3c4043;
+  color: #fff;
   font-size: 12px;
   font-weight: 600;
-  border: 3px solid #3c4043;
+  /* border: 3px solid #3c4043; */
   border-radius: 8px;
-  background-color: transparent;
-  box-shadow: 0 40px 30px 2px rgba(0, 0, 0, 0.2);
+  background-color: #06d5da;
+  box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.09);
 }
+
 
 /* *************************************************************** */
 /* OFFER IMAGES */
@@ -189,7 +226,7 @@ nav a {
   border-radius: 25px;
   box-shadow: 0 0 23px 0 rgba(0, 0, 0, 0.09);
   border: none;
-  /* border: 1px solid #2AECF5; */
+  /* border: 1px solid #06d5da; */
   background-color: #fff;
   transition: all .4s;
 }
@@ -200,13 +237,13 @@ nav a {
 }
 
 #offers a {
-  color: #000;
-  font-size: 14px;
+  color: #fff;
+  font-size: 12px;
   font-weight: 600;
-  /* border: 3px solid #2AECF5; */
-  background-color: #2AECF5;
+  /* border: 3px solid #3c4043; */
   border-radius: 8px;
-  box-shadow: 0 40px 30px 2px rgba(0, 0, 0, 0.2);
+  background-color: #06d5da;
+  box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.09);
 }
 
 /* *************************************************************** */
@@ -305,19 +342,6 @@ nav a {
   .Welcome .text {
     padding-top: 5vh;
   }
-
-  .Welcome h1 {
-    color: #3c4043;
-    font-weight: 600;
-    font-size: 150px;
-  }
-
-  .Welcome h3 {
-    color: #2AECF5;
-    font-size: 50px;
-    font-weight: 600;
-  }
-
   .Welcome .roundedSquare1 {
     position: absolute;
     top: -120px;
@@ -357,18 +381,6 @@ nav a {
     max-width: 1300px !important;
   }
 
-  .Welcome h1 {
-    color: #3c4043;
-    font-weight: 600;
-    font-size: 130px;
-  }
-
-  .Welcome h3 {
-    color: #2AECF5;
-    font-size: 40px;
-    font-weight: 600;
-  }
-
   .Welcome .roundedSquare1 {
     position: absolute;
     top: -120px;
@@ -406,13 +418,11 @@ nav a {
   }
 
   .Welcome h1 {
-    color: #3c4043;
     font-weight: 600;
     font-size: 120px;
   }
 
   .Welcome h3 {
-    color: #2AECF5;
     font-size: 36px;
     font-weight: 600;
   }
@@ -507,24 +517,26 @@ nav a {
   }
 
   .Welcome h1 {
-    color: #3c4043;
     font-weight: 600;
     font-size: 70px;
-    position: relative;
-    top: -20px;
   }
 
   .Welcome h3 {
-    color: #2AECF5;
     font-size: 30px;
     font-weight: 600;
+    margin-top: 10px;
   }
 
   .Welcome p {
-    font-size: 18px;
+    font-size: 20px;
   }
 
-  .Welcome a {
+  .Welcome p br{
+    display: none;
+  }
+
+
+  /* .Welcome a {
     color: #3c4043;
     font-size: 12px;
     font-weight: 600;
@@ -532,7 +544,7 @@ nav a {
     border-radius: 8px;
     background-color: transparent;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
+  } */
 
   #offers {
     margin-bottom: 10%;
