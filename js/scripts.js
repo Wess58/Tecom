@@ -20,7 +20,7 @@ $(window).scroll(function() {
 //       header.addClass("scrolled");
 //       navAText.addClass("navA");
 //
-//       // navbar_brand.attr('style', 'color: #06d5da !important');
+//       // navbar_brand.attr('style', 'color: #13d0d5 !important');
 //       // navbar_brand.css('', '')
 //
 //     } else {

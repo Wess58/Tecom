@@ -20,13 +20,13 @@ nav {
 }
 
 nav .navbar-brand {
-  color: #06d5da !important;
-  font-weight: 600;
+  color: #13d0d5 !important;
   visibility: hidden;
+  font-family: 'Allerta Stencil', sans-serif!important;
 }
 
 nav .navbar-brand span span {
-  color: #fcd4b3;
+  color: #ffd6b3;
   font-size: 14px;
 }
 
@@ -112,17 +112,18 @@ nav a:hover:after {
 }
 
 .Welcome h1 {
-  color: #06d5da !important;
-  font-weight: 600;
+  color: #13d0d5 !important;
   font-size: 7rem;
+  font-family: 'Allerta Stencil', sans-serif!important;
 }
 
 .Welcome h3 {
-  color: #fcd4b3 !important;
-  font-size: 2.4rem;
-  font-weight: 600;
+  color: #ffd6b3 !important;
+  font-size: 4.2rem;
   position: relative;
   top: -20px;
+  left: 40px;
+  font-family: 'Allerta Stencil', sans-serif!important;
 }
 
 .Welcome .roundedSquare1 {
@@ -155,17 +156,18 @@ nav a:hover:after {
 }
 
 .Welcome p {
-  color: #80868b;
+  color: #fff;
   font-size: 20px;
 }
 
 .Welcome a {
   color: #fff;
   font-size: 12px;
+  letter-spacing: 1px;
   font-weight: 600;
   /* border: 3px solid #3c4043; */
   border-radius: 8px;
-  background-color: #06d5da;
+  background-color: #13d0d5;
   box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.09);
 }
 
@@ -226,7 +228,7 @@ nav a:hover:after {
   border-radius: 25px;
   box-shadow: 0 0 23px 0 rgba(0, 0, 0, 0.09);
   border: none;
-  /* border: 1px solid #06d5da; */
+  /* border: 1px solid #13d0d5; */
   background-color: #fff;
   transition: all .4s;
 }
@@ -239,10 +241,11 @@ nav a:hover:after {
 #offers a {
   color: #fff;
   font-size: 12px;
+  letter-spacing: 1px;
   font-weight: 600;
   /* border: 3px solid #3c4043; */
   border-radius: 8px;
-  background-color: #06d5da;
+  background-color: #13d0d5;
   box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.09);
 }
 
@@ -419,13 +422,11 @@ nav a:hover:after {
   }
 
   .Welcome h1 {
-    font-weight: 600;
     font-size: 120px;
   }
 
   .Welcome h3 {
     font-size: 36px;
-    font-weight: 600;
   }
 
   .Welcome .roundedSquare1 {
@@ -477,7 +478,7 @@ nav a:hover:after {
     text-align: right;
     font-size: 20px;
     padding: 10px 0px !important;
-    margin:0px!important;
+    margin: 0px !important;
   }
 
   nav .menu {
@@ -496,7 +497,7 @@ nav a:hover:after {
     overflow-y: hidden;
   }
 
-  .Welcome .roundedSquare2 {
+  .Welcome .roundedSquare1 {
     position: absolute;
     top: 50px;
     left: -100px;
@@ -506,7 +507,7 @@ nav a:hover:after {
     transform: rotate(30deg);
   }
 
-  .Welcome .roundedSquare1,
+  .Welcome .roundedSquare2,
   .footer #find_us {
     display: none;
   }
@@ -518,19 +519,16 @@ nav a:hover:after {
 
   .Welcome .hologram {
     width: 300px !important;
-    margin-bottom: 0px!important;
+    margin-bottom: 0px !important;
   }
 
-
   .Welcome h1 {
-    font-weight: 600;
-    font-size: 70px;
+    font-size: 4.5rem;
   }
 
   .Welcome h3 {
-    font-size: 30px;
-    font-weight: 600;
-    margin-top: 10px;
+    font-size: 2.6rem;
+    left: 30px;
   }
 
   .Welcome p {
