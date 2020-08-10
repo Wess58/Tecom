@@ -1,12 +1,33 @@
 $(window).scroll(function() {
+  console.log(window.screen.width
+);
+  var topofDiv = $("#landingDiv").offset().top; //gets offset of header
+  var topDivHeight = $("#landingDiv").outerHeight();
+  var topTextualHeight = $(".roundedSquare1").outerHeight();
+  var navHeight = $(".navbar").outerHeight();
+  var finalHeight = topDivHeight - navHeight;
+  // console.log('finalHeight' , finalHeight);
   var scroll = $(window).scrollTop();
-  if (scroll >= 0 && scroll <= 400) {
-    $('.navbar-brand').css('visibility', 'hidden');
-    $(".navbar").removeClass("scrolled");
-  } else {
-    $('.navbar-brand').css('visibility', 'visible');
-    $(".navbar").addClass("scrolled");
+
+  if (window.screen.width > 768) {
+    if (scroll <= (topofDiv + finalHeight)) {
+      $('.navbar-brand').css('visibility', 'hidden');
+      $(".navbar").removeClass("scrolled");
+    } else {
+      $('.navbar-brand').css('visibility', 'visible');
+      $(".navbar").addClass("scrolled");
+    }
   }
+  else{
+    if (scroll <= (topofDiv + topTextualHeight)) {
+      $('.navbar-brand').css('visibility', 'hidden');
+      $(".navbar").removeClass("scrolled");
+    } else {
+      $('.navbar-brand').css('visibility', 'visible');
+      $(".navbar").addClass("scrolled");
+    }
+  }
+
 });
 
 
@@ -92,7 +113,7 @@ $(document).ready(function() {
 this.clicked = false;
 
 function toggleIcon() {
-  console.log(this.clicked);
+  // console.log(this.clicked);
   if (!this.clicked) {
     $("#menuIcon").toggleClass("fa-times");
   }
