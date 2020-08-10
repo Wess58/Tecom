@@ -1,9 +1,11 @@
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
   if (scroll >= 0 && scroll <= 400) {
-    $('.navbar-brand').css('visibility', 'hidden')
+    $('.navbar-brand').css('visibility', 'hidden');
+    $(".navbar").removeClass("scrolled");
   } else {
     $('.navbar-brand').css('visibility', 'visible');
+    $(".navbar").addClass("scrolled");
   }
 });
 
