@@ -86,12 +86,11 @@ nav a:hover:after {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
   transition: all .2s ease;
 } */
-
 .scrolled {
   background-image: -webkit-linear-gradient(30deg, #000 20.5%, #fff 20.6%);
   background-image: -o-linear-gradient(30deg, #000 20.5%, #fff 20.6%);
   background-image: linear-gradient(120deg, #000 20.5%, #fff 20.6%);
-  transition: all .2s ease!important;
+  transition: all .2s ease !important;
 }
 
 /* NAVBAR END */
@@ -113,7 +112,7 @@ nav a:hover:after {
 /* *************************************************************** */
 /* WELCOME MAIN SECTION */
 .Welcome {
-  min-height: 90vh;
+  /* min-height: 90vh; */
   overflow-y: hidden;
 }
 
@@ -121,6 +120,7 @@ nav a:hover:after {
   position: relative;
   top: 70px;
   padding-left: 10vw;
+  z-index: 20 !important;
 }
 
 .Welcome h1 {
@@ -150,6 +150,7 @@ nav a:hover:after {
   transform: rotate(30deg);
   border-radius: 170px;
   box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10 !important;
 }
 
 .Welcome .roundedSquare2 {
@@ -183,6 +184,17 @@ nav a:hover:after {
   border-radius: 8px;
   background-color: #13d0d5;
   box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.09);
+}
+
+.topSlider {
+  margin-top: -35px;
+}
+
+.topSlider img {
+  width: 300px !important;
+  height: 180px !important;
+  object-fit: cover !important;
+  border-left: 3.5px solid #000 !important;
 }
 
 /* *************************************************************** */
@@ -482,9 +494,9 @@ nav a:hover:after {
   .container {
     max-width: auto !important;
   }
-  body{
-    overflow-x: hidden!important;
 
+  body {
+    overflow-x: hidden !important;
   }
 
   nav {
@@ -508,15 +520,16 @@ nav a:hover:after {
   nav ul li:first-child a {
     border-top: 0.5px solid #0003;
   }
+
   .scrolled {
-      background-image: -webkit-linear-gradient(30deg, #000 40.3%, #fff 40.6%);
-      background-image: -o-linear-gradient(30deg, #000 40.3%, #fff 40.6%);
-      background-image: linear-gradient(120deg, #000 40.3%, #fff 40.6%);
-    }
+    background-image: -webkit-linear-gradient(30deg, #000 40.3%, #fff 40.6%);
+    background-image: -o-linear-gradient(30deg, #000 40.3%, #fff 40.6%);
+    background-image: linear-gradient(120deg, #000 40.3%, #fff 40.6%);
+  }
 
   .Welcome {
     min-height: 100vh;
-    overflow-x: hidden!important;
+    overflow-x: hidden !important;
     overflow-y: hidden;
   }
 
@@ -561,6 +574,17 @@ nav a:hover:after {
 
   .Welcome p br {
     display: none;
+  }
+
+
+.topSlider{
+  margin-top: -80px!important;
+  margin-bottom: 50px!important;
+}
+  .topSlider img {
+    width: 100%!important;
+    height: 60px !important;
+    margin: 0!important;
   }
 
   /* .Welcome a {

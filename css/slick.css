@@ -1,11 +1,8 @@
 /* Slider */
-.slick{
-  margin-bottom: 5%;
-}
+
 .slick img{
   width: 90px;
   height: 90px;
-  filter: grayscale(100%);
 }
 
 

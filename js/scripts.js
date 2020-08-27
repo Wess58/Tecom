@@ -1,6 +1,5 @@
 $(window).scroll(function() {
-  console.log(window.screen.width
-);
+  // console.log(window.screen.width);
   var topofDiv = $("#landingDiv").offset().top; //gets offset of header
   var topDivHeight = $("#landingDiv").outerHeight();
   var topTextualHeight = $(".roundedSquare1").outerHeight();
@@ -82,6 +81,33 @@ function topFunction() {
 }
 
 // ON SCROLL SHOW TO TOP BUTTON END <---
+
+
+
+$(document).ready(function() {
+  $('.topSlider').slick({
+    infinite: true,
+    arrows: false,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [{
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        autoplaySpeed: 2500,
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    }]
+  });
+});
 
 //INITIALIZE SLICK SLIDER
 $(document).ready(function() {
