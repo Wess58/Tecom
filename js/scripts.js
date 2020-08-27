@@ -102,7 +102,7 @@ $(document).ready(function() {
       breakpoint: 480,
       settings: {
         autoplaySpeed: 2500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1
       }
     }]

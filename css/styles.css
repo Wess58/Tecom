@@ -576,15 +576,17 @@ nav a:hover:after {
     display: none;
   }
 
+  .topSlider {
+    margin-top: -80px !important;
+    margin-bottom: 50px !important;
+  }
 
-.topSlider{
-  margin-top: -80px!important;
-  margin-bottom: 50px!important;
-}
   .topSlider img {
-    width: 100%!important;
-    height: 60px !important;
-    margin: 0!important;
+    width: 100% !important;
+    height: 80px !important;
+    margin: 0 !important;
+    border-left: 2.5px solid #000 !important;
+
   }
 
   /* .Welcome a {
