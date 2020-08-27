@@ -114,6 +114,7 @@ nav a:hover:after {
 .Welcome {
   /* min-height: 90vh; */
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .Welcome .text {
@@ -363,6 +364,48 @@ nav a:hover:after {
 } */
 /* KEYFRAME ANIMATIONS */
 /* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 3000px) {
+  .container {
+    max-width: 70vw !important;
+  }
+
+  .Welcome .text {
+    padding-top: 5vh;
+  }
+
+  .Welcome .roundedSquare1 {
+    position: absolute;
+    top: -100px;
+    left: -300px;
+    width: 1050px;
+    height: 1050px;
+    z-index: -100;
+    transform: rotate(30deg);
+  }
+
+  .Welcome .roundedSquare2 {
+    position: absolute;
+    top: -150px;
+    left: -200px;
+    width: 1150px;
+    height: 1150px;
+    z-index: -110;
+    transform: rotate(30deg);
+  }
+
+  .Welcome .hologram {
+    width: 600px;
+    height: 600px;
+  }
+
+  .card {
+    width: 100%;
+    height: 310px;
+    margin-bottom: 20px !important;
+    margin: auto;
+    padding: 30px 20px 10px 20px;
+  }
+}
 @media (max-width: 2000px) {
   .container {
     max-width: 1500px !important;
@@ -476,7 +519,7 @@ nav a:hover:after {
   }
 
   .Welcome .hologram {
-    width: 350px;
+    width: 300px;
     height: 350px;
   }
 
