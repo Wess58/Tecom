@@ -2,4 +2,367 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import './assets/css/font-montserrat.css';
 @import './assets/css/font-allerta-stencil.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css';
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+html,body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  color: #80868b;
+  scroll-behavior: smooth !important;
+}
+
+.to-top {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+
+* a,
+* button,
+* input,
+* select,
+* textarea {
+  outline: none!important;
+  box-shadow: none!important;
+}
+
+* img {
+  user-drag: none!important;
+  user-select: none!important;
+  -moz-user-select: none!important;
+  -webkit-user-drag: none!important;
+  -webkit-user-select: none!important;
+  -ms-user-select: none!important;
+}
+
+input,
+select,
+textarea {
+  border: 2px solid #e1e1e1 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-clip: padding-box !important;
+  color: #5f6063 !important;
+  padding: 10px 12px!important;
+}
+
+input:active,
+input:focus,
+input:hover,
+select:active,
+select:focus,
+select:hover,
+textarea:active,
+textarea:focus,
+textarea:hover {
+  border: 2px solid #3c4043 !important;
+}
+
+* label {
+  color: #5f6063;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.redText {
+  color: #d11a2a !important;
+}
+
+
+.modal{
+  .modal-title{
+    font-weight: 600;
+    color: #3c4043;
+  }
+}
+
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 3000px) {
+  .container {
+    max-width: 70vw !important;
+  }
+
+  .landing-section {
+    .content {
+      padding-top: 5vh;
+    }
+
+    .roundedSquare1 {
+      position: absolute;
+      top: -100px;
+      left: -300px;
+      width: 1050px;
+      height: 1050px;
+      z-index: -100;
+      transform: rotate(30deg);
+    }
+
+    .roundedSquare2 {
+      position: absolute;
+      top: -150px;
+      left: -200px;
+      width: 1150px;
+      height: 1150px;
+      z-index: -110;
+      transform: rotate(30deg);
+    }
+
+    .hologram {
+      width: 600px;
+      height: 600px;
+    }
+  }
+
+  .card {
+    width: 100%;
+    height: 310px;
+    margin: auto;
+    padding: 30px 20px 10px;
+  }
+}
+@media (max-width: 2000px) {
+  .container {
+    max-width: 1500px !important;
+  }
+
+  .landing-section {
+    .content {
+      padding-top: 5vh;
+    }
+
+    .roundedSquare1 {
+      position: absolute;
+      top: -120px;
+      left: -340px;
+      width: 1050px;
+      height: 1050px;
+      z-index: -100;
+      transform: rotate(30deg);
+    }
+
+    .roundedSquare2 {
+      position: absolute;
+      top: -170px;
+      left: -300px;
+      width: 1150px;
+      height: 1150px;
+      z-index: -110;
+      transform: rotate(30deg);
+    }
+
+    .hologram {
+      width: 600px;
+      height: 600px;
+    }
+
+    .card {
+      width: 100%;
+      height: 310px;
+      margin: auto;
+      padding: 30px 20px 10px;
+    }
+  }
+}
+@media (max-width: 1700px) {
+  .container {
+    max-width: 1300px !important;
+  }
+
+  .landing-section {
+    .roundedSquare1 {
+      position: absolute;
+      top: -120px;
+      left: -340px;
+      width: 900px;
+      height: 900px;
+      z-index: -100;
+      transform: rotate(30deg);
+    }
+
+    .roundedSquare2 {
+      position: absolute;
+      top: -170px;
+      left: -300px;
+      width: 1000px;
+      height: 1000px;
+      z-index: -110;
+      transform: rotate(30deg);
+    }
+
+    .hologram {
+      width: 450px;
+      height: 450px;
+    }
+  }
+}
+@media (max-width: 1350px) {
+  .container {
+    max-width: 1000px !important;
+  }
+
+  .landing-section {
+    .content {
+      position: relative;
+      top: 70px;
+    }
+
+    h1 {
+      font-size: 120px;
+    }
+
+    h3 {
+      font-size: 36px;
+    }
+
+    .roundedSquare1 {
+      position: absolute;
+      top: -120px;
+      left: -380px;
+      width: 900px;
+      height: 900px;
+      z-index: -100;
+      transform: rotate(30deg);
+    }
+
+    .roundedSquare2 {
+      position: absolute;
+      top: -170px;
+      left: -380px;
+      width: 1000px;
+      height: 1000px;
+      z-index: -110;
+      transform: rotate(30deg);
+    }
+
+    .hologram {
+      width: 300px;
+      height: 350px;
+    }
+
+    .card {
+      width: 100%;
+      height: 350px;
+    }
+  }
+
+  .brands {
+    #done_svg {
+      width: 500px;
+    }
+  }
+}
+@media only screen and (max-width: 760px) {
+  .container {
+    max-width: auto !important;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .landing-section {
+    min-height: 100vh;
+    overflow-x: hidden !important;
+    overflow-y: hidden!important;
+
+    h1 {
+      font-size: 4.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      letter-spacing: 15px;
+      left: 30px;
+    }
+
+    p {
+      font-size: 20px;
+
+      br {
+        display: none;
+      }
+    }
+
+    .roundedSquare1 {
+      position: absolute;
+      top: 50px;
+      left: -100px;
+      width: 500px;
+      height: 500px;
+      z-index: -110;
+      transform: rotate(30deg);
+    }
+
+    .roundedSquare2 {
+      display: none;
+    }
+
+    .hologram {
+      width: 300px !important;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .brands {
+    #done_svg {
+      width: 280px !important;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 30px;
+      position: relative;
+      top: 0;
+      margin-bottom: 20%;
+    }
+  }
+
+  .topSlider {
+    margin-top: -80px !important;
+    margin-bottom: 50px !important;
+
+    img {
+      width: 100% !important;
+      height: 80px !important;
+      margin: 0 !important;
+      border-left: 2.5px solid #000 !important;
+    }
+  }
+
+  #offers {
+    margin-bottom: 10%;
+    padding: 0 20px 10vh;
+
+    .card {
+      height: 300px;
+      margin-bottom: 50px !important;
+    }
+  }
+
+  .brands {
+    #find_us {
+      display: none;
+    }
+  }
+
+  .footer {
+    .directContact {
+      text-align: center;
+    }
+  }
+}

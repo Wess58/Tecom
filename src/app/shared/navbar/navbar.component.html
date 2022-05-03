@@ -1,5 +1,5 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar">
-  <span class="navbar-brand" href="#">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar" [ngClass]="{'scrolled':morphNavbar}">
+  <span class="navbar-brand" [routerLink]="'/'" *ngIf="morphNavbar">
     <!-- <img src="images/TA_blue.png" width="70px" height="70px" alt=""> -->
     <span>TECOM <br><span>ADVANCE</span> </span>
   </span>

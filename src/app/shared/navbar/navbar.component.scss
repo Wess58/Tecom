@@ -3,12 +3,11 @@ nav {
   background-color: #fff !important;
   padding: 0 100px !important;
   box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.09);
+  height: 60px;
+  transition: all 0.2s;
 
   .navbar-brand {
-    /* width: 100px; */
-    /* padding-left: 15px; */
     color: #13d0d5 !important;
-    visibility: hidden;
     font-family: 'Allerta Stencil', sans-serif !important;
     line-height: 18px;
 
@@ -60,9 +59,40 @@ nav {
     }
   }
 }
+
 .scrolled {
   background-image: -webkit-linear-gradient(30deg, #000 20.5%, #fff 20.6%);
   background-image: -o-linear-gradient(30deg, #000 20.5%, #fff 20.6%);
   background-image: linear-gradient(120deg, #000 20.5%, #fff 20.6%);
   transition: all 0.2s ease !important;
+}
+@media only screen and (max-width: 760px) {
+  nav {
+    padding: 8px 25px !important;
+    transition: all 0.2s;
+
+    a {
+      text-align: right;
+      font-size: 20px;
+      padding: 10px 0 !important;
+      margin: 0 !important;
+    }
+
+    .menu {
+      font-size: 28px;
+      margin-top: 5px;
+      color: #5f6368 !important;
+    }
+
+    ul li:first-child a {
+      border-top: 0.5px solid #0003;
+    }
+  }
+
+  .scrolled {
+    background-image: -webkit-linear-gradient(30deg, #000 40.3%, #fff 40.6%);
+    background-image: -o-linear-gradient(30deg, #000 40.3%, #fff 40.6%);
+    background-image: linear-gradient(120deg, #000 40.3%, #fff 40.6%);
+    transition: all 0.2s;
+  }
 }
