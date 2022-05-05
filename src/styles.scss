@@ -4,7 +4,8 @@
 @import './assets/css/font-allerta-stencil.css';
 @import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
-html,body {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
@@ -29,7 +30,6 @@ html,body {
 .container-fluid {
   padding: 0;
 }
-
 
 * a,
 * button,
@@ -57,7 +57,7 @@ textarea {
   box-shadow: none !important;
   background-clip: padding-box !important;
   color: #5f6063 !important;
-  padding: 10px 12px!important;
+  padding: 10px 12px!important !important;
 }
 
 input:active,
@@ -76,21 +76,78 @@ textarea:hover {
   color: #5f6063;
   font-weight: 600;
   font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #80868b99 !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #80868b99 !important;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #80868b99 !important;
 }
 
 .redText {
   color: #d11a2a !important;
 }
 
+.red-border-input {
+  border: 2px solid #d11a2a !important;
 
-.modal{
-  .modal-title{
+  &:active,
+  &:focus,
+  &:hover {
+    border: 2px solid #d11a2a!important;
+  }
+}
+/* *************************************************************** */
+// MODAL SECTION
+
+.modal {
+  backdrop-filter: blur(2px);
+  background-color: #0001;
+  padding: 0!important !important;
+
+  .modal-title {
     font-weight: 600;
     color: #3c4043;
   }
+
+  .modal-content {
+    border-radius: 12px;
+  }
+
+  .modal-footer {
+    border: none;
+
+    .btn {
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 4px;
+      color: #3c4043;
+      padding: 6px 20px;
+      letter-spacing: 1px;
+    }
+
+    .btn-close {
+      background-color: #e1e1e1;
+    }
+
+    .btn-submit {
+      background-color: #13d0d5;
+    }
+  }
 }
-
-
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 3000px) {
   .container {

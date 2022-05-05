@@ -2,6 +2,7 @@
 .landing-section {
   height: 80vh;
   overflow: hidden;
+  position: relative;
 
   .content {
     position: relative;
@@ -49,8 +50,11 @@
   }
 
   .hologram {
-    width: 700px !important;
+    width: 800px !important;
     margin-top: 10vh;
+    filter: drop-shadow(0 3px 40px #f1f1f1);
+    // position: absolute;
+    // bottom: 0;
   }
 
   p {
@@ -69,11 +73,12 @@
   .btn-contact {
     background-color: #13d0d5;
     margin-right: 20px;
+    color: #3c4043;
   }
 
   .btn-main-in {
     background-color: #ffd6b3;
-    color: #000;
+    color: #3c4043;
   }
 }
 
@@ -176,6 +181,8 @@
 .brands {
   #done_svg {
     width: 650px;
+    filter: drop-shadow(0 3px 40px #f1f1f1);
+
     /* margin-left: 200px; */
   }
 
@@ -218,6 +225,7 @@
 
   #find_us {
     width: 550px;
+
   }
 
   .directContact {
@@ -261,6 +269,9 @@
     }
   }
 }
+
+
+
 // Infinite scroll logo carousel
 $animationSpeed: 40s; // Animation
 @keyframes scroll {

@@ -1,9 +1,19 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { style, animate, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [
+        // :enter is alias to 'void => *'
+        style({ opacity: 0 }),
+        animate(400, style({ opacity: 1 })),
+      ]),
+    ]),
+  ],
 })
 export class NavbarComponent implements OnInit {
 

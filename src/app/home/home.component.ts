@@ -1,9 +1,20 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { style, animate, transition, trigger } from '@angular/animations';
+import content from "../jsons/content.json";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [
+        // :enter is alias to 'void => *'
+        style({ opacity: 0 }),
+        animate(500, style({ opacity: 1 })),
+      ]),
+    ]),
+  ],
 })
 export class HomeComponent implements OnInit {
 
@@ -29,114 +40,10 @@ export class HomeComponent implements OnInit {
 
   showArrow = false;
 
-  workImages = [
-    {
-      name: 'work',
-      imgUrl: 'assets/images/work/IMG-7515.JPG'
-    },
-    {
-      name: 'work',
-      imgUrl: 'assets/images/work/IMG-7518.JPG'
-    }, {
-      name: 'work',
-      imgUrl: 'assets/images/work/IMG-7522.JPG'
-    }, {
-      name: 'work',
-      imgUrl: 'assets/images/work/Canon EOS 1200D061.JPG'
-    }, {
-      name: 'work',
-      imgUrl: 'assets/images/work/IMG-7524.JPG'
-    }, {
-      name: 'work',
-      imgUrl: 'assets/images/work/IMG-7515.JPG'
-    },
-    {
-      name: 'work',
-      imgUrl: 'assets/images/work/IMG-7538.JPG'
-    }, {
-      name: 'work',
-      imgUrl: 'assets/images/work/Canon EOS 1200D070.JPG'
-    },
-  ];
-  brandImages = [
-    {
-      name: 'apple',
-      imgUrl: 'assets/images/phonelogos/apple-logo.svg'
-    },
-    {
-      name: 'android',
-      imgUrl: 'assets/images/phonelogos/android.svg'
-    },
-    {
-      name: 'samsung',
-      imgUrl: 'assets/images/phonelogos/samsung.svg'
-    },
-    {
-      name: 'lg',
-      imgUrl: 'assets/images/phonelogos/lg.svg'
-    },
-    {
-      name: 'one-plus',
-      imgUrl: 'assets/images/phonelogos/one-plus.svg'
-    },
-    {
-      name: 'htc',
-      imgUrl: 'assets/images/phonelogos/htc.svg'
-    },
-    {
-      name: 'sony',
-      imgUrl: 'assets/images/phonelogos/sony.svg'
-    },
-    {
-      name: 'huawei',
-      imgUrl: 'assets/images/phonelogos/huawei.svg'
-    },
-    {
-      name: 'nokia',
-      imgUrl: 'assets/images/phonelogos/nokia.svg'
-    },
-    {
-      name: 'oppo',
-      imgUrl: 'assets/images/phonelogos/oppo.svg'
-    },
-    {
-      name: 'vivo',
-      imgUrl: 'assets/images/phonelogos/vivo.svg'
-    }, {
-      name: 'xiaomi',
-      imgUrl: 'assets/images/phonelogos/xiaomi.svg'
-    }, {
-      name: 'hp',
-      imgUrl: 'assets/images/phonelogos/hp.svg'
-    }, {
-      name: 'dell',
-      imgUrl: 'assets/images/phonelogos/dell.svg'
-    }, {
-      name: 'lenovo',
-      imgUrl: 'assets/images/phonelogos/lenovo.svg'
-    }, {
-      name: 'asus',
-      imgUrl: 'assets/images/phonelogos/asus.svg'
-    }, {
-      name: 'acer',
-      imgUrl: 'assets/images/phonelogos/acer.svg'
-    }, {
-      name: 'windows-os',
-      imgUrl: 'assets/images/phonelogos/windows-os.svg'
-    }
-  ]
+  workImages = content.workImages;
+  brandImages = content.brandImages;
+  offers = content.offers;
 
-  emailForm = {
-    firstName: '',
-    lastName: '',
-    businessName: '',
-    email: '',
-    phone: '',
-    county: '',
-    town: '',
-    estate: '',
-    referredBy: ''
-  }
 
   constructor() { }
 
@@ -152,5 +59,6 @@ export class HomeComponent implements OnInit {
     });
 
   }
+
 
 }

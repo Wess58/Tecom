@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  endpoint: "http://mwandishi.co.ke:8041/api/send-email"
+  API_ENDPOINT: "http://mwandishi.co.ke:8041/api/send-email"
 };
 
 /*

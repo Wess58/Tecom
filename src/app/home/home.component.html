@@ -1,6 +1,6 @@
 <img (click)="topFunction()" class="to-top" title="Go to top" src="assets/images/totop.svg" *ngIf="showArrow">
 
-<div class="container-fluid">
+<div class="container-fluid" [@fadeIn]>
 
   <main class="landing-section" id="landingDiv">
 
@@ -54,123 +54,26 @@
 
       <h3 class="description text-center mb-5"> Have a look at some of the <span>expertise services</span> we offer </h3>
       <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-3">
-          <div class="card">
+        <div class="col-xs-6 col-sm-6 col-md-3" *ngFor="let offer of offers;index as i">
+          <div class="card mb-4">
 
             <div align="center">
-              <img id="comps" src="assets/images/offered/computer.svg">
+              <img [src]="offer.imgUrl">
               <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
               <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
 
             </div>
-            <h6>Computer Repair & Upgrades</h6>
-            <p>Have a broken Desktop or Laptop or what you really need is an upgrade , we'll get you up and running in no time.</p>
+            <h6>{{offer.title}}</h6>
+            <p>{{offer.description}}</p>
 
           </div>
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-3">
-          <div class="card">
-
-            <div align="center">
-              <img id="smartphones" src="assets/images/offered/smartphone.svg">
-              <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
-              <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
-            </div>
-            <h6>Tablets and Smart Phones Flashing and Repair</h6>
-            <p>Why should you have to walk around with that cracked screen, we've got you covered with original screen-replacements. </p>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6 col-md-3">
-          <div class="card">
 
 
-            <div align="center">
-              <img id="software" src="assets/images/offered/computer-sw.svg">
-              <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
-              <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
 
-            </div>
-            <h6>Software Installation, Updating & Maintenance</h6>
-            <p>Need an updated version of Microsoft Office? No problem! How about an updated antivirus program? We can handle that!</p>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6 col-md-3">
-          <div class="card">
-
-            <div align="center">
-              <img src="assets/images/offered/data.svg">
-              <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
-              <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
-            </div>
-            <h6>Web & Software Development</h6>
-            <p>Are you full of creamy tech ideas but just don't know how to implement their complexities ? or just want an Online brochure for better Marketing, we've got you!</p>
-
-          </div>
-        </div>
 
       </div>
 
-      <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-3">
-          <div class="card">
-
-            <div align="center">
-              <img src="assets/images/offered/file.svg">
-              <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
-              <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
-
-            </div>
-            <h6>Data Recovery</h6>
-            <p>Do you wish to recover lost files, pictures, documents from accidental deletions, formatting errors, partition losses, OS crashes or virus attacks, not to worry!</p>
-
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6 col-md-3">
-          <div class="card">
-
-            <div align="center">
-              <img src="assets/images/offered/printer.svg">
-              <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
-              <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
-
-            </div>
-            <h6>Printers, Photocopier and Scanners Repair</h6>
-            <p>Is it Paper jams, Really bad looking prints or just old-age and/or outdated technology on your trustee printers, all common all fixable!</p>
-
-          </div>
-        </div>
-
-        <div class="col-xs-6 col-sm-6 col-md-3">
-          <div class="card">
-
-            <div align="center">
-              <img src="assets/images/offered/security-camera.svg">
-              <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
-              <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
-
-            </div>
-            <h6>Networking and Security CCTV</h6>
-            <p>You can’t be everywhere but CCTV can , CCTV helps reduce the likelihood of break-ins or fire hazards and creates discipline among employees and customers alike.</p>
-
-          </div>
-        </div>
-
-        <div class="col-xs-6 col-sm-6 col-md-3">
-          <div class="card">
-
-            <div align="center">
-              <img src="assets/images/offered/fingerprint.svg">
-              <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
-              <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
-
-            </div>
-            <h6>Biometric Installation</h6>
-            <p>Fingerprint recognition is ideal, highly accurate and curtains the need to reduce instances of fraud as well as to provide secured access to physical and logical assets</p>
-
-          </div>
-        </div>
-
-      </div>
 
       <div class="mb-5" align="center">
         <a href="#contact" class="btn btn-lg my-4"> TALK TO US <span class="ml-2">&#8702;</span></a>
@@ -236,9 +139,19 @@
             <div class="col-md-6 directContact mb-5">
 
               <h4 class="mb-3"> DIRECT CONTACT </h4>
+
+              <span class="d-block mb-2">
+                <span> <i class="fas fa-phone mr-2"></i> </span>
+                <a href="tel:+254 792 553 595">+254 792 553 595</a>
+              </span>
               <span class="d-block mb-2">
                 <span> <i class="fas fa-phone mr-2"></i> </span>
                 <a href="tel:+254 720 402 275">+254 720 402 275</a>
+              </span>
+
+              <span class="d-block mb-2">
+                <span> <i class="fas fa-envelope mr-2"></i> </span>
+                <a href="mailto:support@tecomadvance.com">support@tecomadvance.com</a>
               </span>
               <span class="d-block mb-2">
                 <span> <i class="fas fa-envelope mr-2"></i> </span>
@@ -255,6 +168,8 @@
 
               <div class="wrapper" style="display:flex;justify-content:center;align-items:center;">
 
+                <a href="https://wa.me/254792553595?text=Hello%20Tecom%20Advance%20..." rel="external nofollow noopener" target="_blank">
+                  <img src="assets/images/Whatsapp.png" title="Whatsapp"> </a>
                 <a href="https://www.facebook.com/TecomAdvance/" target="_blank"><img src="assets/images/Facebook.png" title="Facebook"></a>
                 <a href="https://www.instagram.com/tecom.advance/" target="_blank"><img src="assets/images/Instagram.png" title="Instagram"></a>
                 <a href="https://twitter.com/Tecom_Tech" target="_blank"><img src="assets/images/Twitter.png" title="Twitter"></a>
@@ -279,85 +194,6 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="mailInModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mailInModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="mailInModalLabel">Mail-in form</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form class="form">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="emailForm.firstName">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="emailForm.lastName">
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="businessName">Business name <small>( optional )</small></label>
-            <input type="text" class="form-control" id="businessName" name="businessName" [(ngModel)]="emailForm.businessName">
-          </div>
-
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" id="email" name="email" [(ngModel)]="emailForm.email">
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="emailForm.phone">
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="county">County</label>
-                <input type="text" class="form-control" id="county" name="county" [(ngModel)]="emailForm.county">
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="town">Town</label>
-                <input type="text" class="form-control" id="town" name="town" [(ngModel)]="emailForm.town">
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="estate">Estate</label>
-            <input type="text" class="form-control" id="estate" name="estate" [(ngModel)]="emailForm.estate">
-          </div>
-
-          <div class="form-group">
-            <label for="referredBy">Referred by</label>
-            <input type="text" class="form-control" id="referredBy" name="referredBy" [(ngModel)]="emailForm.referredBy">
-          </div>
-        </form>
-      </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Next</button>
-      </div>
-    </div>
-  </div>
+<div class="modal mail-in-modal fade p-0" id="mailInModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mailInModalLabel" aria-hidden="true">
+  <app-mail-in></app-mail-in>
 </div>
