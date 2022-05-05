@@ -1,0 +1,35 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar" [ngClass]="{'scrolled':morphNavbar}">
+  <span class="navbar-brand" [routerLink]="'/'" *ngIf="morphNavbar" [@fadeIn]>
+    <!-- <img src="images/TA_blue.png" width="70px" height="70px" alt=""> -->
+    <span>TECOM <br><span>ADVANCE</span> </span>
+  </span>
+
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleIcon()">
+    <i class="fas fa-bars" id="menuIcon" *ngIf="!changeIcon" [@fadeIn]></i>
+    <i class="fas fa-times" id="menuIcon" *ngIf="changeIcon" [@fadeIn]></i>
+  </button> -->
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " data-toggle="modal" data-target="#mailInModal">Mail-in</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!-- Modal -->
+<div class="modal mail-in-modal fade p-0" id="mailInModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mailInModalLabel" aria-hidden="true">
+  <app-mail-in></app-mail-in>
+</div>
