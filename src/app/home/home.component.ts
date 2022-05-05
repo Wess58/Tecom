@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     // console.log($event);
     // console.log("scrolling", window.pageYOffset);
     if (window.innerWidth > 770) {
-      if ((window.pageYOffset / window.innerHeight * 100) > 90) {
+      if (window.pageYOffset > 560) {
         this.showArrow = true;
       } else {
         this.showArrow = false;

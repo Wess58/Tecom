@@ -70,6 +70,7 @@ nav {
   nav {
     padding: 8px 25px !important;
     transition: all 0.2s;
+    display: none;
 
     a {
       text-align: right;
@@ -82,6 +83,8 @@ nav {
       font-size: 28px;
       margin-top: 5px;
       color: #5f6368 !important;
+      position: absolute;
+      right: 20px;
     }
 
     ul li:first-child a {
@@ -94,5 +97,6 @@ nav {
     background-image: -o-linear-gradient(30deg, #000 40.3%, #fff 40.6%);
     background-image: linear-gradient(120deg, #000 40.3%, #fff 40.6%);
     transition: all 0.2s;
+    display: block!important;
   }
 }

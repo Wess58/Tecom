@@ -1,28 +1,30 @@
 /* WELCOME MAIN SECTION */
 .landing-section {
-  height: 80vh;
+  height: 600px;
   overflow: hidden;
   position: relative;
 
   .content {
     position: relative;
-    top: 100px;
-    padding-left: 10vw;
     z-index: 200!important;
+    padding-top: 120px;
+
+    .logo-remake {
+      font-family: 'Allerta Stencil', sans-serif !important;
+    }
 
     h1 {
       color: #13d0d5;
-      font-size: 7rem;
-      font-family: 'Allerta Stencil', sans-serif !important;
+      font-size: 6rem;
+      margin: 0;
     }
 
     h3 {
       color: #ffd6b3;
-      font-size: 2.2rem;
+      font-size: 1.5rem;
       letter-spacing: 25px;
       position: relative;
       left: 45px;
-      font-family: 'Allerta Stencil', sans-serif !important;
       margin-bottom: 20px;
     }
   }
@@ -31,8 +33,7 @@
     position: absolute;
     top: -120px;
     left: -300px;
-    width: 900px;
-    height: 900px;
+    width: 57rem;
     transform: rotate(30deg);
     filter: drop-shadow(0 3px 40px #0009);
     z-index: 100 !important;
@@ -42,24 +43,27 @@
     position: absolute;
     top: -170px;
     left: -250px;
-    width: 1000px;
-    height: 1000px;
+    width: 63rem;
     z-index: 1;
     transform: rotate(30deg);
-    // filter: drop-shadow(0 3px 40px #0001);
+  }
+
+  .black-wave {
+    display: none;
   }
 
   .hologram {
-    width: 800px !important;
-    margin-top: 10vh;
+    width: 100%;
+    margin-top: 15vh;
     filter: drop-shadow(0 3px 40px #f1f1f1);
-    // position: absolute;
-    // bottom: 0;
+    position: absolute;
+    left: 0;
+    bottom: -80px;
   }
 
   p {
     color: #fff;
-    font-size: 20px;
+    font-size: 1.2rem;
   }
 
   .btn {
@@ -72,7 +76,7 @@
 
   .btn-contact {
     background-color: #13d0d5;
-    margin-right: 20px;
+    margin-right: 40px;
     color: #3c4043;
   }
 
@@ -101,7 +105,8 @@
 /* *************************************************************** */
 /* OFFER IMAGES */
 #offers {
-  padding: 10vh 0;
+  padding: 9vh 0;
+  border-bottom: 1px solid #e1e1e1;
 
   .description {
     font-size: 30px;
@@ -111,31 +116,15 @@
     }
   }
 
-  .row {
-    margin-bottom: 3%;
-  }
-
-  h6 {
-    /* font-family: 'Prompt', sans-serif; */
-    /* text-decoration: underline; */
-    color: #80868b;
-    letter-spacing: 1px;
-    font-weight: 600;
-  }
 
   .card {
-    width: 100%;
-    height: 310px;
+    height: 280px;
     text-align: center;
-    margin: auto;
-    padding: 30px 10px 10px;
-    box-sizing: border-box;
-    border-radius: 25px;
-    box-shadow: 0 0 23px 0 rgba(0, 0, 0, 0.09);
-    border: none;
-    /* border: 1px solid #13d0d5; */
-    background-color: #fff;
-    transition: all 0.4s;
+    margin-bottom: 40px;
+    padding: 30px 20px 10px;
+    border-radius: 12px;
+    // box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.09);
+    border: 1px solid #e1e1e1;
 
     img {
       width: 70px;
@@ -157,21 +146,28 @@
       width: 10px;
     }
 
+    h6 {
+      color: #5f6063;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+
     p {
       font-size: 14px;
       color: #80868b;
+      letter-spacing: 1px;
     }
   }
 
-  a {
-    color: #fff;
-    font-size: 12px;
+  .btn-contact {
+    background-color: #13d0d5;
+    padding: 12px 30px;
+    color: #3c4043;
+    font-size: 0.9rem;
     letter-spacing: 1px;
     font-weight: 600;
-    /* border: 3px solid #3c4043; */
     border-radius: 8px;
-    background-color: #13d0d5;
-    box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.09);
   }
 }
 /* *************************************************************** */
@@ -179,10 +175,11 @@
 //
 
 .brands {
+  padding-top: 8vh;
+
   #done_svg {
     width: 650px;
     filter: drop-shadow(0 3px 40px #f1f1f1);
-
     /* margin-left: 200px; */
   }
 
@@ -220,12 +217,11 @@
 #contact {
   padding-top: 10vh;
   padding-bottom: 2vh;
-  background-color: #F8FAFB;
+  background-color: #f5f5f5;
   text-align: center;
 
   #find_us {
     width: 550px;
-
   }
 
   .directContact {
@@ -269,9 +265,6 @@
     }
   }
 }
-
-
-
 // Infinite scroll logo carousel
 $animationSpeed: 40s; // Animation
 @keyframes scroll {
@@ -298,4 +291,143 @@ $animationSpeed: 40s; // Animation
       // overflow-x: scroll;
     }
   }
+}
+@media (max-width: 3000px) {}
+@media (max-width: 2000px) {}
+@media (max-width: 1700px) {
+  .roundedSquare1 {
+    position: absolute;
+    left: -400px!important;
+  }
+
+  .roundedSquare2 {
+    position: absolute;
+    left: -380px!important;
+  }
+}
+@media (max-width: 1500px) {
+  .roundedSquare1 {
+    position: absolute;
+    left: -450px!important;
+  }
+
+  .roundedSquare2 {
+    position: absolute;
+    left: -440px!important;
+  }
+}
+@media (max-width: 1390px) {
+  .roundedSquare1 {
+    position: absolute;
+    left: -450px!important;
+  }
+
+  .roundedSquare2 {
+    position: absolute;
+    left: -440px!important;
+  }
+}
+@media (max-width: 1290px) {
+  .roundedSquare1 {
+    position: absolute;
+    left: -500px!important;
+  }
+
+  .roundedSquare2 {
+    position: absolute;
+    left: -490px!important;
+  }
+}
+@media (max-width: 770px) {
+  .landing-section {
+    background-color: #212121;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    text-align: center;
+
+    h1 {
+      font-size: 6rem!important;
+    }
+
+    h3 {
+      font-size: 1.5rem!important;
+      letter-spacing: 15px;
+      left: 20px!important;
+    }
+
+    p {
+      font-size: 20px;
+
+      br {
+        display: none;
+      }
+    }
+
+    .d-flex {
+      justify-content: center;
+    }
+
+    .roundedSquare1,
+    .roundedSquare2 {
+      display: none;
+    }
+
+    .black-wave {
+      display: block!important;
+      position: absolute;
+      bottom: -1px;
+    }
+
+    .hologram {
+      // width: 90% !important;
+      // margin-bottom: 0 !important;
+      display: none;
+    }
+  }
+
+    .brands {
+      #done_svg {
+        width: 90%;
+      }
+
+      .brands-slider{
+        img {
+          margin: 0 20px;
+          width: auto!important;
+          height: 80px!important;
+          object-fit: contain;
+        }
+      }
+    }
+
+
+    #offers {
+      .card {
+        margin: auto 10px;
+        height: auto;
+        margin-bottom: 40px;
+        padding: 30px 10px 10px;
+        text-align: left;
+
+        h6 {
+          font-size: 0.98rem;
+        }
+
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    #contact{
+      .directContact {
+        text-align: center;
+      }
+
+      #find_us{
+        width: 90%;
+      }
+    }
+
 }

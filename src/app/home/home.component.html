@@ -4,33 +4,40 @@
 
   <main class="landing-section" id="landingDiv">
 
-    <div class="row">
-      <div class="col-md-6">
+    <img class="roundedSquare1" src="assets/images/rounded-black-square.svg" alt="rounded-square">
+    <img class="roundedSquare2" src="assets/images/rounded-grey-square.svg" alt="rounded-square">
 
-        <div class="content">
-          <h1>TECOM</h1>
-          <h3>ADVANCE</h3>
-          <p>The one-stop service store for your <br> <strong>technology</strong>, <strong>security</strong> and <strong>repair</strong> needs.</p>
-          <p>Drop-in or <strong>mail-in</strong> your device by <br> filling out our Mail-In Form.</p>
-          <div class="d-flex">
-            <a href="#contact" class="btn btn-lg btn-contact my-4"> Talk to us <span class="ml-2">&#8702;</span></a>
-            <a class="btn btn-lg btn-main-in my-4" data-toggle="modal" data-target="#mailInModal"> Mail in <span class="ml-2">&#8702;</span></a>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+
+          <div class="content">
+            <div class="logo-remake">
+              <h1>TECOM</h1>
+              <h3>ADVANCE</h3>
+            </div>
+            <p>The one-stop service store for your <br> <strong>technology</strong>, <strong>security</strong> and <strong>repair</strong> needs.</p>
+            <p>Drop-in or <strong>mail-in</strong> your device by <br> filling out our Mail-In Form.</p>
+            <div class="d-flex">
+              <a href="#contact" class="btn btn-lg btn-contact my-4"> Talk to us <span class="ml-2">&#8702;</span></a>
+              <a class="btn btn-lg btn-main-in my-4" data-toggle="modal" data-target="#mailInModal"> Mail in <span class="ml-2">&#8702;</span></a>
+            </div>
           </div>
+
+
         </div>
 
-        <img class="roundedSquare1" src="assets/images/rounded-black-square-lightgrey.svg" alt="rounded-square">
-        <img class="roundedSquare2" src="assets/images/rounded-black-square-grey.svg" alt="rounded-square">
+        <div class="col-md-6 text-center">
 
-      </div>
-
-      <div class="col-md-6 text-center">
-
-        <img class="hologram" src="assets/images/circuit.svg" alt="hologram">
+          <div class="illustation-holder">
+            <img class="hologram" src="assets/images/circuit.svg" alt="hologram">
+          </div>
+        </div>
 
       </div>
 
     </div>
-
 
     <!-- <div class="slider topSlider">
       <div class="slide-track">
@@ -40,11 +47,8 @@
       </div>
     </div> -->
 
+    <img class="black-wave" src="assets/images/white-mobile-sc-wave.svg" alt="wave">
 
-
-
-    <!-- TECOM IMAGE LOGO -->
-    <!-- <h2>Your one-stop service store for your Technology and Communication needs.</h2> -->
   </main>
 
   <div id="services">
@@ -53,9 +57,9 @@
 
 
       <h3 class="description text-center mb-5"> Have a look at some of the <span>expertise services</span> we offer </h3>
-      <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-3" *ngFor="let offer of offers;index as i">
-          <div class="card mb-4">
+      <div class="row mx-0">
+        <div class="col-6 col-md-3 pl-ms-0 pr-ms-0" *ngFor="let offer of offers;index as i">
+          <div class="card">
 
             <div align="center">
               <img [src]="offer.imgUrl">
@@ -69,16 +73,11 @@
           </div>
         </div>
 
-
-
-
       </div>
 
 
-      <div class="mb-5" align="center">
-        <a href="#contact" class="btn btn-lg my-4"> TALK TO US <span class="ml-2">&#8702;</span></a>
-
-
+      <div align="center">
+        <a href="#contact" class="btn btn-contact mt-4"> Talk to us <span class="ml-2">&#8702;</span></a>
       </div>
 
 

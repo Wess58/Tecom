@@ -18,6 +18,7 @@ import { style, animate, transition, trigger } from '@angular/animations';
 export class NavbarComponent implements OnInit {
 
   morphNavbar = false;
+  changeIcon = false;
   @HostListener('window:scroll', ['$event']) onScrollEvent($event: any) {
     // console.log($event);
     // console.log("scrolling", window.pageYOffset);
@@ -42,6 +43,10 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleIcon():void{
+    this.changeIcon = !this.changeIcon;
   }
 
 }
