@@ -32,6 +32,28 @@
       "imgUrl": "assets/images/phonelogos/apple-logo.svg"
     },
     {
+      "name": "ubiquiti",
+      "imgUrl": "assets/images/phonelogos/ubiquiti.png"
+    },
+
+    {
+      "name": "cisco",
+      "imgUrl": "assets/images/phonelogos/cisco.png"
+    },
+    {
+      "name": "cambium",
+      "imgUrl": "assets/images/phonelogos/cambium.png"
+    },
+    {
+      "name": "mikrotik",
+      "imgUrl": "assets/images/phonelogos/mikrotik.png"
+    },
+    {
+      "name": "netonix",
+      "imgUrl": "assets/images/phonelogos/netonix.png"
+    },
+
+    {
       "name": "android",
       "imgUrl": "assets/images/phonelogos/android.svg"
     },

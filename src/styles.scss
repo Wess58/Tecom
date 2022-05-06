@@ -57,7 +57,7 @@ textarea {
   box-shadow: none !important;
   background-clip: padding-box !important;
   color: #5f6063 !important;
-  padding: 10px 12px!important !important;
+  padding: 10px 12px!important;
 }
 
 input:active,
@@ -78,7 +78,6 @@ textarea:hover {
   font-size: 0.9rem;
   letter-spacing: 1px;
 }
-
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -101,6 +100,10 @@ textarea:hover {
   color: #d11a2a !important;
 }
 
+.greenText {
+  color: #36a636!important;
+}
+
 .red-border-input {
   border: 2px solid #d11a2a !important;
 
@@ -116,7 +119,7 @@ textarea:hover {
 .modal {
   backdrop-filter: blur(2px);
   background-color: #0001;
-  padding: 0!important !important;
+  padding: 0!important;
 
   .modal-title {
     font-weight: 600;
@@ -182,7 +185,6 @@ textarea:hover {
   body {
     overflow-x: hidden !important;
   }
-
 
   .mb-ms-0 {
     margin-bottom: 0 !important;

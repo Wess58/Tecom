@@ -34,7 +34,6 @@ import { MailInComponent } from './mail-in/mail-in.component';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true }
-
   ],
   bootstrap: [AppComponent]
 })
