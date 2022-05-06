@@ -29,7 +29,7 @@ export class HttpTokenInterceptor implements HttpInterceptor {
 
     const request = req.clone({
       setHeaders: {
-        'Authorization': `Bearer ${this.token}`
+        'apikey': `${this.token}`
       }
     });
 
