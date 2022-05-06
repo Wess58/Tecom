@@ -144,7 +144,7 @@ export class MailInComponent implements OnInit {
       '    <p>Our technician will be in touch within the next 24 hours.</p>\n' +
       '   <br>\n' +
       '    <p>Please call or whatsapp our contact centre on +254 792 553 595 <strong>OR</strong> +254 720 402 275 in case you have any inquiries.</p>\n' +
-      '    <p>Address : Kiambu - Pongezi Plaza on First Floor, <strong>Room FF11</strong> </p>\n' +
+      '    <p>Address : Kiambu Road - Pongezi Plaza on First Floor, <strong>Room FF11</strong> </p>\n' +
       '    <p>\n' +
       '        <span>Regards,</span>\n' +
       '        <br />\n' +
