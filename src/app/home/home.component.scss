@@ -267,14 +267,14 @@
   }
 }
 // Infinite scroll logo carousel
-$animationSpeed: 40s; // Animation
+$animationSpeed: 70s; // Animation
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
 
   100% {
-    transform: translateX(calc(-250px * 6));
+    transform: translateX(calc(-250px * 18.5));
   }
 }
 

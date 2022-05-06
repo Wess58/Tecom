@@ -48,14 +48,6 @@
       "imgUrl": "assets/images/phonelogos/mikrotik.png"
     },
     {
-      "name": "netonix",
-      "imgUrl": "assets/images/phonelogos/netonix.png"
-    },
-    {
-      "name": "apc",
-      "imgUrl": "assets/images/phonelogos/apc.svg"
-    },
-    {
       "name": "android",
       "imgUrl": "assets/images/phonelogos/android.svg"
     },
@@ -80,12 +72,20 @@
       "imgUrl": "assets/images/phonelogos/sony.svg"
     },
     {
+      "name": "netonix",
+      "imgUrl": "assets/images/phonelogos/netonix.png"
+    },
+    {
       "name": "huawei",
       "imgUrl": "assets/images/phonelogos/huawei.svg"
     },
     {
       "name": "nokia",
       "imgUrl": "assets/images/phonelogos/nokia.svg"
+    },
+    {
+      "name": "apc",
+      "imgUrl": "assets/images/phonelogos/apc.svg"
     },
     {
       "name": "oppo",
