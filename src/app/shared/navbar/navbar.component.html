@@ -4,10 +4,10 @@
     <span>TECOM <br><span>ADVANCE</span> </span>
   </span>
 
-  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleIcon()">
+  <button class="navbar-toggler" type="button" (click)="toggleIcon()">
     <i class="fas fa-bars" id="menuIcon" *ngIf="!changeIcon" [@fadeIn]></i>
     <i class="fas fa-times" id="menuIcon" *ngIf="changeIcon" [@fadeIn]></i>
-  </button> -->
+  </button>
 
   <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
     <ul class="navbar-nav">
@@ -24,6 +24,25 @@
         <a class="nav-link " href="#contact">Contact</a>
       </li>
     </ul>
+  </div>
+
+  <div class="side-menu" [ngClass]="{'open-side-menu':changeIcon}" (click)="toggleIcon()">
+
+    <ul >
+      <li class="nav-item active">
+        <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " data-toggle="modal" data-target="#mailInModal">Mail-in</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#contact">Contact</a>
+      </li>
+    </ul>
+
   </div>
 </nav>
 

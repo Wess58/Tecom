@@ -58,6 +58,40 @@ nav {
       opacity: 1;
     }
   }
+
+  .navbar-toggler{
+    position: absolute;
+    right: 10px;
+    top:15px;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    color: #3c4043;
+  }
+}
+
+.side-menu{
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  box-shadow: -50px 20px 20px 0 rgba(0,0,0,0.3);
+  transition: all .2s;
+
+  ul{
+    padding: 0;
+    list-style: none;
+
+    li{
+      padding-right: 20px;
+    }
+  }
+}
+
+.open-side-menu{
+  width: 90%;
 }
 
 .scrolled {
@@ -79,13 +113,6 @@ nav {
       margin: 0 !important;
     }
 
-    .menu {
-      font-size: 28px;
-      margin-top: 5px;
-      color: #5f6368 !important;
-      position: absolute;
-      right: 20px;
-    }
 
     ul li:first-child a {
       border-top: 0.5px solid #0003;
