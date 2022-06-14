@@ -121,7 +121,7 @@
     height: 300px;
     text-align: center;
     margin-bottom: 40px;
-    padding: 30px 20px 10px;
+    padding: 30px 10px 10px;
     border-radius: 12px;
     // box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.09);
     border: 1px solid #e1e1e1;
@@ -157,6 +157,7 @@
       font-size: 14px;
       color: #80868b;
       letter-spacing: 1px;
+      margin: auto;
     }
   }
 
@@ -178,7 +179,7 @@
   padding-top: 8vh;
 
   #done_svg {
-    width: 650px;
+    width: 80%;
     filter: drop-shadow(0 3px 40px #f1f1f1);
     /* margin-left: 200px; */
   }
@@ -222,7 +223,7 @@
   text-align: center;
 
   #find_us {
-    width: 550px;
+    width: 80%;
   }
 
   .directContact {
