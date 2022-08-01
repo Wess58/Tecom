@@ -73,16 +73,20 @@ nav {
 .side-menu{
   width: 0;
   height: 100%;
-  background-color: #fff;
   position: fixed;
   top: 60px;
   right: 0;
-  box-shadow: -50px 20px 20px 0 rgba(0,0,0,0.3);
   transition: all .2s;
+
 
   ul{
     padding: 0;
     list-style: none;
+    transition: all .3s;
+    margin-left: auto;
+    width: 0;
+    height: 0;
+    border-radius: 0 0 0 8px;
 
     li{
       padding-right: 20px;
@@ -91,7 +95,15 @@ nav {
 }
 
 .open-side-menu{
-  width: 90%;
+  width: 100%;
+
+  ul{
+    width: 200px;
+    height: 230px;
+    background-color: #fff;
+    box-shadow: -10px 10px 20px 0 rgba(0,0,0,0.09);
+
+  }
 }
 
 .scrolled {
@@ -114,7 +126,7 @@ nav {
     }
 
 
-    ul li:first-child a {
+    ul li:first-child {
       border-top: 0.5px solid #0003;
     }
   }

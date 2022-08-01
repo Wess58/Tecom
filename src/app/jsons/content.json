@@ -60,6 +60,10 @@
       "imgUrl": "assets/images/phonelogos/lg.svg"
     },
     {
+      "name": "brother",
+      "imgUrl": "assets/images/phonelogos/brother.png"
+    },
+    {
       "name": "one-plus",
       "imgUrl": "assets/images/phonelogos/one-plus.svg"
     },

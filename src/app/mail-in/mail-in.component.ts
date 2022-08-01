@@ -164,6 +164,7 @@ export class MailInComponent implements OnInit {
       '<body>\n' +
       '    <p>New mail-in request from website form,</p>\n' +
       '    <p>Client name: ' + this.emailForm.firstName + ' ' + this.emailForm.lastName + '</p>\n' +
+      '    <p>Client Phone number: ' + this.emailForm.phone + '</p>\n' +
       '    <p>Client Email Address: ' + this.emailForm.email + '</p>\n' +
       '    <p>Problem description: ' + this.emailForm.message + '</p>\n' +
       '</body>' +
