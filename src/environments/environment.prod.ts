@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API_ENDPOINT: "https://mwandishi.co.ke:8043/api/send-email"
+  API_ENDPOINT: "https://kekesreadingnook.com:8043/api/send-email"
 };
