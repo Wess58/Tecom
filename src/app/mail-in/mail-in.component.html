@@ -1,15 +1,23 @@
 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
   <div class="modal-content">
-    <div class="modal-header py-2">
-      <h5 class="modal-title" id="mailInModalLabel">Mail-in form</h5>
+    <div class="modal-header">
+      <h5 class="modal-title" id="mailInModalLabel">
+        <span *ngIf="stage === 1">Terms and Conditions</span>
+        <span *ngIf="stage !== 1">Mail-in request</span>
+      </h5>
       <button type="button" class="close" (click)="reset()" data-dismiss="modal" aria-label="Close" [disabled]="sending">
         <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
       </button>
     </div>
     <div class="modal-body">
 
-      <div *ngIf="stage === 1" [@fadeIn]>
-        <p class="description">Fill in <strong>ALL</strong> the form details accurately</p>
+      <div class="disclaimer" *ngIf="stage === 1" [@fadeIn]>
+        <div [innerHTML]="disclaimer">
+        </div>
+      </div>
+
+      <div *ngIf="stage === 2" [@fadeIn]>
+        <p class="description">Fill in <strong>ALL</strong> the form fields accurately for better service</p>
 
         <div class="alert alert-danger" *ngIf="hasError" [@fadeIn]>
           <p class="m-0">Sorry, your details could not be sent at this time, please try again later !</p>
@@ -19,28 +27,8 @@
           <div class="row">
             <div class="col-6 col-md-6">
               <div class="form-group">
-                <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="emailForm.firstName">
-              </div>
-            </div>
-            <div class="col-6 col-md-6">
-              <div class="form-group">
-                <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="emailForm.lastName">
-              </div>
-            </div>
-          </div>
-
-          <!-- <div class="form-group">
-      <label for="businessName">Business name <small>( optional )</small></label>
-      <input type="text" class="form-control" id="businessName" name="businessName" [(ngModel)]="emailForm.businessName">
-    </div> -->
-
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="email">Email <small class="redText ml-3" *ngIf="emailInvalid">enter a valid email</small></label>
-                <input type="text" class="form-control" id="email" name="email" [(ngModel)]="emailForm.email" (ngModelChange)="emailInvalid = false" [ngClass]="{'red-border-input':emailInvalid}" placeholder="e.g . johndoe@gmail.com">
+                <label for="fullName">Full name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" [(ngModel)]="emailForm.fullName">
               </div>
             </div>
 
@@ -50,34 +38,72 @@
                 <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="emailForm.phone" maxlength="12" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
               </div>
             </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email">Email <small>(primary email)</small> <small class="redText font-weight-bold ml-3" *ngIf="emailInvalid">enter a valid email</small></label>
+                <input type="text" class="form-control" id="email" name="email" [(ngModel)]="emailForm.email" (ngModelChange)="emailInvalid = false" [ngClass]="{'red-border-input':emailInvalid}" placeholder="e.g . johndoe@gmail.com">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="location">Location / Address</label>
+                <input type="text" class="form-control" id="location" name="location" [(ngModel)]="emailForm.location" placeholder="eg. Nairobi, Westlands , CBD">
+              </div>
+            </div>
+
           </div>
 
-          <div class="form-group">
-            <label for="location">Location / Address</label>
-            <input type="text" class="form-control" id="location" name="location" [(ngModel)]="emailForm.location" placeholder="eg. Nairobi, Westlands , CBD">
+          <div class="form-group position-relative" [ngClass]="{'mb-1':ccEmails?.length}">
+            <label for="cc">CC emails <small>(optional)</small> <small class="redText font-weight-bold ml-3" *ngIf="ccEmailInvalid">enter a valid email</small> <small class="redText font-weight-bold ml-3" *ngIf="emailExists">email already in
+                use</small></label>
+            <input type="text" class="form-control" name="ccEmail" [(ngModel)]="ccEmail" (ngModelChange)="ccEmailInvalid = false;emailExists = false;" (keyup.enter)="ccEmail.length && validateCCEmail()" [ngClass]="{'red-border-input':ccEmailInvalid}"
+              placeholder="e.g . company@gmail.com">
+            <button type="button" title="add email to cc" class="btn btn-add-email" [disabled]="!ccEmail.length" (click)="ccEmail.length && validateCCEmail()"><i class="fas fa-plus"></i></button>
+          </div>
+
+          <div class="selected-listing" *ngIf="ccEmails.length" [@fadeIn]>
+            <div class="d-inline">
+              <span class="selected-item" *ngFor="let email of ccEmails;index as i" [@fadeIn]>
+                <span class="me-3">{{email}}</span>
+                <span title="Edit" (click)="ccEmail = email;removeEmail(email,i)"><i class="fas fa-pen"></i></span>
+                <span title="Remove" (click)="removeEmail(email,i)"><i class="fas fa-times"></i></span>
+              </span>
+            </div>
           </div>
 
           <div class="form-group">
             <label for="message">Message</label>
             <textarea name="message" class="form-control" id="message" name="message" [(ngModel)]="emailForm.message" rows="4" placeholder="Describe the problem you are having with your device"></textarea>
           </div>
+
         </form>
       </div>
 
-      <div class="success-div" *ngIf="stage === 2" [@fadeIn]>
+      <div class="success-div" *ngIf="stage === 3" [@fadeIn]>
         <div>
-          <span class="d-block">Hello <strong>{{emailForm?.firstName}}</strong>,</span>
-          <span class="d-block">We've received your repair mail-in details with order. <br> Reference number is <strong class="greenText d-inline-block">{{refId}}</strong>. <br> Our technician will be in touch within the next 24 hours. <br><br>
-            Please call or whatsapp our contact centre on +254 792 553 595 OR +254 720 402 275 in case you have any inquiries. </span>
+          <img src="assets/images/email-sent.png" alt="email-sent">
+          <span class="d-block">Hello <strong>{{emailForm?.fullName | firstName}}</strong>,</span>
+          <span class="d-block">We've received your repair mail-in details with reference number <strong class="greenText d-inline-block">{{refId}}</strong>. <br> Our technician will be in touch within the next 24 hours. <br><br>
+            Please call or whatsapp our contact centre on <a href="tel:254792553595">+254792553595</a> or <a href="tel:254720402275">+254720402275</a> in case you have any inquiries. </span>
         </div>
       </div>
 
     </div>
 
-    <div class="modal-footer pt-0">
-      <button type="button" class="btn btn-close mr-3" id="closeBtn" (click)="reset()" data-dismiss="modal" [disabled]="sending">Close</button>
-      <button type="button" class="btn btn-submit" (click)="formValidation()" *ngIf="stage === 1"
-        [disabled]="sending || !emailForm.phone || !emailForm.email || !emailForm.firstName || !emailForm.lastName || !emailForm.location || !emailForm.message">{{sending ? 'Sending ...' : 'Submit'}}</button>
+    <div class="modal-footer pt-0" *ngIf="stage === 1">
+      <button type="button" class="btn btn-close mr-3" id="closeBtn" data-dismiss="modal">Decline</button>
+      <button type="button" class="btn btn-submit" (click)="stage = 2">Accept</button>
+    </div>
+
+    <div class="modal-footer pt-0" *ngIf="stage === 2">
+      <button type="button" class="btn btn-close mr-3" data-dismiss="modal" [disabled]="sending" (click)="reset()">Close</button>
+      <button type="button" class="btn btn-submit" (click)="formValidation()"
+        [disabled]="sending || !emailForm.phone || !emailForm.email || !emailForm.fullName || !emailForm.location || !emailForm.message">{{sending ? 'Sending ...' : 'Submit'}}</button>
+    </div>
+    <div class="modal-footer pt-0" *ngIf="stage === 3">
+      <button type="button" class="btn btn-close mr-3" data-dismiss="modal" (click)="reset()">Close</button>
     </div>
   </div>
 </div>
