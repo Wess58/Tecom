@@ -107,6 +107,7 @@ export class MailInComponent implements OnInit {
     this.ccEmails = [];
     this.ccEmailInvalid = false;
     this.emailExists = false;
+    this.acceptDisclaimer = false;
 
     setTimeout(() => {
       this.stage = 1;
@@ -126,7 +127,7 @@ export class MailInComponent implements OnInit {
   }
 
   protected onSaveSuccess(res: any) {
-    console.log(res);
+    // console.log(res);
 
     this.hasError = false;
     this.stage = 2;
@@ -134,7 +135,7 @@ export class MailInComponent implements OnInit {
   }
 
   protected onSaveError(error: any) {
-    console.log(error);
+    // console.log(error);
     this.hasError = true;
     this.sending = false;
   }
