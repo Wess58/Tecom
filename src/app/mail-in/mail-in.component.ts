@@ -54,6 +54,7 @@ export class MailInComponent implements OnInit {
     if (/\S+@\S+\.\S+/.test(this.emailForm.email)) {
       this.emailInvalid = false;
       this.sending = true;
+      this.emailForm.email = this.emailForm.email.toLowerCase();
 
       this.generateRefId();
 
@@ -75,7 +76,7 @@ export class MailInComponent implements OnInit {
 
       if (this.ccEmails.indexOf(this.ccEmail) === -1 && this.ccEmail.toLowerCase() !== this.emailForm.email.toLowerCase()) {
         this.emailExists = false;
-        this.ccEmails.push(this.ccEmail);
+        this.ccEmails.push(this.ccEmail.toLowerCase());
         this.ccEmail = '';
 
       } else {
