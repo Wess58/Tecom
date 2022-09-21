@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
 import { MailInComponent } from './mail-in/mail-in.component';
+import { FirstNamePipe } from './pipes/first-name.pipe';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MailInComponent } from './mail-in/mail-in.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    MailInComponent
+    MailInComponent,
+    FirstNamePipe
   ],
   imports: [
     BrowserModule,

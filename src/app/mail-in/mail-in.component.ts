@@ -5,7 +5,7 @@ import { style, animate, transition, trigger } from '@angular/animations';
 
 import { INotificationDTO, NotificationDTO } from '../services/notification-data.model';
 import { NotificationService } from "../services/notification.service";
-
+import disclaimer from "../jsons/disclaimer.json";
 @Component({
   selector: 'app-mail-in',
   templateUrl: './mail-in.component.html',
@@ -23,27 +23,31 @@ import { NotificationService } from "../services/notification.service";
 export class MailInComponent implements OnInit {
 
   emailForm = {
-    firstName: '',
-    lastName: '',
+    fullName: '',
     email: '',
     phone: '',
     location: '',
     message: ''
   };
+  ccEmails: any = [];
+  ccEmail = '';
 
   emailInvalid = false;
   hasError = false;
   stage = 1;
   refId: any;
   sending = false;
+  ccEmailInvalid = false;
+  emailExists = false;
+  disclaimer = disclaimer.content;
 
   constructor(
     private notificationService: NotificationService
   ) { }
 
   ngOnInit(): void {
+    // console.log(this.disclaimer);
   }
-
 
   formValidation(): void {
     if (/\S+@\S+\.\S+/.test(this.emailForm.email)) {
@@ -64,20 +68,43 @@ export class MailInComponent implements OnInit {
     }
   }
 
+  validateCCEmail(): void {
+    if (/\S+@\S+\.\S+/.test(this.ccEmail)) {
+      this.ccEmailInvalid = false;
+
+      if (this.ccEmails.indexOf(this.ccEmail) === -1 && this.ccEmail.toLowerCase() !== this.emailForm.email.toLowerCase()) {
+        this.emailExists = false;
+        this.ccEmails.push(this.ccEmail);
+        this.ccEmail = '';
+
+      } else {
+        this.emailExists = true;
+      }
+
+    } else {
+      this.ccEmailInvalid = true;
+    }
+  }
+
+  removeEmail(email: string, index: any): void {
+    this.ccEmails.splice(index, 1);
+  }
+
   reset(): void {
     this.emailForm = {
-      firstName: '',
-      lastName: '',
+      fullName: '',
       email: '',
       phone: '',
       location: '',
       message: ''
     };
-    this.stage = 1;
     this.emailInvalid = false;
     this.hasError = false;
     this.sending = false;
 
+    setTimeout(() => {
+      this.stage = 1;
+    }, 1000);
   }
 
   generateRefId(): void {
@@ -96,7 +123,7 @@ export class MailInComponent implements OnInit {
     console.log(res);
 
     this.hasError = false;
-    this.stage = 2;
+    this.stage = 3;
     this.sending = false;
   }
 
@@ -110,6 +137,7 @@ export class MailInComponent implements OnInit {
     return {
       ...new NotificationDTO(),
       receiverEmail: this.emailForm.email,
+      cc: this.ccEmails.toString(),
       subject: 'Tecom Advance Mail-in Request ' + this.refId,
       body: this.createUserMessage(),
       html: true,
@@ -139,8 +167,8 @@ export class MailInComponent implements OnInit {
       '    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n' +
       '</head>' +
       '<body>\n' +
-      '    <p>Hello ' + this.emailForm.firstName + ', </p>\n' +
-      '    <p>We\'ve received your repair mail-in details with order reference number <strong>' + this.refId + '</strong> </p>\n' +
+      '    <p>Hello ' + this.emailForm.fullName.split(' ')[0] + ', </p>\n' +
+      '    <p>We\'ve received your repair mail-in details with reference number <strong>' + this.refId + '</strong> </p>\n' +
       '    <p>Our technician will be in touch within the next 24 hours.</p>\n' +
       '   <br>\n' +
       '    <p>Please call or whatsapp our contact centre on +254 792 553 595 <strong>OR</strong> +254 720 402 275 in case you have any inquiries.</p>\n' +
@@ -163,7 +191,7 @@ export class MailInComponent implements OnInit {
       '</head>' +
       '<body>\n' +
       '    <p>New mail-in request from website form,</p>\n' +
-      '    <p>Client name: ' + this.emailForm.firstName + ' ' + this.emailForm.lastName + '</p>\n' +
+      '    <p>Client name: ' + this.emailForm.fullName + '</p>\n' +
       '    <p>Client Phone number: ' + this.emailForm.phone + '</p>\n' +
       '    <p>Client Email Address: ' + this.emailForm.email + '</p>\n' +
       '    <p>Problem description: ' + this.emailForm.message + '</p>\n' +

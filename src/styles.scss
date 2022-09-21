@@ -3,13 +3,11 @@
 @import './assets/css/font-montserrat.css';
 @import './assets/css/font-allerta-stencil.css';
 @import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
-
 // ng build --prod --base-href https://wess58.github.io/Tecom/ --output-path docs
-
 body,
 html {
   margin: 0;
-  padding: 0!important;
+  padding: 0!important !important;
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
   color: #80868b;
@@ -59,7 +57,7 @@ textarea {
   box-shadow: none !important;
   background-clip: padding-box !important;
   color: #5f6063 !important;
-  padding: 10px 12px!important;
+  padding: 10px 12px!important !important;
 }
 
 input:active,
@@ -121,7 +119,7 @@ textarea:hover {
 .modal {
   backdrop-filter: blur(2px);
   background-color: #0001;
-  padding: 0!important;
+  padding: 0!important !important;
 
   .modal-title {
     font-weight: 600;
@@ -129,7 +127,39 @@ textarea:hover {
   }
 
   .modal-content {
-    border-radius: 12px;
+    border-radius: 8px;
+  }
+
+  .selected-listing {
+    display: inline-block!important;
+    margin: 10px 0;
+
+    .selected-item {
+      border: 1px solid #e1e1e1;
+      border-radius: 20px;
+      padding: 6px 20px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      color: #5f6063;
+      font-size: 0.9rem;
+
+      .fas {
+        cursor: pointer;
+        margin: 0 7px;
+      }
+
+      .fa-times {
+        color: #d11a2a;
+        font-size: 1rem;
+
+      }
+
+      .fa-pen {
+        color: #18224b;
+        font-size: 0.9rem;
+
+      }
+    }
   }
 
   .modal-footer {
