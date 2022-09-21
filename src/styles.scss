@@ -3,7 +3,9 @@
 @import './assets/css/font-montserrat.css';
 @import './assets/css/font-allerta-stencil.css';
 @import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
-// ng build --prod --base-href https://wess58.github.io/Tecom/ --output-path docs
+
+// ng build --prod --base-href https://wess58.github.io/Tecom/ --output-path docs && git add . && git commit -m "docs ready for deployment" && git push
+
 body,
 html {
   margin: 0;
@@ -151,13 +153,11 @@ textarea:hover {
       .fa-times {
         color: #d11a2a;
         font-size: 1rem;
-
       }
 
       .fa-pen {
         color: #18224b;
         font-size: 0.9rem;
-
       }
     }
   }
