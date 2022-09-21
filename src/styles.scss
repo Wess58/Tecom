@@ -144,6 +144,7 @@ textarea:hover {
       margin-right: 10px;
       color: #5f6063;
       font-size: 0.9rem;
+      display: inline-block;
 
       .fas {
         cursor: pointer;
@@ -216,6 +217,13 @@ textarea:hover {
 
   body {
     overflow-x: hidden !important;
+  }
+
+  .selected-listing {
+    display: block!important;
+    .selected-item{
+      display: block!important;
+    }
   }
 
   .mb-ms-0 {

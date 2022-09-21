@@ -40,6 +40,7 @@ export class MailInComponent implements OnInit {
   ccEmailInvalid = false;
   emailExists = false;
   disclaimer = disclaimer.content;
+  acceptDisclaimer = false;
 
   constructor(
     private notificationService: NotificationService
@@ -101,6 +102,10 @@ export class MailInComponent implements OnInit {
     this.emailInvalid = false;
     this.hasError = false;
     this.sending = false;
+    this.ccEmail = '';
+    this.ccEmails = [];
+    this.ccEmailInvalid = false;
+    this.emailExists = false;
 
     setTimeout(() => {
       this.stage = 1;
@@ -123,7 +128,7 @@ export class MailInComponent implements OnInit {
     console.log(res);
 
     this.hasError = false;
-    this.stage = 3;
+    this.stage = 2;
     this.sending = false;
   }
 
