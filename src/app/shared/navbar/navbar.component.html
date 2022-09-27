@@ -18,7 +18,7 @@
         <a class="nav-link " href="#services">Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " data-toggle="modal" data-target="#mailInModal">Mail-in</a>
+        <a class="nav-link " data-toggle="modal" data-target="#mailInModal" id="mailInModalBtn" [routerLink]="''" [queryParams]="{ om: 'opn' }">Mail-in</a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href="#contact">Contact</a>
@@ -28,7 +28,7 @@
 
   <div class="side-menu" [ngClass]="{'open-side-menu':changeIcon}" (click)="toggleIcon()">
 
-    <ul >
+    <ul>
       <li class="nav-item">
         <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -36,7 +36,7 @@
         <a class="nav-link " href="#services">Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " data-toggle="modal" data-target="#mailInModal">Mail-in</a>
+        <a class="nav-link " data-toggle="modal" data-target="#mailInModal" id="mailInModalBtn" [routerLink]="''" [queryParams]="{ om: 'opn' }">Mail-in</a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href="#contact">Contact</a>

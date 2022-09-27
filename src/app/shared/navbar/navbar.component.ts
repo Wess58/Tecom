@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { style, animate, transition, trigger } from '@angular/animations';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -40,13 +41,30 @@ export class NavbarComponent implements OnInit {
 
   }
 
-  constructor() { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.activatedRoute.queryParams.subscribe((params: any) => {
+        if (params['om']) {
+          const close = document.getElementById('mailInModalBtn') as HTMLElement;
+
+          if (close) {
+            close.click();
+          }
+        }
+      });
+    }, 10);
+
+
   }
 
-  toggleIcon():void{
+  toggleIcon(): void {
     this.changeIcon = !this.changeIcon;
   }
+
 
 }

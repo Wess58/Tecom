@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpResponse } from '@angular/common/http';
 import { style, animate, transition, trigger } from '@angular/animations';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { INotificationDTO, NotificationDTO } from '../services/notification-data.model';
 import { NotificationService } from "../services/notification.service";
 import disclaimer from "../jsons/disclaimer.json";
+
 @Component({
   selector: 'app-mail-in',
   templateUrl: './mail-in.component.html',
@@ -43,7 +45,9 @@ export class MailInComponent implements OnInit {
   acceptDisclaimer = false;
 
   constructor(
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -93,6 +97,8 @@ export class MailInComponent implements OnInit {
   }
 
   reset(): void {
+    this.router.navigate(['/']);
+
     this.emailForm = {
       fullName: '',
       email: '',
