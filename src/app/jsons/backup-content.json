@@ -122,16 +122,23 @@
     }
   ],
   "offers": [{
+      "imgUrl": "assets/images/offered/computer.svg",
+      "title": "Computer Repair & Upgrades",
+      "description": "Have a broken Desktop or Laptop or what you really need is an upgrade , we'll get you up and running in no time."
+    },
+    {
       "imgUrl": "assets/images/offered/smartphone.svg",
-      "title": "Smart Phone, Computers & Tablet Repairs & Upgrades",
-      "description": "Walking around with that cracked screen? Have a broken Desktop or Laptop or what you really need is an upgrade , we'll get you up and running in no time."
-    },
-    {
+      "title": "Tablets and Smart Phones Flashing and Repair",
+      "description": "Why should you have to walk around with that cracked screen, we've got you covered with original screen-replacements."
+    }, {
       "imgUrl": "assets/images/offered/computer-sw.svg",
-      "title": "Software & Hardware Installation and Upgrading",
-      "description": "Need an updated version of Microsoft Office or BIOS ? No problem! How about a much needed upgrade to your RAM or Storage? We can handle that!"
-    },
-    {
+      "title": "Software Installation, Updating & Maintenance",
+      "description": "Need an updated version of Microsoft Office? No problem! How about an updated antivirus program? We can handle that!"
+    }, {
+      "imgUrl": "assets/images/offered/data.svg",
+      "title": "Web & Software Development",
+      "description": "Are you full of creamy tech ideas but just don't know how to implement their complexities ? or just want an Online brochure for better Marketing, we've got you!"
+    }, {
       "imgUrl": "assets/images/offered/file.svg",
       "title": "Data Recovery",
       "description": "Do you wish to recover lost files, pictures, documents from accidental deletions, formatting errors, partition losses, OS crashes or virus attacks, not to worry!"
@@ -141,12 +148,12 @@
       "description": "Is it Paper jams, really bad looking prints or just old-age and/or outdated technology on your trustee printers, all common all fixable!"
     }, {
       "imgUrl": "assets/images/offered/security-camera.svg",
-      "title": "Security CCTV & Biometrics Installation",
-      "description": "You can’t be everywhere but CCTV can !! CCTV and Biometrics are ideal and highly reduce instances of fraud as well as providing secured access."
+      "title": "Networking and Security CCTV",
+      "description": "You can’t be everywhere but CCTV can , CCTV helps reduce the likelihood of break-ins or fire hazards and creates discipline among employees and customers alike."
     }, {
-      "imgUrl": "assets/images/offered/micro-soldering.svg",
-      "title": "Micro-soldering",
-      "description": "Learning to micro-solder is difficult with low quality equipment, why not come to the professionals and get highly reliable, corrosion-free and strain-free joins for your components."
+      "imgUrl": "assets/images/offered/computer.svg",
+      "title": "Biometric Installation",
+      "description": "Fingerprint recognition is ideal, highly accurate and curtains the need to reduce instances of fraud as well as to provide secured access to physical and logical assets."
     }
   ]
 }
