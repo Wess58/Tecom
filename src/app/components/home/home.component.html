@@ -1,0 +1,38 @@
+<img (click)="topFunction()" class="to-top" title="Go to top" alt="to-top" src="assets/images/totop.svg" *ngIf="showArrow">
+
+<div class="container-fluid" [@fadeIn]>
+
+  <!-- LANDING SECTION -->
+  <div id="landingDiv">
+    <app-landing></app-landing>
+
+  </div>
+
+
+  <!-- SERVICES SECTION -->
+  <div id="services">
+
+    <app-services></app-services>
+
+
+  </div>
+
+  <!-- BRANDS SECTION -->
+
+  <div id="brands">
+    <app-brands></app-brands>
+  </div>
+
+
+  <!-- CONTACT US SECTION -->
+  <div id="contact">
+    <app-contact-us></app-contact-us>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal mail-in-modal fade p-0" id="mailInModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mailInModalLabel" aria-hidden="true">
+  <app-mail-in></app-mail-in>
+</div>

@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { style, animate, transition, trigger } from '@angular/animations';
-import content from "../jsons/content.json";
+import content from "../../jsons/content.json";
 
 @Component({
   selector: 'app-home',
@@ -39,11 +39,6 @@ export class HomeComponent implements OnInit {
   }
 
   showArrow = false;
-
-  workImages = content.workImages;
-  brandImages = content.brandImages;
-  offers = content.offers;
-
 
   constructor() { }
 

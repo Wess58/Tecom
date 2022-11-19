@@ -1,0 +1,117 @@
+#offers {
+  padding: 9vh 0;
+  border-bottom: 1px solid #e1e1e1;
+
+  .description {
+    font-size: 30px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .card {
+    height: 330px;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 10px 10px;
+    border-radius: 12px;
+    border: 1px solid #e1e1e1;
+    transition: all .2s;
+
+    &:hover {
+      // box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.09);
+      border: 1px solid #3c4043;
+
+
+      .link {
+        color: #3c4043;
+        span {
+          position: relative;
+          left: 15px;
+        }
+      }
+    }
+
+    img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 20px;
+    }
+
+    .blue_circle {
+      position: relative;
+      top: -40px;
+      right: -10px;
+      width: 16px;
+    }
+
+    .grey_circle {
+      position: relative;
+      top: 40px;
+      right: 100px;
+      width: 10px;
+    }
+
+    h6 {
+      color: #5f6063;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 14px;
+      color: #80868b;
+      letter-spacing: 1px;
+      margin: auto;
+    }
+
+    .link {
+      cursor: pointer;
+
+      span {
+        transition: all 0.3s;
+        position: relative;
+        left: 5px;
+        top: 1px;
+      }
+    }
+  }
+
+  .btn-contact {
+    background-color: #13d0d5;
+    padding: 12px 30px;
+    color: #3c4043;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+}
+@media (max-width: 1290px) {
+  #offers {
+    .card {
+      height: 360px;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 770px) {
+  #offers {
+    .card {
+      margin: auto 10px;
+      height: 420px;
+      margin-bottom: 40px;
+      padding: 30px 10px 10px;
+      text-align: left;
+
+      h6 {
+        font-size: 0.9rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

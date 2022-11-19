@@ -123,28 +123,34 @@
   ],
   "offers": [{
       "imgUrl": "assets/images/offered/smartphone.svg",
+      "index": 1,
       "title": "Smart Phone, Computers & Tablet Repairs & Upgrades",
       "description": "Walking around with that cracked screen? Have a broken Desktop or Laptop or what you really need is an upgrade , we'll get you up and running in no time."
     },
     {
       "imgUrl": "assets/images/offered/computer-sw.svg",
+      "index": 2,
       "title": "Software & Hardware Installation and Upgrading",
       "description": "Need an updated version of Microsoft Office or BIOS ? No problem! How about a much needed upgrade to your RAM or Storage? We can handle that!"
     },
     {
       "imgUrl": "assets/images/offered/file.svg",
+      "index": 3,
       "title": "Data Recovery",
       "description": "Do you wish to recover lost files, pictures, documents from accidental deletions, formatting errors, partition losses, OS crashes or virus attacks, not to worry!"
     }, {
       "imgUrl": "assets/images/offered/printer.svg",
+      "index": 4,
       "title": "Printers, Photocopier and Scanners Repair",
       "description": "Is it Paper jams, really bad looking prints or just old-age and/or outdated technology on your trustee printers, all common all fixable!"
     }, {
       "imgUrl": "assets/images/offered/security-camera.svg",
+      "index": 5,
       "title": "Security CCTV & Biometrics Installation",
       "description": "You can’t be everywhere but CCTV can !! CCTV and Biometrics are ideal and highly reduce instances of fraud as well as providing secured access."
     }, {
       "imgUrl": "assets/images/offered/micro-soldering.svg",
+      "index": 6,
       "title": "Micro-soldering",
       "description": "Learning to micro-solder is difficult with low quality equipment, why not come to the professionals and get highly reliable, corrosion-free and strain-free joins for your components."
     }

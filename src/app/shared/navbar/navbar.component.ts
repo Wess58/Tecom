@@ -49,7 +49,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.activatedRoute.queryParams.subscribe((params: any) => {
-        if (params['om']) {
+        if (params['type'] === 'mail-in') {
           const close = document.getElementById('mailInModalBtn') as HTMLElement;
 
           if (close) {

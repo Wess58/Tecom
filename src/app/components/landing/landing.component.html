@@ -1,0 +1,48 @@
+<main class="landing-section">
+
+  <img class="roundedSquare1" src="assets/images/rounded-black-square.svg" alt="rounded-square">
+  <img class="roundedSquare2" src="assets/images/rounded-grey-square.svg" alt="rounded-square">
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-6">
+
+        <div class="content" [@fadeIn]>
+          <div class="logo-remake">
+            <h1>TECOM</h1>
+            <h3>ADVANCE</h3>
+          </div>
+          <p>The one-stop service store for your <br> <strong>technology</strong>, <strong>security</strong> and <strong>repair</strong> needs.</p>
+          <p>Drop-in or <strong>mail-in</strong> your device by <br> filling out our Mail-In Form.</p>
+          <div class="d-flex">
+            <a href="#contact" class="btn btn-lg btn-contact my-4"> Talk to us <span class="ml-2">&#8702;</span></a>
+            <a class="btn btn-lg btn-main-in my-4" data-toggle="modal" data-target="#mailInModal" [routerLink]="''" [queryParams]="{ type:'mail-in' }"> Mail in <span class="ml-2">&#8702;</span></a>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="col-md-6 text-center">
+
+        <div class="illustation-holder">
+          <img class="hologram" src="assets/images/circuit.svg" alt="hologram">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- <div class="slider topSlider">
+    <div class="slide-track">
+      <div class="slide" *ngFor="let img of workImages;index as i">
+        <img [src]="img.imgUrl" [alt]="img.name">
+      </div>
+    </div>
+  </div> -->
+
+  <img class="black-wave" src="assets/images/white-mobile-sc-wave.svg" alt="wave">
+
+</main>

@@ -1,0 +1,55 @@
+.brands {
+  padding-top: 8vh;
+
+  #done_svg {
+    width: 80%;
+    filter: drop-shadow(0 3px 40px #f1f1f1);
+    /* margin-left: 200px; */
+  }
+
+  .description {
+    font-size: 36px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .brands-slider {
+    position: relative;
+    min-height: 150px;
+    margin: 30px 0;
+
+    .slide {
+      margin: 0;
+      padding: 0;
+
+      img {
+        width: 250px;
+        height: 120px;
+        object-fit: contain;
+        filter: grayscale(100%);
+      }
+    }
+  }
+}
+
+
+@media (max-width: 770px) {
+  .brands {
+    #done_svg {
+      width: 90%;
+    }
+
+    .brands-slider {
+      img {
+        margin: 0 20px;
+        width: auto!important;
+        height: 80px!important;
+        object-fit: contain;
+      }
+    }
+  }
+}

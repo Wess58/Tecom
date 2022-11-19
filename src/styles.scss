@@ -184,6 +184,34 @@ textarea:hover {
     }
   }
 }
+
+// Infinite scroll logo carousel
+$animationSpeed: 70s; // Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 18.5));
+  }
+}
+
+.slider {
+  margin: auto;
+  overflow-x: hidden;
+  z-index: 10!important;
+
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+
+    &:hover {
+      animation-play-state: paused;
+      // overflow-x: scroll;
+    }
+  }
+}
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 4200px) {
   .container {

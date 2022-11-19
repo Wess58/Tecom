@@ -1,0 +1,25 @@
+<div class="container brands">
+
+  <div class="row">
+    <div class="col-md-6 col-lg-7">
+      <img id="done_svg" src="assets/images/undraw_done.svg" alt="done">
+
+
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <h3 class="description text-left"> We have proficiency assurance in a wide variety of <span>products & Brands'</span> flagship devices.</h3>
+    </div>
+
+  </div>
+
+
+  <div class="slider brands-slider">
+    <div class="slide-track">
+      <div class="slide" *ngFor="let brand of brandImages;index as i">
+        <img [src]="brand.imgUrl" [alt]="brand.name">
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,74 @@
+<div class="container" id="offers">
+
+  <h3 class="description text-center mb-5"> Have a look at some of the <span>expertise services</span> we offer </h3>
+  <div class="d-none d-md-block">
+    <div class="row justify-content-center mx-0">
+      <div class="col-6 col-md-4 col-lg-3 pl-ms-0 pr-ms-0" *ngFor="let offer of offers.slice(0,3);index as i">
+        <div class="card">
+
+          <div align="center">
+            <img [src]="offer.imgUrl" alt="icon">
+            <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
+            <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
+
+          </div>
+          <h6>{{offer.title}}</h6>
+          <p>{{offer.description}}</p>
+
+          <span class="link" data-toggle="modal" data-target="#mailInModal" [routerLink]="''" [queryParams]="{ type:'services', index: offer.index }">Inquire <span><i class="fas fa-long-arrow-alt-right"></i></span></span>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row justify-content-center mx-0">
+      <div class="col-6 col-md-4 col-lg-3 pl-ms-0 pr-ms-0" *ngFor="let offer of offers.slice(3);index as i">
+        <div class="card">
+
+          <div align="center">
+            <img [src]="offer.imgUrl" alt="icon">
+            <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
+            <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
+
+          </div>
+          <h6>{{offer.title}}</h6>
+          <p>{{offer.description}}</p>
+
+          <span class="link" data-toggle="modal" data-target="#mailInModal" [routerLink]="''" [queryParams]="{ type:'services', index: offer.index }">Inquire <span><i class="fas fa-long-arrow-alt-right"></i></span></span>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="d-block d-md-none">
+    <div class="row mx-0">
+      <div class="col-6 col-md-4 col-lg-3 pl-ms-0 pr-ms-0" *ngFor="let offer of offers;index as i">
+        <div class="card">
+
+          <div align="center">
+            <img [src]="offer.imgUrl" alt="icon">
+            <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
+            <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
+
+          </div>
+          <h6>{{offer.title}}</h6>
+          <p>{{offer.description}}</p>
+
+          <span class="link" data-toggle="modal" data-target="#mailInModal" [routerLink]="''" [queryParams]="{ type:'services', index: offer.index }">Inquire <span><i class="fas fa-long-arrow-alt-right"></i></span></span>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div align="center">
+    <a href="#contact" class="btn btn-contact mt-4"> Talk to us <span class="ml-2">&#8702;</span></a>
+  </div>
+
+
+</div>

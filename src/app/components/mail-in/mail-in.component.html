@@ -3,7 +3,7 @@
     <div class="modal-header">
       <h5 class="modal-title" id="mailInModalLabel">
         <!-- <span *ngIf="stage === 1">Terms and Conditions</span> -->
-        <span>Mail-in request</span>
+        <span>{{requestType === 'services' ? 'Service inquiry' : 'Mail-in request'}}</span>
       </h5>
       <button type="button" class="close" (click)="reset()" data-dismiss="modal" aria-label="Close" [disabled]="sending">
         <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
@@ -34,7 +34,7 @@
 
             <div class="col-md-6">
               <div class="form-group">
-                <label for="phone">Phone</label>
+                <label for="phone">Phone number</label>
                 <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="emailForm.phone" maxlength="12" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
               </div>
             </div>
@@ -46,10 +46,19 @@
               </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6" *ngIf="requestType !== 'services'">
               <div class="form-group">
                 <label for="location">Location / Address</label>
                 <input type="text" class="form-control" id="location" name="location" [(ngModel)]="emailForm.location" placeholder="eg. Nairobi, Westlands , CBD">
+              </div>
+            </div>
+
+            <div class="col-md-6" *ngIf="requestType === 'services'">
+              <div class="form-group">
+                <label for="service">Services</label>
+                <select class="form-control" name="service" [(ngModel)]="emailForm.service">
+                  <option [value]="service.index" *ngFor="let service of services;index as i">{{service.title}}</option>
+                </select>
               </div>
             </div>
 
@@ -78,11 +87,12 @@
 
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea name="message" class="form-control" id="message" name="message" [(ngModel)]="emailForm.message" rows="4" placeholder="Describe the problem you are having with your device"></textarea>
+            <textarea name="message" class="form-control" id="message" name="message" [(ngModel)]="emailForm.message" rows="4"
+              [placeholder]="requestType === 'services' ? 'Enter a message about inquiry' : 'Describe the problem you are having with your device'"></textarea>
           </div>
 
           <span class="terms-checkbox">
-            <input type="checkbox" name="acceptDisclaimer" [checked]="acceptDisclaimer" [(ngModel)]="acceptDisclaimer" [disabled]="sending || !emailForm.phone || !emailForm.email || !emailForm.fullName || !emailForm.location || !emailForm.message" />
+            <input type="checkbox" name="acceptDisclaimer" [checked]="acceptDisclaimer" [(ngModel)]="acceptDisclaimer" [disabled]="sending || !emailForm.phone || !emailForm.email || !emailForm.fullName || (requestType !== 'services' && !emailForm.location) || !emailForm.message" />
             I have read and accept <a href="assets/Tecom Advance Disclaimer.pdf" download>terms and conditions</a>
           </span>
 
@@ -93,8 +103,15 @@
         <div>
           <img src="assets/images/email-sent.png" alt="email-sent">
           <span class="d-block">Hello <strong>{{emailForm?.fullName | firstName}}</strong>,</span>
-          <span class="d-block">We've received your repair mail-in details with reference number <strong class="greenText d-inline-block">{{refId}}</strong>. <br> Our technician will be in touch within the next 24 hours. <br><br>
-            Please call or whatsapp our contact centre on <a href="tel:254792553595">+254792553595</a> or <a href="tel:254720402275">+254720402275</a> in case you have any inquiries. </span>
+          <span class="d-block" *ngIf="requestType !== 'services'">We've received your repair mail-in details with reference number <strong class="greenText d-inline-block">{{refId}}</strong>. <br> Our technician will be in touch within the next 24
+            hours. <br><br>
+            Please call or whatsapp our contact centre on <a href="tel:254792553595">+254792553595</a> or <a href="tel:254720402275">+254720402275</a> in case you have any inquiries.
+          </span>
+
+          <span class="d-block" *ngIf="requestType === 'services'">We've received your service inquiry details for {{services[emailForm.service].title}} with reference number <strong class="greenText d-inline-block">{{refId}}</strong>. <br> Our
+            technician will be in touch within the next 24 hours. <br><br>
+            Please call or whatsapp our contact centre on <a href="tel:254792553595">+254792553595</a> or <a href="tel:254720402275">+254720402275</a> in case you have any inquiries.
+          </span>
         </div>
       </div>
 
@@ -107,7 +124,8 @@
 
     <div class="modal-footer pt-0" *ngIf="stage === 1">
       <button type="button" class="btn btn-close mr-3" data-dismiss="modal" [disabled]="sending" (click)="reset()">Close</button>
-      <button type="button" class="btn btn-submit" (click)="formValidation()" [disabled]="!acceptDisclaimer || sending || !emailForm.phone || !emailForm.email || !emailForm.fullName || !emailForm.location || !emailForm.message">{{sending ? 'Sending ...' : 'Submit'}}</button>
+      <button type="button" class="btn btn-submit" (click)="formValidation()"
+        [disabled]="!acceptDisclaimer || sending || !emailForm.phone || !emailForm.email || !emailForm.fullName || (requestType !== 'services' && !emailForm.location) || !emailForm.message">{{sending ? 'Sending ...' : 'Submit'}}</button>
     </div>
     <div class="modal-footer pt-0" *ngIf="stage === 2">
       <button type="button" class="btn btn-close mr-3" data-dismiss="modal" (click)="reset()">Close</button>

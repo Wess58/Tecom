@@ -10,12 +10,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
-import { MailInComponent } from './mail-in/mail-in.component';
+import { MailInComponent } from './components/mail-in/mail-in.component';
 import { FirstNamePipe } from './pipes/first-name.pipe';
+import { ServicesComponent } from './components/services/services.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { LandingComponent } from './components/landing/landing.component';
+import { BrandsComponent } from './components/brands/brands.component';
 
 
 @NgModule({
@@ -25,7 +29,11 @@ import { FirstNamePipe } from './pipes/first-name.pipe';
     FooterComponent,
     HomeComponent,
     MailInComponent,
-    FirstNamePipe
+    FirstNamePipe,
+    ServicesComponent,
+    ContactUsComponent,
+    LandingComponent,
+    BrandsComponent
   ],
   imports: [
     BrowserModule,
