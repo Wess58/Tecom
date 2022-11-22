@@ -79,7 +79,7 @@ export class MailInComponent implements OnInit {
   }
 
   formValidation(): void {
-    if (/\S +@\S +\.\S + /.test(this.emailForm.email)) {
+    if ((/\S+@\S+\.\S+/).test(this.emailForm.email)) {
       this.emailInvalid = false;
       this.sending = true;
       this.emailForm.email = this.emailForm.email.toLowerCase();
@@ -99,7 +99,7 @@ export class MailInComponent implements OnInit {
   }
 
   validateCCEmail(): void {
-    if (/\S +@\S +\.\S + /.test(this.ccEmail)) {
+    if ((/\S+@\S+\.\S+/).test(this.ccEmail)) {
       this.ccEmailInvalid = false;
 
       if (this.ccEmails.indexOf(this.ccEmail) === -1 && this.ccEmail.toLowerCase() !== this.emailForm.email.toLowerCase()) {
