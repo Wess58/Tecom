@@ -79,6 +79,7 @@ export class MailInComponent implements OnInit {
     }
   }
 
+
   formValidation(): void {
     if ((/\S+@\S+\.\S+/).test(this.emailForm.email)) {
       this.emailInvalid = false;
@@ -229,7 +230,7 @@ export class MailInComponent implements OnInit {
       '</head>' +
       '<body>\n' +
       '    <p>Hello ' + this.emailForm.fullName.split(' ')[0] + ', </p>\n' +
-      '    <p>We\'ve received your service inquiry details for' + this.services[this.emailForm.service].title + ' with reference number <strong>' + this.refId + '</strong> </p>\n' +
+      '    <p>We\'ve received your service inquiry details for ' + this.services[this.emailForm.service - 1].title + ' with reference number <strong>' + this.refId + '</strong> </p>\n' +
       '    <p>Our technician will be in touch within the next 24 hours.</p>\n' +
       '   <br>\n' +
       '    <p>Please call or whatsapp our contact centre on +254 792 553 595 <strong>OR</strong> +254 720 402 275 in case you have any inquiries.</p>\n' +
@@ -273,7 +274,7 @@ export class MailInComponent implements OnInit {
       '    <p>Client name: ' + this.emailForm.fullName + '</p>\n' +
       '    <p>Client Phone number: ' + this.emailForm.phone + '</p>\n' +
       '    <p>Client Email Address: ' + this.emailForm.email + '</p>\n' +
-      '    <p>Service inquired: ' + this.services[this.emailForm.service].title + '</p>\n' +
+      '    <p>Service inquired: ' + this.services[this.emailForm.service - 1].title + '</p>\n' +
       '    <p>Problem description: ' + this.emailForm.message + '</p>\n' +
       '</body>' +
       '</html>';
