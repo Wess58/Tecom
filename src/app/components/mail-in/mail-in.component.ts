@@ -60,7 +60,7 @@ export class MailInComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         // trick the Router into believing it's last link wasn't previously loaded
         this.requestType = this.activatedRoute.snapshot.queryParams.type;
-        console.log(this.activatedRoute.snapshot.queryParams.type);
+        // console.log(this.activatedRoute.snapshot.queryParams.type);
 
 
         this.emailForm.service = +this.activatedRoute.snapshot.queryParams.index ?? '';
@@ -69,6 +69,7 @@ export class MailInComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     // console.log(this.requestType);
     if (this.requestType === 'services') {
       this.subject = 'Tecom Advance Service Inquiry '
@@ -146,9 +147,7 @@ export class MailInComponent implements OnInit {
   }
 
   generateRefId(): void {
-    // console.log('custom', 'TA-' , new Date().getFullYear() , new Date().getMonth() , new Date().getDate() , new Date().getHours(),new Date().getMinutes());
-
-    this.refId = '#TA-' + '' + new Date().getFullYear() + '' + new Date().getMonth() + '' + new Date().getDate() + '' + new Date().getHours() + '' + new Date().getMinutes();
+    this.refId = '#TA-' + '' + new Date().getFullYear() + '' + (new Date().getMonth() + 1) + '' + new Date().getDate() + '' + new Date().getHours() + '' + new Date().getMinutes();
   }
 
   protected subscribeToSaveResponse(result: Observable<HttpResponse<any>>) {
