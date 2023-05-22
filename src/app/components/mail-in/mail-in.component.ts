@@ -181,7 +181,7 @@ export class MailInComponent implements OnInit {
     return {
       ...new NotificationDTO(),
       receiverEmail: this.emailForm.email,
-      cc: this.ccEmails.toString() ?? null,
+      cc: this.ccEmails.length ? this.ccEmails.toString() : null,
       subject: this.subject + this.refId,
       body: this.requestType === 'services' ? this.createUserMessageForServices() : this.createUserMessage(),
       html: true,
