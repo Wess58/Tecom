@@ -94,7 +94,12 @@ export class MailInComponent implements OnInit {
       this.generateRefId();
 
 
-      const userNotificationDTO = this.getUserNotificationDTO();
+      let userNotificationDTO = this.getUserNotificationDTO();
+
+      if (this.ccEmails.length) {
+        userNotificationDTO = { ...{ cc: this.ccEmails.toString() }, ...userNotificationDTO };
+      }
+
       this.subscribeToSaveResponse(this.notificationService.emailWithoutAttachments(userNotificationDTO));
 
       const businessNotificationDTO = this.getBusinessNotificationDTO();
@@ -181,7 +186,6 @@ export class MailInComponent implements OnInit {
     return {
       ...new NotificationDTO(),
       receiverEmail: this.emailForm.email,
-      cc: this.ccEmails.length ? this.ccEmails.toString() : null,
       subject: this.subject + this.refId,
       body: this.requestType === 'services' ? this.createUserMessageForServices() : this.createUserMessage(),
       html: true,
