@@ -60,23 +60,28 @@ export class MailInComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         // trick the Router into believing it's last link wasn't previously loaded
         this.requestType = this.activatedRoute.snapshot.queryParams.type;
+        this.setSubject();
         // console.log(this.activatedRoute.snapshot.queryParams.type);
 
 
         this.emailForm.service = +this.activatedRoute.snapshot.queryParams.index ?? '';
+
       }
     });
   }
 
   ngOnInit(): void {
 
-    // console.log(this.requestType);
+  }
+
+  setSubject(): void {
     if (this.requestType === 'services') {
       this.subject = 'Tecom Advance Service Inquiry '
 
     } else {
       this.subject = 'Tecom Advance Mail-in Request '
     }
+
   }
 
 
