@@ -9,7 +9,7 @@
 body,
 html {
   margin: 0;
-  padding: 0!important !important;
+  padding: 0!important;
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
   color: #80868b;
@@ -59,7 +59,7 @@ textarea {
   box-shadow: none !important;
   background-clip: padding-box !important;
   color: #5f6063 !important;
-  padding: 10px 12px!important !important;
+  padding: 10px 12px!important;
 }
 
 input:active,
@@ -121,7 +121,7 @@ textarea:hover {
 .modal {
   backdrop-filter: blur(2px);
   background-color: #0001;
-  padding: 0!important !important;
+  padding: 0!important;
 
   .modal-title {
     font-weight: 600;

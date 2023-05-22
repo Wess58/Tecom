@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 
 export class HttpTokenInterceptor implements HttpInterceptor {
-  token = "dGVjb21hZHZhbmNlQGdtYWlsLmNvbTpodGFkd2hnbWN5YnhyYnlh";
+  token = "dGVjb21hZHZhbmNlQGdtYWlsLmNvbTpzdXJ3YW9obnNwdXJoZHRj";
 
   constructor(
     private router: Router
