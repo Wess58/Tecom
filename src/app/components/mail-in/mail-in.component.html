@@ -56,7 +56,7 @@
             <div class="col-md-6" *ngIf="requestType === 'services'">
               <div class="form-group">
                 <label for="service">Services</label>
-                <select class="form-control" name="service" [(ngModel)]="emailForm.service">
+                <select class="form-control py-0" name="service" [(ngModel)]="emailForm.service">
                   <option [value]="service.index" *ngFor="let service of services;index as i">{{service.title}}</option>
                 </select>
               </div>
