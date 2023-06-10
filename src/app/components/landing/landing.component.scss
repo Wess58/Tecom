@@ -2,6 +2,7 @@
   height: 600px;
   overflow: hidden;
   position: relative;
+  background-color: #212121;
 
   .content {
     position: relative;
@@ -83,6 +84,17 @@
     background-color: #ffd6b3;
     color: #3c4043;
   }
+}
+
+#video{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  height: 100%;
+  width: 100vw!important;
+  z-index: 1;
+  object-fit: cover;
 }
 
 .topSlider {

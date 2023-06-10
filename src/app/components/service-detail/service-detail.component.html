@@ -1,0 +1,19 @@
+<div class="landing-section">
+  <div class="bg-img">
+    <img [src]="currentBackground" alt="bg-img" *ngIf="currentBackground" [@fadeIn]>
+  </div>
+  <div class="container">
+    <div class="col-md-12 col-lg-7">
+      <h1>{{currentOffer.title}}</h1>
+      <p>{{currentOffer.longDescription}}</p>
+      <button class="btn btn-cta" data-toggle="modal" data-target="#mailInModal" [routerLink]="['/service',currentOffer.index]" [queryParams]="{ type:'services', index: currentOffer.index }">Inquire about service</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal mail-in-modal fade p-0" id="mailInModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mailInModalLabel" aria-hidden="true">
+  <app-mail-in></app-mail-in>
+</div>

@@ -15,7 +15,7 @@ import content from "../../jsons/content.json";
     ]),
     trigger('fadeInGrow', [
       transition(':enter', [   // :enter is alias to 'void => *'
-      style({ opacity: 0, marginTop: 40 }),
+        style({ opacity: 0, marginTop: 40 }),
         animate('500ms ease', style({ opacity: 1, marginTop: 0 }))
       ])
     ])
@@ -30,8 +30,16 @@ export class LandingComponent implements OnInit {
   ngOnInit(): void {
 
     setTimeout(() => {
+      document.getElementById('autoplay') ?.click();
+    }, 100);
+
+    setTimeout(() => {
       this.showH1 = true;
     }, 1000);
+  }
+
+  playVideo(): void {
+    document.querySelector('video') ?.play();
   }
 
 }

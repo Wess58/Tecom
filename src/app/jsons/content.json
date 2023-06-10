@@ -1,5 +1,6 @@
 {
-  "workImages": [{
+  "workImages": [
+    {
       "name": "work",
       "imgUrl": "assets/images/work/IMG-7515.JPG"
     },
@@ -27,9 +28,10 @@
       "imgUrl": "assets/images/work/Canon EOS 1200D070.JPG"
     }
   ],
-  "brandImages": [{
+  "brandImages": [
+    {
       "name": "apple",
-      "imgUrl": "assets/images/phonelogos/apple-logo.svg"
+      "imgUrl": "assets/images/phonelogos/apple-logo.png"
     },
     {
       "name": "ubiquiti",
@@ -45,35 +47,35 @@
     },
     {
       "name": "mikrotik",
-      "imgUrl": "assets/images/phonelogos/mikrotik.png"
+      "imgUrl": "assets/images/phonelogos/mikrotik.jpg"
     },
     {
       "name": "android",
-      "imgUrl": "assets/images/phonelogos/android.svg"
+      "imgUrl": "assets/images/phonelogos/android.png"
     },
     {
       "name": "samsung",
-      "imgUrl": "assets/images/phonelogos/samsung.svg"
+      "imgUrl": "assets/images/phonelogos/samsung.png"
     },
     {
       "name": "lg",
-      "imgUrl": "assets/images/phonelogos/lg.svg"
+      "imgUrl": "assets/images/phonelogos/lg.png"
     },
     {
       "name": "brother",
-      "imgUrl": "assets/images/phonelogos/brother.png"
+      "imgUrl": "assets/images/phonelogos/brother.jpg"
     },
     {
       "name": "one-plus",
-      "imgUrl": "assets/images/phonelogos/one-plus.svg"
+      "imgUrl": "assets/images/phonelogos/one-plus.png"
     },
     {
       "name": "htc",
-      "imgUrl": "assets/images/phonelogos/htc.svg"
+      "imgUrl": "assets/images/phonelogos/htc.png"
     },
     {
       "name": "sony",
-      "imgUrl": "assets/images/phonelogos/sony.svg"
+      "imgUrl": "assets/images/phonelogos/sony.png"
     },
     {
       "name": "netonix",
@@ -81,78 +83,119 @@
     },
     {
       "name": "huawei",
-      "imgUrl": "assets/images/phonelogos/huawei.svg"
+      "imgUrl": "assets/images/phonelogos/huawei.png"
     },
     {
       "name": "nokia",
-      "imgUrl": "assets/images/phonelogos/nokia.svg"
+      "imgUrl": "assets/images/phonelogos/nokia.png"
     },
     {
       "name": "apc",
-      "imgUrl": "assets/images/phonelogos/apc.svg"
+      "imgUrl": "assets/images/phonelogos/apc.png"
     },
     {
       "name": "oppo",
-      "imgUrl": "assets/images/phonelogos/oppo.svg"
+      "imgUrl": "assets/images/phonelogos/oppo.png"
     },
     {
       "name": "vivo",
-      "imgUrl": "assets/images/phonelogos/vivo.svg"
+      "imgUrl": "assets/images/phonelogos/vivo.png"
     }, {
       "name": "xiaomi",
-      "imgUrl": "assets/images/phonelogos/xiaomi.svg"
+      "imgUrl": "assets/images/phonelogos/xiaomi.png"
     }, {
       "name": "hp",
-      "imgUrl": "assets/images/phonelogos/hp.svg"
+      "imgUrl": "assets/images/phonelogos/hp.png"
     }, {
       "name": "dell",
-      "imgUrl": "assets/images/phonelogos/dell.svg"
+      "imgUrl": "assets/images/phonelogos/dell.png"
     }, {
       "name": "lenovo",
-      "imgUrl": "assets/images/phonelogos/lenovo.svg"
+      "imgUrl": "assets/images/phonelogos/lenovo.png"
     }, {
       "name": "asus",
-      "imgUrl": "assets/images/phonelogos/asus.svg"
+      "imgUrl": "assets/images/phonelogos/asus.png"
     }, {
       "name": "acer",
-      "imgUrl": "assets/images/phonelogos/acer.svg"
+      "imgUrl": "assets/images/phonelogos/acer.png"
     }, {
       "name": "windows-os",
-      "imgUrl": "assets/images/phonelogos/windows-os.svg"
+      "imgUrl": "assets/images/phonelogos/windows.png"
     }
   ],
   "offers": [{
       "imgUrl": "assets/images/offered/smartphone.svg",
       "index": 1,
       "title": "Smart Phone, Computers & Tablet Repairs & Upgrades",
-      "description": "Walking around with that cracked screen? Have a broken Desktop or Laptop or what you really need is an upgrade ? We'll get you up and running in no time."
+      "description": "Walking around with that cracked screen? Have a broken Desktop or Laptop or what you really need is an upgrade ? We'll get you up and running in no time.",
+      "longDescription":"Walking around with that cracked screen? Have a broken Desktop or Laptop or what you really need is an upgrade? We'll get you up and running in no time. Your damaged smartphone is in safe hands – let us fix it for you. We’ve seen mobile phones grow from simple devices that could handle telephone calls and text messages to the pocket powerhouses of today. As a result, these diminutive machines have become the epicenters of most people’s worlds. They’re communication devices, satellite navigation platforms, gaming machines and they provide instant access to the entirety of the World Wide Web whenever we need it. When a smartphone breaks, it can feel like losing a limb. We understand that; which is why TECOM ADVANCE came to be. Looking for quality Laptop, Desktop, iMac, or MacBook repairs? Worry no more for we provide laptop screen repairs, battery replacement or any other issue, TECOM ADVANCE expert-certified technicians will be there to fix the issue. We have a growing network of stores that all provide on-the-spot diagnostic service and high-quality parts to ensure timely laptop repair.",
+      "images": [
+        "assets/images/work/phone-comps/1.jpg",
+        "assets/images/work/phone-comps/2.jpg",
+        "assets/images/work/phone-comps/3.jpg",
+        "assets/images/work/phone-comps/4.jpeg"
+      ]
     },
     {
       "imgUrl": "assets/images/offered/computer-sw.svg",
       "index": 2,
       "title": "Software & Hardware Installation and Upgrading",
-      "description": "Need an updated version of Microsoft Office or BIOS ? No problem! How about a much needed upgrade to your RAM or Storage? We can handle that!"
+      "description": "Need an updated version of Microsoft Office or BIOS ? No problem! How about a much needed upgrade to your RAM or Storage? We can handle that!",
+      "longDescription":"Need an updated version of Microsoft Office or BIOS? No problem! How about a much- needed upgrade to your RAM or Storage? We can handle that!",
+      "images": [
+        "assets/images/work/phone-comps/1.jpg",
+        "assets/images/work/phone-comps/2.jpg"
+      ]
     },
     {
       "imgUrl": "assets/images/offered/file.svg",
       "index": 3,
       "title": "Data Recovery",
-      "description": "Do you wish to recover lost files, pictures, documents from accidental deletions, formatting errors, partition losses, OS crashes or virus attacks? Not to worry!"
+      "description": "Do you wish to recover lost files, pictures, documents from accidental deletions, formatting errors, partition losses, OS crashes or virus attacks? Not to worry!",
+      "longDescription":"Do you wish to recover lost files, pictures, and documents from accidental deletions, formatting errors, partition losses, OS crashes, or virus attacks? Not to worry! Having issues with your crashed computers or data loss? Perhaps your computer won’t turn on and you need to access your data? What if your computer won’t connect to an external storage? We, the Tecom Advance team provide data recovery service for Mac computers, PCs, and a range of external storage devices. Our data recovery service has the right software, hardware, and mechanical repair solutions to successfully recover your data with 100% confidentiality so you can rest at ease. We also provide the best iPhone data recovery service. Feel free to contact us for computer data recovery or mobile data recovery at any time.",
+      "images": [
+        "assets/images/work/data-recovery/1.jpg",
+        "assets/images/work/data-recovery/2.jpg",
+        "assets/images/work/data-recovery/3.jpg",
+        "assets/images/work/data-recovery/4.jpg",
+        "assets/images/work/data-recovery/5.jpg"
+      ]
     }, {
       "imgUrl": "assets/images/offered/printer.svg",
       "index": 4,
       "title": "Printers, Photocopier and Scanners Repair",
-      "description": "Is it Paper jams, really bad looking prints or just old-age and/or outdated technology on your trustee printers? All common all fixable!"
+      "description": "Is it Paper jams, really bad looking prints or just old-age and/or outdated technology on your trustee printers? All common all fixable!",
+      "longDescription":"Is it Paper jams, really bad-looking prints or just old-age and/or outdated technology on your trustee printers? All common all fixable! At Tecom Advance we provide high-quality services & repairs in all types of Printers & Scanners from all major brands-HP, Epson, Samsung, Xerox, Canon, etc. to our clients. We offer good value for money and contentment to our clients due to our high standard of service and maintenance. We deal with all kinds of printers and have skilled servicepersonnel to set right your faulty printers. Whether laser or Desk Jet printers, our service personnel can fix your printer problems. We understand how valuable your office’s productivity is and are committed to getting you up and running as fast as possible. We always provide quality services and products quickly, efficiently, and professionally.",
+      "images": [
+        "assets/images/work/data-recovery/1.jpg",
+        "assets/images/work/data-recovery/2.jpg"
+      ]
     }, {
       "imgUrl": "assets/images/offered/security-camera.svg",
       "index": 5,
       "title": "Security CCTV & Biometrics Installation",
-      "description": "You can’t be everywhere but CCTV can !! CCTV and Biometrics are ideal and highly reduce instances of fraud as well as providing secured access."
+      "description": "You can’t be everywhere but CCTV can !! CCTV and Biometrics are ideal and highly reduce instances of fraud as well as providing secured access.",
+      "longDescription":"You can’t be everywhere but CCTV can!! CCTV and Biometrics are ideal and highly reduce fraud instances and provide secured access. We offer CCTV installation internationally, biometric access control systems, and alarm systems installation to keep off intruders and burglars. Our highly experienced technicians are experts at handling the most difficult security installation services with the utmost ease. Having the right kind of agency to design and install your surveillance cameras and related products is crucial to that it will be done perfectly and on time. Our ultimate goal is to thoroughly satisfy our customers. The most important question while looking for CCTV installation is “Will he give you proper service and warranty on products?” after installation. We only work with trusted brands like Dahua, Hikvision, Idis, and Honeywell for all our security cameras.",
+      "images": [
+        "assets/images/work/cctv/1.jpg",
+        "assets/images/work/cctv/2.jpg",
+        "assets/images/work/cctv/3.jpg",
+        "assets/images/work/cctv/4.jpg",
+        "assets/images/work/cctv/5.jpg"
+      ]
     }, {
       "imgUrl": "assets/images/offered/micro-soldering.svg",
       "index": 6,
       "title": "Micro-soldering",
-      "description": "Learning to micro-solder is difficult with low quality equipment, why not come to the professionals and get highly reliable, corrosion-free and strain-free joins for your components."
+      "description": "Learning to micro-solder is difficult with low quality equipment, why not come to the professionals and get highly reliable, corrosion-free and strain-free joins for your components.",
+      "longDescription":"Micro-soldering demands high-quality equipment in order to create highly reliable, corrosion-free, and strain-free join for your devices. At Tecom Advance we offer logic board-level micro soldering repairs for a variety of devices: iPhones, iPads, Xbox, PS4, LG, Sony, etc. We are able to repair FPC connectors, backlight circuits, repair traces, replace surface-mounted device components, and much more.",
+      "images": [
+        "assets/images/work/micro-soldering/1.jpg",
+        "assets/images/work/micro-soldering/2.jpg",
+        "assets/images/work/micro-soldering/3.jpg",
+        "assets/images/work/micro-soldering/4.jpg",
+        "assets/images/work/micro-soldering/5.jpg"
+      ]
     }
   ]
 }

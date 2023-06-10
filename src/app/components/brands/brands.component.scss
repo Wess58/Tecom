@@ -28,9 +28,10 @@
 
       img {
         width: 250px;
-        height: 120px;
+        height: 100px;
         object-fit: contain;
-        filter: grayscale(100%);
+        mix-blend-mode: color-burn;
+        // filter: grayscale(100%);
       }
     }
   }

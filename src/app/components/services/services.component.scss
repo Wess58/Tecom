@@ -17,19 +17,25 @@
     padding: 30px 10px 10px;
     border-radius: 12px;
     border: 1px solid #e1e1e1;
-    transition: all .2s;
+    transition: all 0.2s;
 
     &:hover {
       // box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.09);
       border: 1px solid #3c4043;
 
-
       .link {
         color: #3c4043;
+
         span {
           position: relative;
           left: 15px;
         }
+      }
+
+      .btn-link{
+        border: 1px solid #13d0d5;
+        background-color: #13d0d5;
+        color: #fff;
       }
     }
 
@@ -66,6 +72,11 @@
       margin: auto;
     }
 
+    .d-flex{
+      padding: 0 10px;
+      margin: 5px 0;
+    }
+
     .link {
       cursor: pointer;
 
@@ -76,12 +87,25 @@
         top: 1px;
       }
     }
+
+    .btn-link {
+      border: 1px solid #13d0d5;
+      background-color: transparent;
+      border-radius: 20px;
+      color: #13d0d5;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-decoration: none!important;
+      outline: none!important;
+      box-shadow: none!important;
+    }
   }
 
   .btn-contact {
     background-color: #13d0d5;
     padding: 12px 30px;
-    color: #3c4043;
+    color: #fff;
     font-size: 0.9rem;
     letter-spacing: 1px;
     font-weight: 600;

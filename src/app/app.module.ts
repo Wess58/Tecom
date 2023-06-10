@@ -20,6 +20,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { BrandsComponent } from './components/brands/brands.component';
+import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { BrandsComponent } from './components/brands/brands.component';
     ServicesComponent,
     ContactUsComponent,
     LandingComponent,
-    BrandsComponent
+    BrandsComponent,
+    ServiceDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -133,7 +133,9 @@ export class MailInComponent implements OnInit {
   }
 
   reset(): void {
-    this.router.navigate(['/']);
+    // this.router.navigate(['/']);
+    window.history.back();
+
 
     this.emailForm = {
       fullName: '',

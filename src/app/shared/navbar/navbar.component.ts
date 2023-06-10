@@ -43,7 +43,7 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    public router: Router
   ) { }
 
   ngOnInit(): void {

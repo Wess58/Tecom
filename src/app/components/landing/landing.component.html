@@ -1,7 +1,7 @@
 <main class="landing-section">
 
   <img class="roundedSquare1" src="assets/images/rounded-black-square.svg" alt="rounded-square">
-  <img class="roundedSquare2" src="assets/images/rounded-grey-square.svg" alt="rounded-square">
+  <!-- <img class="roundedSquare2" src="assets/images/rounded-grey-square.svg" alt="rounded-square"> -->
 
 
   <div class="container">
@@ -19,6 +19,7 @@
             <a href="#contact" class="btn btn-lg btn-contact my-4"> Talk to us <span class="ml-2">&#8702;</span></a>
             <a class="btn btn-lg btn-main-in my-4" data-toggle="modal" data-target="#mailInModal" [routerLink]="''" [queryParams]="{ type:'mail-in' }"> Mail in <span class="ml-2">&#8702;</span></a>
           </div>
+
         </div>
 
 
@@ -26,9 +27,9 @@
 
       <div class="col-md-6 text-center">
 
-        <div class="illustation-holder">
+        <!-- <div class="illustation-holder">
           <img class="hologram" src="assets/images/circuit.svg" alt="hologram">
-        </div>
+        </div> -->
       </div>
 
     </div>
@@ -42,6 +43,14 @@
       </div>
     </div>
   </div> -->
+
+  <div class="wrapper d-none d-lg-block">
+    <video playsinline autoplay="true" muted="true" loop id="video">
+      <source src="assets/images/work/landing-video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <button type="button" name="button" id="autoplay" hidden (click)="playVideo()"></button>
 
   <img class="black-wave" src="assets/images/white-mobile-sc-wave.svg" alt="wave">
 
