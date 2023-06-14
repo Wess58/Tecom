@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { style, animate, transition, trigger } from '@angular/animations';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import content from "../../jsons/content.json";
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -20,6 +20,9 @@ export class NavbarComponent implements OnInit {
 
   morphNavbar = false;
   changeIcon = false;
+  offers = content.offers;
+  serviceIndex = 0;
+
   @HostListener('window:scroll', ['$event']) onScrollEvent($event: any) {
     // console.log($event);
     // console.log("scrolling", window.pageYOffset);
@@ -42,11 +45,17 @@ export class NavbarComponent implements OnInit {
   }
 
   constructor(
-    private activatedRoute: ActivatedRoute,
+    public activatedRoute: ActivatedRoute,
     public router: Router
   ) { }
 
   ngOnInit(): void {
+
+    setTimeout(() => {
+      const urlSplit: any = this.router.url.split('/');
+      this.serviceIndex = urlSplit[urlSplit.length - 1];
+    }, 10);
+
     setTimeout(() => {
       this.activatedRoute.queryParams.subscribe((params: any) => {
         if (params['type'] === 'mail-in') {
@@ -59,11 +68,16 @@ export class NavbarComponent implements OnInit {
       });
     }, 10);
 
-
   }
 
   toggleIcon(): void {
     this.changeIcon = !this.changeIcon;
+  }
+
+  refresh(): void {
+    setTimeout(() => {
+      location.reload();
+    }, 1);
   }
 
 

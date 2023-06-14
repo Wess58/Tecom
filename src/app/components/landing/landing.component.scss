@@ -159,12 +159,13 @@
     left: -490px!important;
   }
 }
-@media (max-width: 770px) {
+@media (max-width: 1000px) {
   .landing-section {
     background-color: #212121;
-    overflow-x: hidden !important;
-    overflow-y: hidden !important;
+    // overflow-x: hidden !important;
+    // overflow-y: hidden !important;
     text-align: center;
+    position: relative;
 
     h1 {
       font-size: 6rem!important;
@@ -197,6 +198,9 @@
       display: block!important;
       position: absolute;
       bottom: -1px;
+      left: 0;
+      right: 0;
+      width: 100vw;
     }
 
     .hologram {
@@ -205,4 +209,7 @@
       display: none;
     }
   }
+}
+
+@media (max-width: 600px) {
 }

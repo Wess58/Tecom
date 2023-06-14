@@ -29,7 +29,7 @@ nav {
     }
   }
 
-  a {
+  .nav-link {
     color: #5f6368 !important;
     font-size: 14px;
     font-weight: 600;
@@ -79,6 +79,51 @@ nav {
   }
 }
 
+.dropdown {
+  &:hover {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+
+  .dropdown-toggle-btn {
+    i {
+      margin-left: 10px;
+    }
+  }
+
+  .dropdown-menu {
+    display: none;
+    margin-top: -3px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    width: 300px;
+
+    .dropdown-item {
+      white-space: normal;
+      transition: all 50ms ease;
+      padding: 12px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #5f6063;
+      border-bottom: 1px solid #f1f1f1;
+
+      &:hover {
+        background-color: #f9fafb;
+        // border: none!important;
+      }
+    }
+  }
+
+  .active-dropdown-item {
+    background-color: #13d0d5!important;
+    color: #3c4043!important;
+    // font-weight: 600;
+  }
+}
+
 .side-menu {
   width: 0;
   height: 100%;
@@ -87,7 +132,7 @@ nav {
   right: 0;
   transition: all 0.2s;
 
-  ul {
+  .main-list {
     padding: 0;
     list-style: none;
     transition: all 0.3s;
@@ -100,14 +145,38 @@ nav {
       padding-right: 20px;
     }
   }
+
+  .services-listing {
+    background-color: #f1f1f1;
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+      border-bottom: 1px solid #e1e1e1;
+      // max-width:200px;
+      font-size: 0.8rem!important;
+      word-wrap: break-word!important;
+      display: block;
+      text-align: right;
+      padding: 10px;
+      padding-right: 20px;
+    }
+
+    .active-dropdown-item {
+      background-color: #13d0d5!important;
+      color: #3c4043!important;
+      // font-weight: 600;
+    }
+  }
 }
 
 .open-side-menu {
   width: 100%;
+  backdrop-filter: blur(2px);
 
-  ul {
-    width: 200px;
-    height: 230px;
+  .main-list {
+    width: 300px;
+    height: auto;
     background-color: #fff;
     box-shadow: -10px 10px 20px 0 rgba(0,0,0,0.09);
   }
