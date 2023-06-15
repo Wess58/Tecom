@@ -48,7 +48,7 @@
         <a class="nav-link " href="#services">Services</a>
       </li>
 
-      <ul class="services-listing">
+      <ul class="services-listing" *ngIf="changeIcon" [@fadeIn]>
         <li *ngFor="let offer of offers" [routerLink]="['/service',offer.index]" [ngClass]="{'active-dropdown-item':offer.index === +serviceIndex}" (click)="refresh()">
           {{offer.title}}
         </li>

@@ -150,6 +150,7 @@ nav {
     background-color: #f1f1f1;
     padding-left: 0;
     list-style-type: none;
+    width: 0;
 
     li {
       border-bottom: 1px solid #e1e1e1;
@@ -179,6 +180,10 @@ nav {
     height: auto;
     background-color: #fff;
     box-shadow: -10px 10px 20px 0 rgba(0,0,0,0.09);
+  }
+
+  .services-listing{
+    width: 300px;
   }
 }
 
