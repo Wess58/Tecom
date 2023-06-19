@@ -28,11 +28,12 @@
   }
 
   .container {
-    min-height: 100vh ;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     z-index: 10!important;
-    padding: 7vh;
+    padding-top: 12vh;
+    padding-bottom: 3vh;
 
     h1 {
       color: #f5f5f5;
@@ -72,7 +73,7 @@
     display: flex;
     align-items: center;
     z-index: 10!important;
-    padding: 15vh 10px  !important;
+    padding: 15vh 10px !important;
 
     h1 {
       font-size: 2rem!important;
