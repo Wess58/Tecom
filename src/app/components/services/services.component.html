@@ -5,14 +5,16 @@
       <div class="col-6 col-md-4 col-lg-3 pl-ms-0 pr-ms-0" *ngFor="let offer of offers.slice(0,3);index as i">
         <div class="card">
 
-          <div align="center">
-            <img [src]="offer.imgUrl" alt="icon">
-            <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
-            <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
+          <div [routerLink]="['/service',offer.index]">
+            <div align="center">
+              <img [src]="offer.imgUrl" alt="icon">
+              <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
+              <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
 
+            </div>
+            <h6>{{offer.title}}</h6>
+            <p>{{offer.description}}</p>
           </div>
-          <h6>{{offer.title}}</h6>
-          <p>{{offer.description}}</p>
 
           <div class="d-flex justify-content-between align-items-center">
 
@@ -29,14 +31,17 @@
       <div class="col-6 col-md-4 col-lg-3 pl-ms-0 pr-ms-0" *ngFor="let offer of offers.slice(3);index as i">
         <div class="card">
 
-          <div align="center">
-            <img [src]="offer.imgUrl" alt="icon">
-            <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
-            <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
+          <div [routerLink]="['/service',offer.index]">
+            <div align="center">
+              <img [src]="offer.imgUrl" alt="icon">
+              <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
+              <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
 
+            </div>
+            <h6>{{offer.title}}</h6>
+            <p>{{offer.description}}</p>
           </div>
-          <h6>{{offer.title}}</h6>
-          <p>{{offer.description}}</p>
+
 
           <div class="d-flex justify-content-between align-items-center">
 
@@ -57,14 +62,16 @@
       <div class="col-6 col-md-4 col-lg-3 pl-ms-0 pr-ms-0" *ngFor="let offer of offers;index as i">
         <div class="card">
 
-          <div align="center">
-            <img [src]="offer.imgUrl" alt="icon">
-            <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
-            <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
+          <div [routerLink]="['/service',offer.index]">
+            <div align="center">
+              <img [src]="offer.imgUrl" alt="icon">
+              <img class="grey_circle" src="assets/images/circle-grey.svg" alt="grey circle">
+              <img class="blue_circle" src="assets/images/circle-blue.svg" alt="blue circle">
 
+            </div>
+            <h6>{{offer.title}}</h6>
+            <p>{{offer.description}}</p>
           </div>
-          <h6>{{offer.title}}</h6>
-          <p>{{offer.description}}</p>
 
           <div class="d-flex justify-content-between align-items-center">
 
