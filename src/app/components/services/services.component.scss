@@ -117,11 +117,11 @@
   }
 }
 @media (max-width: 1500px) {
-.card{
-  p {
-    min-height: 130px!important;
+  .card {
+    p {
+      min-height: 130px!important;
+    }
   }
-}
 }
 @media (max-width: 1290px) {
   #offers {
@@ -136,8 +136,6 @@
   }
 }
 @media (max-width: 770px) {
-
-
   #offers {
     .card {
       margin: auto 10px 40px;
@@ -152,7 +150,6 @@
       p {
         font-size: 0.75rem;
         min-height: 160px!important;
-
       }
     }
   }
