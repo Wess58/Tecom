@@ -8,6 +8,7 @@ import { INotificationDTO, NotificationDTO } from '../../services/notification-d
 import { NotificationService } from "../../services/notification.service";
 import disclaimer from "../../jsons/disclaimer.json";
 import content from "../../jsons/content.json";
+import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-mail-in',
@@ -53,7 +54,8 @@ export class MailInComponent implements OnInit {
   constructor(
     private notificationService: NotificationService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private sanitizer: DomSanitizer
   ) {
     // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.events.subscribe((event) => {
@@ -62,8 +64,6 @@ export class MailInComponent implements OnInit {
         this.requestType = this.activatedRoute.snapshot.queryParams.type;
         this.setSubject();
         // console.log(this.activatedRoute.snapshot.queryParams.type);
-
-
         this.emailForm.service = +this.activatedRoute.snapshot.queryParams.index ?? '';
 
       }
@@ -71,19 +71,32 @@ export class MailInComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
 
   setSubject(): void {
+
+    if (localStorage.getItem('emailForm')) {
+      this.emailForm = JSON.parse(localStorage.getItem('emailForm') || '{}');
+      this.ccEmails = JSON.parse(localStorage.getItem('ccEmails') || '[]');
+    }
+
     if (this.requestType === 'services') {
       this.subject = 'Tecom Advance Service Inquiry '
 
     } else {
       this.subject = 'Tecom Advance Mail-in Request '
     }
-
   }
 
+  saveToLocal(): void {
+    localStorage.setItem('emailForm', JSON.stringify(this.emailForm));
+    localStorage.setItem('ccEmails', JSON.stringify(this.ccEmails));
+  }
+
+  clearLocal(): void {
+    localStorage.removeItem('emailForm');
+    localStorage.removeItem('ccEmails');
+  }
 
   formValidation(): void {
     if ((/\S+@\S+\.\S+/).test(this.emailForm.email)) {
@@ -118,7 +131,7 @@ export class MailInComponent implements OnInit {
         this.emailExists = false;
         this.ccEmails.push(this.ccEmail.toLowerCase());
         this.ccEmail = '';
-
+        this.saveToLocal();
       } else {
         this.emailExists = true;
       }
@@ -130,21 +143,23 @@ export class MailInComponent implements OnInit {
 
   removeEmail(email: string, index: any): void {
     this.ccEmails.splice(index, 1);
+    this.saveToLocal();
   }
 
-  reset(): void {
+  reset(action?: string): void {
     // this.router.navigate(['/']);
     window.history.back();
 
-
-    this.emailForm = {
-      fullName: '',
-      email: '',
-      phone: '',
-      message: '',
-      location: '',
-      service: ''
-    };
+    if (action) {
+      this.emailForm = {
+        fullName: '',
+        email: '',
+        phone: '',
+        message: '',
+        location: '',
+        service: ''
+      };
+    }
     this.emailInvalid = false;
     this.hasError = false;
     this.sending = false;
@@ -163,6 +178,12 @@ export class MailInComponent implements OnInit {
     this.refId = '#TA-' + '' + new Date().getFullYear() + '' + (new Date().getMonth() + 1) + '' + new Date().getDate() + '' + new Date().getHours() + '' + new Date().getMinutes();
   }
 
+  createReferralLinkWhatsapp(): any {
+    let whatsappLink: any;
+    const message =  "Hello, my name is " + this.emailForm.fullName.split(' ')[0] + (this.requestType === 'services' ? (", inquiry for service details for *" + this.services[this.emailForm.service - 1]?.title?.replace(/&/g,'and') + "* ") : ", asking inquiry for repair mail-in service ") + "with reference number *" + this.refId.replace('#','') + "* %0AContact phone number : *" + this.emailForm.phone + "* %0AContact email : *" + this.emailForm.email + "*" + (this.requestType === 'services' ? "" : "%0ALocation : *" + this.emailForm.location + "*") + "%0AMessage : " + this.emailForm.message + "";
+    return whatsappLink = this.sanitizer.bypassSecurityTrustUrl("https://wa.me/254792553595?text=" + message);
+  }
+
   protected subscribeToSaveResponse(result: Observable<HttpResponse<any>>) {
     result.subscribe(
       (res: any) => this.onSaveSuccess(res),
@@ -175,6 +196,7 @@ export class MailInComponent implements OnInit {
     this.hasError = false;
     this.stage = 2;
     this.sending = false;
+    this.clearLocal();
   }
 
   protected onSaveError(error: any) {

@@ -41,6 +41,56 @@
       }
     }
 
+    .has-error-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .error-image {
+        height: 100px;
+        margin: auto 20px auto 0;
+      }
+
+      .error-title {
+        text-decoration: underline;
+        font-weight: 600;
+        color: #3c4043;
+        display: block;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+      }
+
+      p {
+        text-align: justify!important;
+        text-justify: inter-word!important;
+        strong{
+          color: #3c4043;
+        }
+      }
+
+      .use-whatsapp-text {
+        color: #00b66c;
+        font-weight: 600;
+      }
+
+      .btn-whatsapp {
+        background-color: #00b66c;
+        color: #fff;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        padding: 8px 30px;
+        border-radius: 20px;
+
+        i {
+          margin-left: 10px;
+          font-size: 1.2rem;
+          position: relative;
+          top:2px;
+        }
+      }
+    }
+
     .btn-add-email {
       background-color: #13d0d5;
       color: #3c4043;
@@ -86,5 +136,11 @@
         text-decoration: underline;
       }
     }
+  }
+}
+@media only screen and (max-width: 770px) {
+  .has-error-container {
+    display: flex;
+    flex-direction: column!important;
   }
 }
