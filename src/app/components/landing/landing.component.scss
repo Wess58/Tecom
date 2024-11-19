@@ -4,13 +4,24 @@
   position: relative;
   background-color: #212121;
 
+  background-image: linear-gradient(90deg, #00000099 52%, #0002),
+    url("../../../assets/images/tecom-landing-bg.jpeg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+
   .content {
     position: relative;
-    z-index: 200!important;
+    z-index: 200 !important;
     padding-top: 120px;
 
     .logo-remake {
-      font-family: 'Allerta Stencil', sans-serif !important;
+      font-family: "Allerta Stencil", sans-serif !important;
     }
 
     h1 {
@@ -86,13 +97,13 @@
   }
 }
 
-#video{
+#video {
   position: absolute;
   left: 0;
   right: 0;
-  top:0;
+  top: 0;
   height: 100%;
-  width: 100vw!important;
+  width: 100vw !important;
   z-index: 1;
   object-fit: cover;
 }
@@ -113,50 +124,52 @@
     }
   }
 }
-@media (max-width: 3000px) {}
-@media (max-width: 2000px) {}
+@media (max-width: 3000px) {
+}
+@media (max-width: 2000px) {
+}
 @media (max-width: 1700px) {
   .roundedSquare1 {
     position: absolute;
-    left: -400px!important;
+    left: -400px !important;
   }
 
   .roundedSquare2 {
     position: absolute;
-    left: -380px!important;
+    left: -380px !important;
   }
 }
 @media (max-width: 1500px) {
   .roundedSquare1 {
     position: absolute;
-    left: -450px!important;
+    left: -450px !important;
   }
 
   .roundedSquare2 {
     position: absolute;
-    left: -440px!important;
+    left: -440px !important;
   }
 }
 @media (max-width: 1390px) {
   .roundedSquare1 {
     position: absolute;
-    left: -450px!important;
+    left: -450px !important;
   }
 
   .roundedSquare2 {
     position: absolute;
-    left: -440px!important;
+    left: -440px !important;
   }
 }
 @media (max-width: 1290px) {
   .roundedSquare1 {
     position: absolute;
-    left: -500px!important;
+    left: -500px !important;
   }
 
   .roundedSquare2 {
     position: absolute;
-    left: -490px!important;
+    left: -490px !important;
   }
 }
 @media (max-width: 1000px) {
@@ -168,13 +181,13 @@
     position: relative;
 
     h1 {
-      font-size: 6rem!important;
+      font-size: 6rem !important;
     }
 
     h3 {
-      font-size: 1.5rem!important;
+      font-size: 1.5rem !important;
       letter-spacing: 15px;
-      left: 20px!important;
+      left: 20px !important;
     }
 
     p {
@@ -195,7 +208,7 @@
     }
 
     .black-wave {
-      display: block!important;
+      display: block !important;
       position: absolute;
       bottom: -1px;
       left: 0;

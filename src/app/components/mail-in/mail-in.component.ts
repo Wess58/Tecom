@@ -169,6 +169,8 @@ export class MailInComponent implements OnInit {
     this.emailExists = false;
     this.acceptDisclaimer = false;
 
+    this.clearLocal();
+
     setTimeout(() => {
       this.stage = 1;
     }, 1000);

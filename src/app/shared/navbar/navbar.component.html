@@ -23,7 +23,7 @@
           Services <i class="fas fa-caret-down"></i>
         </a>
         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <li *ngFor="let offer of offers" [routerLink]="['/service',offer.index]" [ngClass]="{'active-dropdown-item':offer.index === +serviceIndex}" (click)="refresh()"><a class="dropdown-item">{{offer.title}}</a></li>
+          <li *ngFor="let offer of offers" [routerLink]="['/service',offer.index]" (click)="refresh()"><a class="dropdown-item" [ngClass]="{'active-dropdown-item':offer.index === +serviceIndex}">{{offer.title}}</a></li>
         </ul>
       </li>
       <!-- <li class="nav-item">
