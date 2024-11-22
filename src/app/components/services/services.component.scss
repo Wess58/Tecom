@@ -100,9 +100,9 @@
       font-weight: 600;
       font-size: 0.8rem;
       letter-spacing: 1px;
-      text-decoration: none!important;
-      outline: none!important;
-      box-shadow: none!important;
+      text-decoration: none !important;
+      outline: none !important;
+      box-shadow: none !important;
     }
   }
 
@@ -119,7 +119,7 @@
 @media (max-width: 1500px) {
   .card {
     p {
-      min-height: 130px!important;
+      min-height: 130px !important;
     }
   }
 }
@@ -137,6 +137,9 @@
 }
 @media (max-width: 770px) {
   #offers {
+    .description {
+      font-size: 22px;
+    }
     .card {
       margin: auto 10px 40px;
       padding: 30px 10px 10px;
@@ -149,7 +152,7 @@
 
       p {
         font-size: 0.75rem;
-        min-height: 160px!important;
+        min-height: 160px !important;
       }
     }
   }

@@ -1,5 +1,12 @@
 .footer {
-  iframe {
-    width: 100%;
+  .iframe-container {
+    border-top: 2px solid #e1e1e1;
+    // border-bottom: 2px solid #e1e1e1;
+    padding: 0;
+
+    iframe {
+      width: 100%;
+      margin: 0;
+    }
   }
 }

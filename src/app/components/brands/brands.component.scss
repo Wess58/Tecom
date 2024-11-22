@@ -38,18 +38,22 @@
   }
 }
 
-
 @media (max-width: 770px) {
   .brands {
     #done_svg {
       width: 90%;
     }
 
+    .description {
+      font-size: 22px !important;
+      line-height: 2.5rem;
+    }
+
     .brands-slider {
       img {
         margin: 0 20px;
-        width: auto!important;
-        height: 80px!important;
+        width: auto !important;
+        height: 80px !important;
         object-fit: contain;
       }
     }
