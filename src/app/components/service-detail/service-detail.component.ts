@@ -62,9 +62,11 @@ export class ServiceDetailComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    new bootstrap.Carousel(document.querySelector('#carouselSlides'), {
-      interval: 7000
-    });
+    setTimeout(() => {
+      new bootstrap.Carousel(document.querySelector('#carouselSlides'), {
+        interval: 10000
+      });
+    }, 5000);
   }
 
   callAnimationTimeout(): void {
