@@ -148,7 +148,14 @@ export class MailInComponent implements OnInit {
 
   reset(action?: string): void {
     // this.router.navigate(['/']);
-    window.history.back();
+    // window.history.back();
+    this.router.navigate([], {
+      queryParams: {
+        'type': null,
+        // 'youCanRemoveMultiple': null,
+      },
+      queryParamsHandling: 'merge'
+    });
 
     if (action) {
       this.emailForm = {
@@ -160,6 +167,7 @@ export class MailInComponent implements OnInit {
         service: ''
       };
     }
+
     this.emailInvalid = false;
     this.hasError = false;
     this.sending = false;

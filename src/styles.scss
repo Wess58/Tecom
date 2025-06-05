@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "./assets/css/font-montserrat.css";
 @import "./assets/css/font-allerta-stencil.css";
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
@@ -59,7 +59,7 @@ textarea {
   box-shadow: none !important;
   background-clip: padding-box !important;
   color: #5f6063 !important;
-  padding: 10px 12px !important;
+  // padding: 10px 12px !important;
 }
 
 input:active,
@@ -175,7 +175,7 @@ textarea:hover {
       letter-spacing: 1px;
     }
 
-    .btn-close {
+    .btn-cancel {
       background-color: #e1e1e1;
     }
 

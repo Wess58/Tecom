@@ -59,11 +59,8 @@ export class NavbarComponent implements OnInit {
     setTimeout(() => {
       this.activatedRoute.queryParams.subscribe((params: any) => {
         if (params['type'] === 'mail-in') {
-          const close = document.getElementById('mailInModalBtn') as HTMLElement;
-
-          if (close) {
-            close.click();
-          }
+          const close: HTMLElement = document.getElementById('mailInModalBtn') as HTMLElement;
+          close?.click();
         }
       });
     }, 10);

@@ -3,6 +3,7 @@ import { style, animate, transition, trigger } from '@angular/animations';
 import { Router, ActivatedRoute, ActivationEnd, ActivationStart } from '@angular/router';
 
 import content from "../../jsons/content.json";
+declare const bootstrap: any;
 
 @Component({
   selector: 'app-service-detail',
@@ -29,6 +30,7 @@ export class ServiceDetailComponent implements OnInit {
   animateAfterViewInit = false;
 
 
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router
@@ -53,12 +55,17 @@ export class ServiceDetailComponent implements OnInit {
 
     window.scrollTo({ top: 1, behavior: "smooth" });
     this.currentOffer = this.offers[+this.activatedRoute.snapshot.params['index'] - 1];
-    
+
     // this.activateFade = true;
     // this.currentBackground = this.currentOffer.images[0];
     // window.setInterval(this.setBackground.bind(this), 10000);
   }
 
+  ngAfterViewInit(): void {
+    new bootstrap.Carousel(document.querySelector('#carouselSlides'), {
+      interval: 7000
+    });
+  }
 
   callAnimationTimeout(): void {
     setTimeout(() => {

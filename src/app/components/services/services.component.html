@@ -19,7 +19,7 @@
           <div class="d-flex justify-content-between align-items-center">
 
             <span class="link" [routerLink]="['/service',offer.index]">Learn more <span><i class="fas fa-long-arrow-alt-right"></i></span></span>
-            <span class="btn btn-link" data-toggle="modal" data-target="#mailInModal" [routerLink]="''" [queryParams]="{ type:'services', index: offer.index }">Inquire</span>
+            <span class="btn btn-link" data-bs-toggle="modal" data-bs-target="#mailInModal" [routerLink]="''" [queryParams]="{ type:'services', index: offer.index }">Inquire</span>
 
           </div>
         </div>
@@ -28,7 +28,7 @@
     </div>
 
     <div class="row justify-content-center mx-0">
-      <div class="col-md-4 col-lg-3 pl-ms-0 pr-ms-0" *ngFor="let offer of offers.slice(3);index as i">
+      <div class="col-6 col-md-4 col-lg-3 pl-ms-0 pr-ms-0" *ngFor="let offer of offers.slice(3);index as i">
         <div class="card">
 
           <div [routerLink]="['/service',offer.index]">
@@ -46,7 +46,7 @@
           <div class="d-flex justify-content-between align-items-center">
 
             <span class="link" [routerLink]="['/service',offer.index]">Learn more <span><i class="fas fa-long-arrow-alt-right"></i></span></span>
-            <span class="btn btn-link" data-toggle="modal" data-target="#mailInModal" [routerLink]="''" [queryParams]="{ type:'services', index: offer.index }">Inquire</span>
+            <span class="btn btn-link" data-bs-toggle="modal" data-bs-target="#mailInModal" [routerLink]="''" [queryParams]="{ type:'services', index: offer.index }">Inquire</span>
 
 
           </div>
@@ -76,7 +76,7 @@
           <div class="d-flex justify-content-between align-items-center">
 
             <span class="link" [routerLink]="['/service',offer.index]">Learn more <span><i class="fas fa-long-arrow-alt-right"></i></span></span>
-            <span class="btn btn-link" data-toggle="modal" data-target="#mailInModal" [routerLink]="''" [queryParams]="{ type:'services', index: offer.index }">Inquire</span>
+            <span class="btn btn-link" data-bs-toggle="modal" data-bs-target="#mailInModal" [routerLink]="''" [queryParams]="{ type:'services', index: offer.index }">Inquire</span>
 
           </div>
         </div>
@@ -87,7 +87,7 @@
 
 
   <div align="center">
-    <a href="#contact" class="btn btn-contact mt-4"> Talk to us <span class="ml-2">&#8702;</span></a>
+    <a href="#contact" class="btn btn-contact mt-4"> Talk to us <span class="ms-2">&#8702;</span></a>
   </div>
 
 

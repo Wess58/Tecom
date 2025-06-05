@@ -5,9 +5,10 @@
         <!-- <span *ngIf="stage === 1">Terms and Conditions</span> -->
         <span>{{requestType === 'services' ? 'Service inquiry' : 'Mail-in request'}}</span>
       </h5>
-      <button type="button" class="close" (click)="reset()" data-dismiss="modal" aria-label="Close" [disabled]="sending">
-        <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
-      </button>
+
+      <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close" (click)="reset()"
+        [disabled]="sending"></button>
+
     </div>
     <div class="modal-body">
 
@@ -26,36 +27,45 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="fullName">Full name <sup class="redText">*</sup></label>
-                  <input type="text" class="form-control" id="fullName" name="fullName" [(ngModel)]="emailForm.fullName" (ngModelChange)="saveToLocal()">
+                  <input type="text" class="form-control" id="fullName" name="fullName" [(ngModel)]="emailForm.fullName"
+                    (ngModelChange)="saveToLocal()">
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="phone">Phone number <sup class="redText">*</sup></label>
-                  <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="emailForm.phone" (ngModelChange)="saveToLocal()" maxlength="12" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                  <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="emailForm.phone"
+                    (ngModelChange)="saveToLocal()" maxlength="12"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="email">Email <sup class="redText">*</sup> <small>(primary email)</small> <small class="redText font-weight-bold ml-3" *ngIf="emailInvalid">enter a valid email</small></label>
-                  <input type="text" class="form-control" id="email" name="email" [(ngModel)]="emailForm.email" (ngModelChange)="saveToLocal();emailInvalid = false" [ngClass]="{'red-border-input':emailInvalid}" placeholder="e.g . johndoe@gmail.com">
+                  <label for="email">Email <sup class="redText">*</sup> <small>(primary email)</small> <small
+                      class="redText font-weight-bold ms-3" *ngIf="emailInvalid">enter a valid email</small></label>
+                  <input type="text" class="form-control" id="email" name="email" [(ngModel)]="emailForm.email"
+                    (ngModelChange)="saveToLocal();emailInvalid = false" [ngClass]="{'red-border-input':emailInvalid}"
+                    placeholder="e.g . johndoe@gmail.com">
                 </div>
               </div>
 
               <div class="col-md-6" *ngIf="requestType !== 'services'">
                 <div class="form-group">
                   <label for="location">Location / Address <sup class="redText">*</sup></label>
-                  <input type="text" class="form-control" id="location" name="location" [(ngModel)]="emailForm.location" (ngModelChange)="saveToLocal()" placeholder="eg. Kenya, Nairobi, Westlands , CBD">
+                  <input type="text" class="form-control" id="location" name="location" [(ngModel)]="emailForm.location"
+                    (ngModelChange)="saveToLocal()" placeholder="eg. Kenya, Nairobi, Westlands , CBD">
                 </div>
               </div>
 
               <div class="col-md-6" *ngIf="requestType === 'services'">
                 <div class="form-group">
                   <label for="service">Services <sup class="redText">*</sup></label>
-                  <select class="form-control py-0" name="service" [(ngModel)]="emailForm.service" (ngModelChange)="saveToLocal()">
-                    <option [value]="service.index" *ngFor="let service of services;index as i">{{service.title}}</option>
+                  <select class="form-control py-0" name="service" [(ngModel)]="emailForm.service"
+                    (ngModelChange)="saveToLocal()">
+                    <option [value]="service.index" *ngFor="let service of services;index as i">{{service.title}}
+                    </option>
                   </select>
                 </div>
               </div>
@@ -63,12 +73,17 @@
             </div>
 
             <div class="form-group position-relative" [ngClass]="{'mb-1':ccEmails?.length}">
-              <label for="cc">CC emails <small>(optional)</small> <small class="redText font-weight-bold ml-3" *ngIf="ccEmailInvalid">enter a valid email</small> <small class="redText font-weight-bold ml-3" *ngIf="emailExists">email already in
+              <label for="cc">CC emails <small>(optional)</small> <small class="redText font-weight-bold ms-3"
+                  *ngIf="ccEmailInvalid">enter a valid email</small> <small class="redText font-weight-bold ms-3"
+                  *ngIf="emailExists">email already in
                   use</small></label>
               <div class="input-group">
-                <input type="text" class="form-control" name="ccEmail" [(ngModel)]="ccEmail" (ngModelChange)="ccEmailInvalid = false;emailExists = false;" (keyup.enter)="ccEmail.length && validateCCEmail()"
-                  [ngClass]="{'red-border-input':ccEmailInvalid}" placeholder="e.g . company@gmail.com">
-                <button type="button" title="add email to cc" class="btn btn-add-email" [disabled]="!ccEmail.length" (click)="ccEmail.length && validateCCEmail()"><i class="fas fa-plus"></i></button>
+                <input type="text" class="form-control" name="ccEmail" [(ngModel)]="ccEmail"
+                  (ngModelChange)="ccEmailInvalid = false;emailExists = false;"
+                  (keyup.enter)="ccEmail.length && validateCCEmail()" [ngClass]="{'red-border-input':ccEmailInvalid}"
+                  placeholder="e.g . company@gmail.com">
+                <button type="button" title="add email to cc" class="btn btn-add-email" [disabled]="!ccEmail.length"
+                  (click)="ccEmail.length && validateCCEmail()"><i class="fas fa-plus"></i></button>
 
               </div>
             </div>
@@ -85,14 +100,16 @@
 
             <div class="form-group">
               <label for="message">Message <sup class="redText">*</sup></label>
-              <textarea name="message" class="form-control" id="message" name="message" [(ngModel)]="emailForm.message" (ngModelChange)="saveToLocal()" rows="4"
+              <textarea name="message" class="form-control" id="message" name="message" [(ngModel)]="emailForm.message"
+                (ngModelChange)="saveToLocal()" rows="4"
                 [placeholder]="requestType === 'services' ? 'Enter a message about inquiry' : 'Describe the problem you are having with your device'"></textarea>
             </div>
 
-            <span class="terms-checkbox">
+            <span class="terms-checkbox text-muted">
               <input type="checkbox" name="acceptDisclaimer" [checked]="acceptDisclaimer" [(ngModel)]="acceptDisclaimer"
                 [disabled]="sending || !emailForm.phone || !emailForm.email || !emailForm.fullName || (requestType !== 'services' && !emailForm.location) || !emailForm.message" />
-              I have read and accept <a href="assets/Tecom Advance Disclaimer.pdf" download>terms and conditions</a><sup class="redText">*</sup>
+              I have read and accept <a href="assets/Tecom Advance Disclaimer.pdf" download>terms and conditions</a><sup
+                class="redText">*</sup>
             </span>
 
           </form>
@@ -107,14 +124,19 @@
           <div class="">
             <span class="error-title">We apologize for the inconvenience</span>
             <p>
-              Due to a technical issue, our website form is currently <strong>unable to send emails</strong>. We are working hard to fix this problem as soon as possible.
+              Due to a technical issue, our website form is currently <strong>unable to send emails</strong>. We are
+              working hard to fix this problem as soon as possible.
             </p>
-            <p> However, you can still contact us without losing your data in the form. Simply click on the <span class="use-whatsapp-text">Use WhatsApp</span> button and continue the chat with us. We will receive your message and respond to you
+            <p> However, you can still contact us without losing your data in the form. Simply click on the <span
+                class="use-whatsapp-text">Use WhatsApp</span> button and continue the chat with us. We will receive your
+              message and respond to you
               promptly.</p>
-            <p> <strong>Thank you</strong> for your patience and understanding. We appreciate your business and look forward to hearing from you.
+            <p> <strong>Thank you</strong> for your patience and understanding. We appreciate your business and look
+              forward to hearing from you.
             </p>
 
-            <a [href]="createReferralLinkWhatsapp()" class="btn btn-whatsapp" data-action="share/whatsapp/share" target="_blank">
+            <a [href]="createReferralLinkWhatsapp()" class="btn btn-whatsapp" data-bs-action="share/whatsapp/share"
+              target="_blank">
               Use WhatsApp <i class="fab fa-whatsapp"></i>
             </a>
 
@@ -128,14 +150,20 @@
         <div>
           <img src="assets/images/email-sent.png" alt="email-sent">
           <span class="d-block">Hello <strong>{{emailForm?.fullName | firstName}}</strong>,</span>
-          <span class="d-block" *ngIf="requestType !== 'services'">We've received your repair mail-in details with reference number <strong class="greenText d-inline-block">{{refId}}</strong>. <br> Our technician will be in touch within the next 24
+          <span class="d-block" *ngIf="requestType !== 'services'">We've received your repair mail-in details with
+            reference number <strong class="greenText d-inline-block">{{refId}}</strong>. <br> Our technician will be in
+            touch within the next 24
             hours. <br><br>
-            Please call or whatsapp our contact centre on <a href="tel:254792553595">+254792553595</a> or <a href="tel:254720402275">+254720402275</a> in case you have any inquiries.
+            Please call or whatsapp our contact centre on <a href="tel:254792553595">+254792553595</a> or <a
+              href="tel:254720402275">+254720402275</a> in case you have any inquiries.
           </span>
 
-          <span class="d-block" *ngIf="requestType === 'services'">We've received your service inquiry details for {{services[emailForm.service - 1]?.title}} with reference number <strong class="greenText d-inline-block">{{refId}}</strong>. <br> Our
+          <span class="d-block" *ngIf="requestType === 'services'">We've received your service inquiry details for
+            {{services[emailForm.service - 1]?.title}} with reference number <strong
+              class="greenText d-inline-block">{{refId}}</strong>. <br> Our
             technician will be in touch within the next 24 hours. <br><br>
-            Please call or whatsapp our contact centre on <a href="tel:254792553595">+254792553595</a> or <a href="tel:254720402275">+254720402275</a> in case you have any inquiries.
+            Please call or whatsapp our contact centre on <a href="tel:254792553595">+254792553595</a> or <a
+              href="tel:254720402275">+254720402275</a> in case you have any inquiries.
           </span>
         </div>
       </div>
@@ -143,17 +171,20 @@
     </div>
 
     <!-- <div class="modal-footer pt-0" *ngIf="stage === 1">
-      <button type="button" class="btn btn-close mr-3" id="closeBtn" data-dismiss="modal">Decline</button>
+      <button type="button" class="btn btn-close me-3" id="closeBtn" data-bs-dismiss="modal">Decline</button>
       <button type="button" class="btn btn-submit" (click)="stage = 2">Accept</button>
     </div> -->
 
     <div class="modal-footer pt-0" *ngIf="stage === 1">
-      <button type="button" class="btn btn-close mr-3" data-dismiss="modal" [disabled]="sending" (click)="reset()">Close</button>
+      <button type="button" class="btn btn-cancel me-3" data-bs-dismiss="modal" [disabled]="sending"
+        (click)="reset()">Close</button>
       <button type="button" class="btn btn-submit" (click)="formValidation()" *ngIf="!hasError"
-        [disabled]="!acceptDisclaimer || sending || !emailForm.phone || !emailForm.email || !emailForm.fullName || (requestType !== 'services' && !emailForm.location) || !emailForm.message">{{sending ? 'Sending ...' : 'Submit'}}</button>
+        [disabled]="!acceptDisclaimer || sending || !emailForm.phone || !emailForm.email || !emailForm.fullName || (requestType !== 'services' && !emailForm.location) || !emailForm.message">{{sending
+        ? 'Sending ...' : 'Submit'}}</button>
     </div>
     <div class="modal-footer pt-0" *ngIf="stage === 2">
-      <button type="button" class="btn btn-close mr-3" data-dismiss="modal" (click)="reset('full-clear')">Close</button>
+      <button type="button" class="btn btn-cancel me-3" data-bs-dismiss="modal"
+        (click)="reset('full-clear')">Close</button>
     </div>
   </div>
 </div>

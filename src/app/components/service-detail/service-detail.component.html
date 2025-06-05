@@ -3,10 +3,10 @@
     <img [src]="currentBackground" loading="lazy" alt="bg-img" *ngIf="currentBackground" [@fadeIn]>
   </div> -->
 
-  <div id="carouselSlides" class="carousel slide carousel-fade" data-ride="carousel">
+  <div id="carouselSlides" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item" [ngClass]="{'active':currentCarouselImageIndex === i}"
-        *ngFor="let image of currentOffer.images;index as i;first as isFirst" data-interval="7000">
+        *ngFor="let image of currentOffer.images;index as i;first as isFirst">
         <img [src]="image" class="d-block w-100 h-100" alt="image">
       </div>
     </div>
@@ -17,11 +17,12 @@
     <div class="col-md-12 col-lg-8">
       <h1 [ngClass]="{'drop-in':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
         {{currentOffer.title}}
+        - {{currentOffer.images.length}}
       </h1>
       <p [ngClass]="{'drop-in-2':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
         {{currentOffer.longDescription}}
       </p>
-      <button class="btn btn-cta" data-toggle="modal" data-target="#mailInModal"
+      <button class="btn btn-cta" data-bs-toggle="modal" data-bs-target="#mailInModal"
         [routerLink]="['/service',currentOffer.index]" [queryParams]="{ type:'services', index: currentOffer.index }"
         [ngClass]="{'drop-in-3':animateAfterViewInit}" [hidden]="!animateAfterViewInit">Inquire about service</button>
     </div>
@@ -37,7 +38,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal mail-in-modal fade p-0" id="mailInModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+<div class="modal mail-in-modal fade p-0" id="mailInModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
   aria-labelledby="mailInModalLabel" aria-hidden="true">
   <app-mail-in></app-mail-in>
 </div>
