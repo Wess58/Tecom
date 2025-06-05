@@ -3,7 +3,7 @@
     <img [src]="currentBackground" loading="lazy" alt="bg-img" *ngIf="currentBackground" [@fadeIn]>
   </div> -->
 
-  <div id="carouselSlides" class="carousel slide carousel-fade" data-ride="carousel" data-touch="false">
+  <div id="carouselSlides" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item" [ngClass]="{'active':currentCarouselImageIndex === i}"
         *ngFor="let image of currentOffer.images;index as i;first as isFirst" data-interval="7000">
