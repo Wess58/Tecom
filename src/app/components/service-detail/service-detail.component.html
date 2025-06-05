@@ -17,7 +17,6 @@
     <div class="col-md-12 col-lg-8">
       <h1 [ngClass]="{'drop-in':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
         {{currentOffer.title}}
-        - {{currentOffer.images.length}}
       </h1>
       <p [ngClass]="{'drop-in-2':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
         {{currentOffer.longDescription}}
@@ -38,7 +37,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal mail-in-modal fade p-0" id="mailInModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-  aria-labelledby="mailInModalLabel" aria-hidden="true">
+<div class="modal mail-in-modal fade p-0" id="mailInModal" data-bs-backdrop="static" data-bs-keyboard="false"
+  tabindex="-1" aria-labelledby="mailInModalLabel" aria-hidden="true">
   <app-mail-in></app-mail-in>
 </div>
