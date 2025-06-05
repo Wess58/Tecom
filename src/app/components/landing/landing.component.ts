@@ -9,8 +9,8 @@ import content from "../../jsons/content.json";
   animations: [
     trigger('fadeIn', [
       transition(':enter', [   // :enter is alias to 'void => *'
-        style({ opacity: 0 }),
-        animate(3000, style({ opacity: 1 }))
+        style({ opacity: 0.5 }),
+        animate(500, style({ opacity: 1 }))
       ])
     ]),
     trigger('fadeInGrow', [
@@ -25,17 +25,29 @@ export class LandingComponent implements OnInit {
   showH1 = false;
   showH3 = false;
   showOthers = false;
+
+  animateAfterViewInit = false;
+
   constructor() { }
 
   ngOnInit(): void {
 
-    setTimeout(() => {
-      document.getElementById('autoplay') ?.click();
-    }, 100);
+    window.scrollTo({ top: 1, behavior: "smooth" });
 
+
+    // setTimeout(() => {
+    //   document.getElementById('autoplay') ?.click();
+    // }, 100);
+
+    // setTimeout(() => {
+    //   this.showH1 = true;
+    // }, 1000);
+  }
+
+  ngAfterViewInit(): void {
     setTimeout(() => {
-      this.showH1 = true;
-    }, 1000);
+      this.animateAfterViewInit = true;
+    }, 200);
   }
 
   playVideo(): void {

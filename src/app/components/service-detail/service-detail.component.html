@@ -1,24 +1,43 @@
 <div class="landing-section">
-  <div class="bg-img">
-    <img [src]="currentBackground" alt="bg-img" *ngIf="currentBackground" [@fadeIn]>
+  <!-- <div class="bg-img">
+    <img [src]="currentBackground" loading="lazy" alt="bg-img" *ngIf="currentBackground" [@fadeIn]>
+  </div> -->
+
+  <div id="carouselSlides" class="carousel slide carousel-fade" data-ride="carousel" data-touch="false">
+    <div class="carousel-inner">
+      <div class="carousel-item" [ngClass]="{'active':currentCarouselImageIndex === i}"
+        *ngFor="let image of currentOffer.images;index as i;first as isFirst" data-interval="7000">
+        <img [src]="image" class="d-block w-100 h-100" alt="image">
+      </div>
+    </div>
   </div>
-  <div class="container" [@fadeIn]>
+
+
+  <div class="container">
     <div class="col-md-12 col-lg-8">
-      <h1>{{currentOffer.title}}</h1>
-      <p>{{currentOffer.longDescription}}</p>
-      <button class="btn btn-cta" data-toggle="modal" data-target="#mailInModal" [routerLink]="['/service',currentOffer.index]" [queryParams]="{ type:'services', index: currentOffer.index }">Inquire about service</button>
+      <h1 [ngClass]="{'drop-in':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
+        {{currentOffer.title}}
+      </h1>
+      <p [ngClass]="{'drop-in-2':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
+        {{currentOffer.longDescription}}
+      </p>
+      <button class="btn btn-cta" data-toggle="modal" data-target="#mailInModal"
+        [routerLink]="['/service',currentOffer.index]" [queryParams]="{ type:'services', index: currentOffer.index }"
+        [ngClass]="{'drop-in-3':animateAfterViewInit}" [hidden]="!animateAfterViewInit">Inquire about service</button>
     </div>
 
   </div>
 
-  <!-- CONTACT US SECTION -->
-  <div id="contact">
-    <app-contact-us></app-contact-us>
-  </div>
 </div>
 
 
+<!-- CONTACT US SECTION -->
+<div id="contact">
+  <app-contact-us></app-contact-us>
+</div>
+
 <!-- Modal -->
-<div class="modal mail-in-modal fade p-0" id="mailInModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mailInModalLabel" aria-hidden="true">
+<div class="modal mail-in-modal fade p-0" id="mailInModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+  aria-labelledby="mailInModalLabel" aria-hidden="true">
   <app-mail-in></app-mail-in>
 </div>

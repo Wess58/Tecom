@@ -9,7 +9,7 @@ import content from "../../jsons/content.json";
 })
 export class BrandsComponent implements OnInit {
 
-  brandImages = content.brandImages;
+  brandImages = [...content.brandImages, ...content.brandImages];
 
   constructor() { }
 

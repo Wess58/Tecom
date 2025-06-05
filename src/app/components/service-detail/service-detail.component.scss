@@ -1,6 +1,6 @@
 .landing-section {
   // background-color: #000;
-  background-image: linear-gradient(90deg, #00000099 52%, #0002);
+  background-image: linear-gradient(to bottom, #000 5%, #0005);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10,20 +10,26 @@
   position: relative;
   min-height: 100vh;
 
-  .bg-img {
-    z-index: -1!important;
+  #carouselSlides {
+    z-index: -1 !important;
     position: absolute;
     top: 0;
-    width: 100%!important;
+    left: 0;
+    right: 0;
+    width: 100%;
     height: 100%;
+    min-height: 100vh !important;
+
+    .carousel-inner,
+    .carousel-item {
+      height: 100%;
+    }
 
     img {
       height: 100%;
-      width: 100%!important;
+      min-height: 100% !important;
+      width: 100% !important;
       object-fit: cover;
-      position: absolute;
-      top: 0;
-      // z-index: -1!important;
     }
   }
 
@@ -31,24 +37,24 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    z-index: 10!important;
+    z-index: 10 !important;
     padding-top: 12vh;
     padding-bottom: 3vh;
 
     h1 {
       color: #f5f5f5;
-      font-size: 2.6rem;
+      font-size: 2.5rem;
       margin-bottom: 30px;
       font-weight: 600;
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(1px);
     }
 
     p {
       color: #fff;
       line-height: 2rem;
-      backdrop-filter: blur(3px);
-      text-align: justify!important;
-      text-justify: inter-word!important;
+      backdrop-filter: blur(1px);
+      text-align: justify !important;
+      text-justify: inter-word !important;
     }
 
     .btn-cta {
@@ -66,31 +72,24 @@
 }
 @media (max-width: 600px) {
   .landing-section {
-    background-color: #0009!important;
-    background-image: linear-gradient(90deg, transparent 52%, transparent)!important;
+    background-color: #0009 !important;
+    background-image: linear-gradient(
+      90deg,
+      transparent 52%,
+      transparent
+    ) !important;
   }
 
   .container {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    z-index: 10!important;
+    z-index: 10 !important;
     padding: 15vh 10px !important;
 
     h1 {
-      font-size: 2rem!important;
-    }
-
-    .btn-cta {
-      background-color: #fff;
-      color: #3c4043;
-      border: 3px solid #fff;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-      padding: 8px 30px;
-      border-radius: 20px;
-      margin: 20px 0;
+      font-size: 1.5rem !important;
+      line-height: 2.5rem !important;
     }
   }
 }

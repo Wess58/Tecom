@@ -74,11 +74,11 @@ export class NavbarComponent implements OnInit {
     this.changeIcon = !this.changeIcon;
   }
 
-  refresh(): void {
-    setTimeout(() => {
-      location.reload();
-    }, 1);
-  }
+  // refresh(): void {
+  //   setTimeout(() => {
+  //     location.reload();
+  //   }, 1);
+  // }
 
 
 }

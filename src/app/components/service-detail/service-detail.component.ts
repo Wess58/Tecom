@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { style, animate, transition, trigger } from '@angular/animations';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, ActivationEnd, ActivationStart } from '@angular/router';
 
 import content from "../../jsons/content.json";
 
@@ -22,31 +22,55 @@ export class ServiceDetailComponent implements OnInit {
 
   currentBackground: any;
   currentImageIndex = 0;
+  currentCarouselImageIndex = 0;
   activateFade = false;
   offers = content.offers;
   currentOffer: any;
+  animateAfterViewInit = false;
+
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {
+
+    router.events.subscribe((val) => {
+
+      if (val instanceof ActivationEnd) {
+        // console.log(val);
+        this.animateAfterViewInit = false;
+
+        this.ngOnInit();
+        this.callAnimationTimeout();
+        // console.log(this.activatedRoute.snapshot.params);
+
+      }
+
+    });
+  }
 
   ngOnInit(): void {
 
-    window.scroll(0, 0);
-
-    this.activateFade = true;
-
+    window.scrollTo({ top: 1, behavior: "smooth" });
     this.currentOffer = this.offers[+this.activatedRoute.snapshot.params['index'] - 1];
-
-    this.currentBackground = this.currentOffer.images[0];
-    window.setInterval(this.setBackground.bind(this), 10000);
+    
+    // this.activateFade = true;
+    // this.currentBackground = this.currentOffer.images[0];
+    // window.setInterval(this.setBackground.bind(this), 10000);
   }
+
+
+  callAnimationTimeout(): void {
+    setTimeout(() => {
+      this.animateAfterViewInit = true;
+    }, 200);
+  }
+
 
   setBackground(): any {
 
     this.currentImageIndex++;
-    this.currentImageIndex = this.currentImageIndex % this.currentOffer.images ?.length;
+    this.currentImageIndex = this.currentImageIndex % this.currentOffer.images?.length;
 
     this.currentBackground = null;
     setTimeout(() => {

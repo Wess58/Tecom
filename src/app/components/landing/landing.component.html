@@ -1,40 +1,38 @@
-<main class="landing-section">
+<main class="landing-section" [@fadeIn]>
 
   <img class="roundedSquare1" src="assets/images/rounded-black-square.svg" alt="rounded-square">
   <!-- <img class="roundedSquare2" src="assets/images/rounded-grey-square.svg" alt="rounded-square"> -->
 
 
-  <div class="container">
+  <main class="container">
     <div class="row">
       <div class="col-md-12 col-lg-6">
 
-        <div class="content" [@fadeIn]>
-          <div class="logo-remake">
+        <div class="content">
+          <div class="logo-remake" [ngClass]="{'drop-in':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
             <h1>TECOM</h1>
             <h3>ADVANCE</h3>
           </div>
-          <p>The one-stop service store for your <br> <strong>Information Technology Repair</strong> needs.</p>
-          <p>Drop-in or <strong>mail-in</strong> your device by <br> filling out our Mail-In Form.</p>
+
+          <div [ngClass]="{'drop-in-2':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
+            <p>The one-stop service store for your <br> <strong>Information Technology Repair</strong> needs.</p>
+            <p>Drop-in or <strong>mail-in</strong> your device by <br> filling out our Mail-In Form.</p>
+          </div>
+
           <div class="d-flex">
-            <a href="#contact" class="btn btn-lg btn-contact my-4"> Talk to us <span class="ml-2">&#8702;</span></a>
-            <a class="btn btn-lg btn-main-in my-4" data-toggle="modal" data-target="#mailInModal" [routerLink]="''" [queryParams]="{ type:'mail-in' }"> Mail in <span class="ml-2">&#8702;</span></a>
+            <a href="#contact" class="btn btn-lg btn-contact my-4" [ngClass]="{'drop-in-3':animateAfterViewInit}"
+              [hidden]="!animateAfterViewInit"> Talk to us <span class="ml-2">&#8702;</span></a>
+            <a class="btn btn-lg btn-main-in my-4" data-toggle="modal" data-target="#mailInModal" [routerLink]="''"
+              [queryParams]="{ type:'mail-in' }" [ngClass]="{'drop-in-35':animateAfterViewInit}"
+              [hidden]="!animateAfterViewInit"> Mail in <span class="ml-2">&#8702;</span></a>
           </div>
 
         </div>
 
-
       </div>
-
-      <div class="col-md-6 text-center">
-
-        <!-- <div class="illustation-holder">
-          <img class="hologram" src="assets/images/circuit.svg" alt="hologram">
-        </div> -->
-      </div>
-
     </div>
 
-  </div>
+  </main>
 
   <!-- <div class="slider topSlider">
     <div class="slide-track">

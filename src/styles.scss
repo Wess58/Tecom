@@ -1,16 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import './assets/css/font-montserrat.css';
-@import './assets/css/font-allerta-stencil.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import "./assets/css/font-montserrat.css";
+@import "./assets/css/font-allerta-stencil.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
 // ng build --prod --base-href https://wess58.github.io/Tecom/ --output-path docs && git add . && git commit -m "docs ready for deployment" && git push
 
 body,
 html {
   margin: 0;
-  padding: 0!important;
-  font-family: 'Montserrat', sans-serif;
+  padding: 0 !important;
+  font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
   color: #80868b;
   scroll-behavior: smooth !important;
@@ -38,17 +38,17 @@ html {
 * input,
 * select,
 * textarea {
-  outline: none!important;
-  box-shadow: none!important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 * img {
-  user-drag: none!important;
-  user-select: none!important;
-  -moz-user-select: none!important;
-  -webkit-user-drag: none!important;
-  -webkit-user-select: none!important;
-  -ms-user-select: none!important;
+  user-drag: none !important;
+  user-select: none !important;
+  -moz-user-select: none !important;
+  -webkit-user-drag: none !important;
+  -webkit-user-select: none !important;
+  -ms-user-select: none !important;
 }
 
 input,
@@ -59,7 +59,7 @@ textarea {
   box-shadow: none !important;
   background-clip: padding-box !important;
   color: #5f6063 !important;
-  padding: 10px 12px!important;
+  padding: 10px 12px !important;
 }
 
 input:active,
@@ -103,7 +103,7 @@ textarea:hover {
 }
 
 .greenText {
-  color: #36a636!important;
+  color: #36a636 !important;
 }
 
 .red-border-input {
@@ -112,7 +112,7 @@ textarea:hover {
   &:active,
   &:focus,
   &:hover {
-    border: 2px solid #d11a2a!important;
+    border: 2px solid #d11a2a !important;
   }
 }
 /* *************************************************************** */
@@ -121,7 +121,7 @@ textarea:hover {
 .modal {
   backdrop-filter: blur(2px);
   background-color: #0001;
-  padding: 0!important;
+  padding: 0 !important;
 
   .modal-title {
     font-weight: 600;
@@ -133,7 +133,7 @@ textarea:hover {
   }
 
   .selected-listing {
-    display: inline-block!important;
+    display: inline-block !important;
     margin: 10px 0;
 
     .selected-item {
@@ -193,14 +193,14 @@ $animationSpeed: 70s; // Animation
   }
 
   100% {
-    transform: translateX(calc(-250px * 18.5));
+    transform: translateX(calc(-250px * 20));
   }
 }
 
 .slider {
   margin: auto;
   overflow-x: hidden;
-  z-index: 10!important;
+  z-index: 10 !important;
 
   .slide-track {
     animation: scroll $animationSpeed linear infinite;
@@ -212,6 +212,36 @@ $animationSpeed: 70s; // Animation
     }
   }
 }
+
+// DROP IN ANIMATION STYLING
+// **********************************
+
+.drop-in {
+  animation: drop-in 1s ease 0.2s backwards;
+}
+.drop-in-2 {
+  animation: drop-in 1.2s ease 0.5s backwards;
+}
+.drop-in-3 {
+  animation: drop-in 1.5s ease 0.8s backwards;
+}
+.drop-in-35 {
+  animation: drop-in 1.8s ease 0.8s backwards;
+}
+.drop-in-4 {
+  animation: drop-in 1.9s ease 1.2s backwards;
+}
+@keyframes drop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 4200px) {
   .container {
@@ -248,9 +278,9 @@ $animationSpeed: 70s; // Animation
   }
 
   .selected-listing {
-    display: block!important;
-    .selected-item{
-      display: block!important;
+    display: block !important;
+    .selected-item {
+      display: block !important;
     }
   }
 

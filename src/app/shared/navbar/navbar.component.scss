@@ -4,19 +4,32 @@ nav {
   padding: 0 100px !important;
   box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.09);
   height: 60px;
-  transition: all 0.2s;
+  background-image: linear-gradient(120deg, #fff 0%, #fff 0%);
+  background-image: -webkit-linear-gradient(120deg, #fff 0%, #fff 0%);
+  background-image: -o-linear-gradient(120deg, #fff 0%, #fff 0%);
+  transition: all 0.9s;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  // background-position: right bottom;
 
   .navbar-brand {
-    color: #13d0d5 !important;
     font-family: "Allerta Stencil", sans-serif !important;
     line-height: 18px;
+    letter-spacing: 2px;
 
-    span span {
+    .top-text {
+      color: #13d0d5 !important;
+      font-size: 26px;
+      display: block;
+    }
+
+    .bottom-text {
       color: #ffd6b3;
-      font-size: 10px;
-      letter-spacing: 2px;
+      font-size: 14px;
       position: relative;
-      left: 5px;
+      left: 10px;
+      top: 5px;
+      display: block;
     }
   }
 
@@ -196,8 +209,18 @@ nav {
   background-image: -webkit-linear-gradient(30deg, #000 20.5%, #fff 20.6%);
   background-image: -o-linear-gradient(30deg, #000 20.5%, #fff 20.6%);
   background-image: linear-gradient(120deg, #000 20.5%, #fff 20.6%);
-  transition: all 0.2s ease !important;
+  transition: all 0.5s !important;
+  // transition-delay: 250ms;
+  background-position: right bottom;
+  background-size: 100% 100%;
 }
+
+@media (max-width: 1400px) {
+  body {
+    zoom: 90%;
+  }
+}
+
 @media (max-width: 1100px) {
   .open-hours {
     display: none;
@@ -206,8 +229,9 @@ nav {
 @media only screen and (max-width: 1000px) {
   nav {
     padding: 8px 25px !important;
-    transition: all 0.2s;
-    display: none;
+    top: -100px;
+    background-image: linear-gradient(120deg, #fff 0%, #fff 0%);
+    background-size: 100% 100% !important;
 
     a {
       text-align: right;
@@ -222,10 +246,9 @@ nav {
   }
 
   .scrolled {
+    background-image: linear-gradient(120deg, #000 40.3%, #fff 40.6%);
     background-image: -webkit-linear-gradient(30deg, #000 40.3%, #fff 40.6%);
     background-image: -o-linear-gradient(30deg, #000 40.3%, #fff 40.6%);
-    background-image: linear-gradient(120deg, #000 40.3%, #fff 40.6%);
-    transition: all 0.2s;
-    display: block !important;
+    top: 0;
   }
 }

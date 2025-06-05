@@ -9,10 +9,18 @@ import content from "../../jsons/content.json";
 export class ServicesComponent implements OnInit {
 
   offers = content.offers;
+  animateAfterViewInit = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.animateAfterViewInit = true;
+    }, 200);
   }
 
 }

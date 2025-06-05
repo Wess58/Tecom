@@ -19,6 +19,7 @@
     position: relative;
     z-index: 200 !important;
     padding-top: 120px;
+    min-height: 550px;
 
     .logo-remake {
       font-family: "Allerta Stencil", sans-serif !important;
@@ -226,10 +227,9 @@
 
 @media (max-width: 770px) {
   .landing-section {
-    background-image: linear-gradient(to top, #000000 2%, #0003),
+    background-image: linear-gradient(to top, #000 10%, #0009 60%),
       url("../../../assets/images/tecom-landing-bg.jpeg");
-    background-position: bottom !important;
-    background-attachment: scroll !important;
+    // background-position: bottom !important;
     // min-height: 700px;
 
     .content {
