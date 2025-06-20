@@ -4,7 +4,7 @@
 @import "./assets/css/font-allerta-stencil.css";
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
-// ng build --prod --base-href https://wess58.github.io/Tecom/ --output-path docs && git add . && git commit -m "docs ready for deployment" && git push
+// export NODE_OPTIONS=--openssl-legacy-provider && ng build --prod --base-href https://wess58.github.io/Tecom/ --output-path docs && git add . && git commit -m "docs ready for deployment" && git push
 
 body,
 html {
