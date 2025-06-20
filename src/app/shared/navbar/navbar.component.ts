@@ -28,14 +28,14 @@ export class NavbarComponent implements OnInit {
     // console.log("scrolling", window.pageYOffset);
 
 
-    if (window.innerWidth > 770) {
+    if (window.innerWidth > 1100) {
       if ((window.pageYOffset / window.innerHeight * 100) > 70) {
         this.morphNavbar = true;
       } else {
         this.morphNavbar = false;
       }
     } else {
-      if ((window.pageYOffset / window.innerHeight * 100) > 60) {
+      if ((window.pageYOffset / window.innerHeight * 100) > 50) {
         this.morphNavbar = true;
       } else {
         this.morphNavbar = false;

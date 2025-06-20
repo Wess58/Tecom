@@ -32,7 +32,7 @@ export class LandingComponent implements OnInit {
 
   ngOnInit(): void {
 
-    window.scrollTo({ top: 1, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
 
 
     // setTimeout(() => {
@@ -47,11 +47,13 @@ export class LandingComponent implements OnInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.animateAfterViewInit = true;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
     }, 200);
   }
 
   playVideo(): void {
-    document.querySelector('video') ?.play();
+    document.querySelector('video')?.play();
   }
 
 }

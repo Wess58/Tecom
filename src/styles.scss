@@ -263,6 +263,12 @@ $animationSpeed: 70s; // Animation
     max-width: 1300px !important;
   }
 }
+
+@media (max-width: 1500px) {
+  body {
+    zoom: 90%;
+  }
+}
 @media (max-width: 1390px) {
   .container {
     max-width: 1170px !important;

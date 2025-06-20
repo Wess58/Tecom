@@ -8,12 +8,15 @@ import content from "../../jsons/content.json";
 })
 export class ServicesComponent implements OnInit {
 
-  offers = content.offers;
+  offers: any = [content.offers.slice(0, 3), content.offers.slice(3)];;
+  offersMobile = content.offers;
   animateAfterViewInit = false;
 
   constructor() { }
 
   ngOnInit(): void {
+
+
   }
 
 

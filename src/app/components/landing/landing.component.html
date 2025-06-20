@@ -1,11 +1,11 @@
 <main class="landing-section" [@fadeIn]>
 
-  <img class="roundedSquare1" src="assets/images/rounded-black-square.svg" alt="rounded-square">
+  <!-- <img class="roundedSquare1" src="assets/images/rounded-black-square.svg" alt="rounded-square"> -->
   <!-- <img class="roundedSquare2" src="assets/images/rounded-grey-square.svg" alt="rounded-square"> -->
 
 
-  <main class="container">
-    <div class="row">
+  <main class="container px-0">
+    <div class="row mx-0">
       <div class="col-md-12 col-lg-6">
 
         <div class="content">
@@ -19,10 +19,10 @@
             <p>Drop-in or <strong>mail-in</strong> your device by <br> filling out our Mail-In Form.</p>
           </div>
 
-          <div class="d-flex">
-            <a href="#contact" class="btn btn-lg btn-contact my-4" [ngClass]="{'drop-in-3':animateAfterViewInit}"
+          <div class="d-flex justify-content-center justify-content-lg-start mt-5">
+            <a href="#contact" class="btn btn-lg btn-contact" [ngClass]="{'drop-in-3':animateAfterViewInit}"
               [hidden]="!animateAfterViewInit"> Talk to us <span class="ms-2">&#8702;</span></a>
-            <a class="btn btn-lg btn-main-in my-4" data-bs-toggle="modal" data-bs-target="#mailInModal" [routerLink]="''"
+            <a class="btn btn-lg btn-main-in" data-bs-toggle="modal" data-bs-target="#mailInModal" [routerLink]="''"
               [queryParams]="{ type:'mail-in' }" [ngClass]="{'drop-in-35':animateAfterViewInit}"
               [hidden]="!animateAfterViewInit"> Mail in <span class="ms-2">&#8702;</span></a>
           </div>
@@ -34,14 +34,6 @@
 
   </main>
 
-  <!-- <div class="slider topSlider">
-    <div class="slide-track">
-      <div class="slide" *ngFor="let img of workImages;index as i">
-        <img [src]="img.imgUrl" [alt]="img.name">
-      </div>
-    </div>
-  </div> -->
-
   <!-- <div class="wrapper d-none d-lg-block">
     <video playsinline autoplay="true" muted="true" loop id="video">
       <source src="assets/images/work/landing-video.mp4" type="video/mp4">
@@ -50,6 +42,6 @@
 
   <!-- <button type="button" name="button" id="autoplay" hidden (click)="playVideo()"></button> -->
 
-  <img class="black-wave" src="assets/images/white-mobile-sc-wave.svg" alt="wave">
+  <!-- <img class="black-wave" src="assets/images/white-mobile-sc-wave.svg" alt="wave"> -->
 
 </main>

@@ -47,10 +47,10 @@
 
     <ul class="main-list">
       <li class="nav-item">
-        <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link " href="#" aria-label="home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item border-bottom">
-        <a class="nav-link " href="#services">Services</a>
+        <a class="nav-link " href="#services" aria-label="services">Services</a>
       </li>
 
       <ul class="services-listing" *ngIf="changeIcon" [@fadeIn]>
@@ -63,10 +63,10 @@
 
       <li class="nav-item">
         <a class="nav-link " data-bs-toggle="modal" data-bs-target="#mailInModal" id="mailInModalBtn"
-          [routerLink]="router.url" [queryParams]="{ type:'mail-in' }">Mail-in</a>
+          [routerLink]="router.url" [queryParams]="{ type:'mail-in' }" aria-label="main-in">Mail-in</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="#contact">Contact</a>
+        <a class="nav-link " href="#contact" aria-label="contact">Contact</a>
       </li>
 
     </ul>
